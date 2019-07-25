@@ -8,27 +8,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class servaxxsa
+ * Servlet implementation class cicciolaaaaaaaaaaaa
  */
-@WebServlet("/servaxxsa")
-public class servaxxsa extends HttpServlet {
+@WebServlet("/cicciolaaaaaaaaaaaa")
+public class cicciolaaaaaaaaaaaa extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
     /**
-     * Default constructor. 
-     * adds+dsa
-     * asd
-     * dsa
-     * dsa
-     * sad
-     * ads
-     * ads
-     * asd
-     * dsa
-     * d
-     * sa
+     * @see HttpServlet#HttpServlet()
      */
-    public servaxxsa() {
+    public cicciolaaaaaaaaaaaa() {
+        super();
         // TODO Auto-generated constructor stub
     }
 
