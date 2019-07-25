@@ -22,6 +22,12 @@ public class anto extends HttpServlet {
     }
 
 	/**
+	 * byhgygybhiby
+	 *  yy
+	 *  y y
+	 *  y 
+	 *  y y 
+	 *  
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
