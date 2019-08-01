@@ -18,11 +18,28 @@ public class Prodotto implements Cloneable
 	public Prodotto()
 	{}
 	
+	public Prodotto(int watt, int idProdotto, int percentualeSconto, float prezzo, String specifiche, String marca,
+			int quantita, String modello, String nome, String immagine, String tipo, String descrizione) 
+	{
+		this.watt = watt;
+		this.idProdotto = idProdotto;
+		this.percentualeSconto = percentualeSconto;
+		this.prezzo = prezzo;
+		this.specifiche = specifiche;
+		this.marca = marca;
+		this.quantita = quantita;
+		this.modello = modello;
+		this.nome = nome;
+		this.immagine = immagine;
+		this.tipo = tipo;
+		this.descrizione = descrizione;
+	}
+	
 	public String getDescrizione() 
 	{
 		return descrizione;
 	}
-
+	
 	public void setDescrizione(String descrizione)
 	{
 		this.descrizione = descrizione;
@@ -154,7 +171,7 @@ public class Prodotto implements Cloneable
 	@Override
 	public String toString() 
 	{
-		return "watt=" + watt + ", idProdotto=" + idProdotto + ", percentualeSconto=" + percentualeSconto+ ", prezzo=" + prezzo + ", specifiche=" + specifiche + ", marca=" + marca + ", quantita=" + quantita
-				+ ", modello=" + modello + ", nome=" + nome + ", immagine=" + immagine + "]";
+		return "watt=" + watt + ", idProdotto=" + idProdotto + ", percentualeSconto=" + percentualeSconto+ ", prezzo=" + prezzo +", quantita=" + quantita
+				+" , nome=" + nome + ", immagine=" + immagine + "]";
 	}
 }

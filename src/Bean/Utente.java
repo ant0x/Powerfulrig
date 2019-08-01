@@ -15,10 +15,19 @@ public class Utente implements Cloneable
 	public Utente () 
 	{}
 
-	public Utente(String email, String tipo, String password, String nome, String cognome) 
+	public Utente(String email,String nome, String cognome, String via, String cap,int numeroCivico) 
 	{
 		this.email = email;
-		this.tipo = tipo;
+		this.nome = nome;
+		this.cognome = cognome;
+		this.via = via;
+		this.cap = cap;
+		this.numeroCivico = numeroCivico;
+	}
+
+	public Utente(String email, String password, String nome, String cognome) 
+	{
+		this.email = email;
 		this.password = password;
 		this.nome = nome;
 		this.cognome = cognome;
@@ -129,9 +138,6 @@ public class Utente implements Cloneable
 	@Override
 	public String toString() 
 	{
-		return "email=" + email + ", tipo=" + tipo + ", password=" + password + ", nome=" + nome + ", cognome="+ cognome + ", via=" + via + ", cap=" + cap + ", numeroCivico=" + numeroCivico + ", numeroTelefono="+ numeroTelefono;
+		return "email=" + email + ", nome=" + nome + ", cognome="+ cognome + ", via=" + via + ", cap=" + cap + ", numeroCivico=" + numeroCivico ;
 	}
-	
-
-
 }
