@@ -280,6 +280,7 @@ public class DAOOrdine
 		return order;
 	}
 
+	@SuppressWarnings("finally")
 	public static boolean deleteOrder(int NOrdine)
 	{
 		boolean flag=false;
@@ -289,8 +290,11 @@ public class DAOOrdine
 			con=ConnectionPool.getConnection();
 			
 		}
+		finally
+		{
+		
 		return flag;
-	}
+	}}
 	
 	
 	private static Connection con=null;
