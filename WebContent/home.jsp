@@ -5,6 +5,7 @@
 	language="java" 
 	contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"
+    import="com.Powerfulrig.Bean.*" 
     import="java.util.*"
 %>
 
@@ -46,7 +47,9 @@
 		<div class="loader"></div>
 	</div>
 
-
+<!-- Header section start -->
+     	  <%@ include file="fragment/header.jsp" %>
+	<!-- Header section end -->
 
 	<!-- Main section -->
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="9000">
@@ -175,7 +178,13 @@
 		
 		
 		
+<!-- Pre-Footer section -->
+	     <%@ include file="fragment/pre-footer.jsp" %>
+	<!-- Pre-Footer section end -->
 
+	<!-- Footer section -->
+		<%@ include file="fragment/footer.jsp" %>
+	<!-- Footer section end -->
 
 
 	<!--====== Javascripts & Jquery ======-->
