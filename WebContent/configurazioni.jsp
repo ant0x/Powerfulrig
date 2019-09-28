@@ -117,7 +117,7 @@
 					</div>
 					<div class="col-xl-10">
 						<p class="confP" id="confP1">Aggiungi Configurazione</p>
-						<input type="hidden" id="username_conf" value="<%=utenteLoggato.getUsername()%>">
+						<input type="hidden" id="username_conf" value="<%=utenteLoggato.getEmail()%>">
 					</div>
 				</div>
 			<%

@@ -1,13 +1,14 @@
 <%@page language="java" 
 		contentType="text/html; charset=ISO-8859-1"
+		import="com.Powerfulrig.Bean.*"
     	pageEncoding="ISO-8859-1"
 %>
 
 <%
 
-	UserConfigurationBean bean = (UserConfigurationBean) request.getAttribute("conf");
+	//UserConfigurationBean bean = (UserConfigurationBean) request.getAttribute("conf");
 
-	DAOProdotto model_prod = new DAOProdotto();
+	//DAOProdotto model_prod = new DAOProdotto();
 
 %>
 

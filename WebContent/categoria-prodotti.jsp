@@ -2,6 +2,7 @@
 		contentType="text/html; charset=ISO-8859-1"
     	pageEncoding="ISO-8859-1"
     	import="com.Powerfulrig.Bean.*" 
+    	import="com.Powerfulrig.Model.*" 
     	import="java.util.*"
 %>
 
@@ -88,10 +89,6 @@
 					if(comp_name != null) {
 						array = model_product.retrieveByCategory(action);					
 					} else {
-						if(action_name!=null)
-						{
-							array = model_product.retrieveByFamily(3);
-						} else {
 							if(brand!=null)
 							{
 								array = model_product.retrieveByBrand(brand);

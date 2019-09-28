@@ -8,9 +8,6 @@
 <%	
 	Prodotto bean = (Prodotto) request.getAttribute("product");
 	DAOProdotto model_prod = new DAOProdotto();
-	ComponentFormatter formatter = new ComponentFormatter();
-	ArrayList<String> componentFormatter = formatter.selectFormatter( (bean.getTipo()).substring(0, (bean.getTipo().indexOf("_")) ) );	
-	Map<String,String> component = model_prod.retrieveComponentByModelProd(bean.getModello(), bean.getTipo(), componentFormatter);	
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -57,7 +54,7 @@
      	  <%@ include file="fragment/header.jsp" %>
 	<!-- Header section end -->
 	
-	 <%	 
+	 <!-- 
 	 	UserConfigurationDAO model_user_conf = null;
 	  	ArrayList<UserConfigurationBean> userconfs = null;
 	 	
@@ -66,7 +63,7 @@
      	  model_user_conf = new UserConfigurationDAO();
      	  userconfs = model_user_conf.retrieveByUsername(utenteLoggato.getUsername()); 
 	 	}
-     %>
+     -->	
 	
 	<!-- Prodotto Singolo section -->
 
@@ -167,7 +164,7 @@
 				<div class="descstyle col-xl-9">
 					<hr>
 				</div> 
-				<p id="descP"><%=bean.getDescription_prod()%></p>
+				<p id="descP"><%=bean.getDescrizione()%></p>
 			</div>
 			<div class="row">
 				<div class="col-xl-2">

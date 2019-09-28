@@ -40,8 +40,6 @@
 
 <body>
 
-	<% PaymentMethodDAO model_payment = new PaymentMethodDAO();
-		PaymentMethodBean paymentBean = new PaymentMethodBean();%>
 	
 	<!-- Page Preloder -->
 	<div id="preloder">
@@ -55,7 +53,7 @@
 	<!-- Prodotto Singolo section -->
 
 	<section class="ordine-section">
-	<input type="hidden" id="username" value="<%=utenteLoggato.getUsername()%>">
+	<input type="hidden" id="username" value="<%=utenteLoggato.getEmail()%>">
 		<form action="CreateOrder" method="POST">
 			
 			<div class="container">
@@ -110,68 +108,6 @@
 								<h4 class="ordH42">Seleziona l'indirizzo di spedizione</h4>
 							</div>
 						</div>
-						<!-- generazione indirizzi -->
-						<% ArrayList<String> addresses = new ArrayList<>();
-							addresses.add(utenteLoggato.getUser_first_address());
-							addresses.add(utenteLoggato.getUser_second_address());
-							addresses.add(utenteLoggato.getUser_third_address());
-							boolean isStampato = false;
-							
-							for(int i = 0;i < addresses.size(); i++)
-							{
-							%>
-							<div class="row cntr justify-content-jusitfy"> 
-								<label id="address_selector" class="radio">
-							<%	
-								if(addresses.get(i) == null || addresses.get(i).equals(null))
-								{
-									if(!isStampato)
-									{
-							%>
-								<div class="row">
-									<span class="glyphicon glyphicon-plus plus2"></span><p id="newInd" class="ordinePar"><a herf="#">Inserisci un nuovo indirizzo</p></a>
-								</div>
-								<div class="row justify-content-start" id="inputNewInd2">
-									<div class="col-xl-12">
-										<div class="row">
-											<div class="col-xl-4">
-												<input type="text" class="form-input indSpacer1" name="indirizzo"  id="address" placeholder="Inserisci Indirizzo">
-											</div>
-											<div class="col-xl-4">
-												<input type="text" class="form-input indSpacer1" name="città" id="city" placeholder="Inserisci città">
-											</div>
-											<div class="col-xl-1">
-												<input type="text" class="form-input3 indSpacer2" id="province" maxlength="2" name="provincia" placeholder="Provincia">
-											</div>
-											<div class="col-xl-3">
-												<div class="row justify-content-center">
-													<input type="text" class="form-input3 indSpacer3" id="cap" maxlength="5" name="cap" placeholder="CAP">
-												</div>
-											</div>
-										</div>
-										<div class="row justify-content-center">
-											<input type="button" class="site-btn6" style="margin-top: 20px; margin-right: 120px;" value="Salva Indirizzo" id="CreateNewAddress">
-										</div>
-									</div>
-								</div>
-							<%
-										isStampato = true;
-									}
-								}
-								else
-								{
-							%>
-									<input type="radio" name="addressopt" value="<%=addresses.get(i)%>" id="opt1" class="hidden">
-									<span class="label"></span>
-									<p class="ordinePar"><%=addresses.get(i)%></p>
-							<%
-								}							
-							%>
-							</label>											
-						</div>
-							<%
-							}
-							%>
 					</div>
 						<!-- codice generato -->												
 					<div class="col-xl-6 spacerMethod_payment">
@@ -181,113 +117,7 @@
 							</div>
 						</div>
 						
-						<!-- codice generato -->
-						<% 
-						isStampato = false;
-						ArrayList<PaymentMethodBean> paymentMethods = model_payment.doRetrieveByUsername(utenteLoggato.getUsername());
 						
-						if(paymentMethods.size()==0)
-						{
-							%>
-							<div class="row cntr justify-content-start"> 
-								<label class="radio newPaymentMethod">
-									<span class="glyphicon glyphicon-plus plus2"></span><p id="newCard" class="ordinePar"><a herf="#">Inserisci un nuovo metodo di pagamento</p></a>
-								</label>
-							</div>
-							<div class="row" id="inputNewCard2">
-								<form action="InsertPaymentMethod" method="GET">
-									<div class="row justify-content-start" >
-										<div class="col-xl-5">
-											<select class="custom-select" name="card_selector" id="card_selector">
-												<option disabled hidden selected>TIPO CARTA</option>
-												<option value=1>PayPal</option>
-												<option value=2>Carta di Credito</option>
-												<option value=3>Carta del Docente</option>
-												<option value=4>PostePay</option>
-											</select>
-										</div>
-										<div class="col-xl-7">
-											<input type="text" class="form-input2" id="codcarta" name="codcarta" maxlength="19" placeholder="Codice Carta">
-										</div>
-									</div>
-									<div class="row justify-content-start" style="margin-top: 20px;">
-										<div class="col-xl-5">
-											<input type="password" class="form-input4" name="codcvc" maxlength="3" placeholder="Codice CVC">
-										</div>
-										<div class="col-xl-7">
-											<input type="date" name="dataexpcarta" id="dataexpcarta">
-										</div>
-									</div>
-									<div class="row justify-content-center">
-										<input type="Submit" class="site-btn7" value="Salva Carta" style="margin-top: 25px;">
-									</div>
-								</form>
-							</div>
-						
-							<%
-							isStampato = true;
-							
-						}
-						
-						for(int i = 0;i < paymentMethods.size(); i++) 
-						{
-							paymentBean = paymentMethods.get(i);
-							%>
-							<div class="row cntr justify-content-start spacerCards"> 
-								<label class="radio">
-									<input type="radio" name="payment_method_opt" id="opt3" value="<%=paymentBean.getCard_number()%>" class="hidden">
-									<span class="label"></span>
-									<p class="ordinePar2"><%=paymentBean.getCard_bank()%> - &#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; <%=paymentBean.getCard_number().substring(15,19)%></p>
-								</label>											
-							</div>
-							<%	
-								if(!isStampato && i < paymentMethods.size() )
-									{
-										%>
-										<div class="row cntr justify-content-start"> 
-										<label class="radio newPaymentMethod">
-											<span class="glyphicon glyphicon-plus plus2"></span><p id="newCard" class="ordinePar"><a herf="#">Inserisci un nuovo metodo di pagamento</p></a>
-										</label>
-										</div>
-										<div class="row" id="inputNewCard2">
-											<form action="InsertPaymentMethod" method="get">
-												<div class="row justify-content-start">
-													<div class="col-xl-5">
-														<select class="custom-select" name="card_selector" id="card_selector">
-															<option disabled hidden selected>TIPO CARTA</option>
-															<option value=1>PayPal</option>
-															<option value=2>Carta di Credito</option>
-															<option value=3>Carta del Docente</option>
-															<option value=4>PostePay</option>
-														</select>
-													</div>
-													<div class="col-xl-7">
-														<input type="text" class="form-input2" id="codcarta" name="codcarta" maxlength="19" placeholder="Codice Carta">
-													</div>
-												</div>
-												<div class="row justify-content-start" style="margin-top: 20px;">
-													<div class="col-xl-5">
-														<input type="password" class="form-input4" name="codcvc" maxlength="3" placeholder="Codice CVC">
-													</div>
-													<div class="col-xl-7">
-														<input type="date" class="prova312" name="dataexpcarta" id="dataexpcarta">
-													</div>
-												</div>
-												<div class="row justify-content-center">
-													<input type="Submit" class="site-btn7" value="Salva Carta" style="margin-top: 25px;">
-												</div>
-											</form>
-										</div>
-
-										<%
-										isStampato = true;
-									}
-						}
-						
-						
-								%>
-						
-						</div>	
 						<!-- codice generato -->
 					</div>
 						
@@ -414,7 +244,7 @@
 				  cancelButtonColor: '#d33',
 				  confirmButtonText: 'Elimina',
 				  cancelButtonText: 'Annulla',
-				}).then((result) => {
+				}).then((result) =>{
 				  if (result.value) {
 					  $.ajax({ //INVOCAZIONE AJAX
 						  	type: "GET",

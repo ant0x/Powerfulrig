@@ -232,15 +232,9 @@
 					</div>
 				</div>
 				<div class="row form-group">
-					<label for="year_prod" class="4 form-label">Anno</label>
-					<div class="col-xl-8">
-						<input type="text" class="form-input" value="<%=bean.getYear_prod()%>" name="year_prod">
-					</div>
-				</div>
-				<div class="row form-group">
 					<label for="description_prod" class="4 form-label">Descrizione</label>
 					<div class="col-xl-8">
-						<textarea rows="5" class="form-input" name="description_prod"><%=bean.getDescription_prod()%></textarea>
+						<textarea rows="5" class="form-input" name="description_prod"><%=bean.getDescrizione()%></textarea>
 					</div>
 				</div>
 				<div class="row form-group">
@@ -252,21 +246,11 @@
 				<div class="row form-group">
 					<label for="discount_prod" class="4 form-label">% Prodotto in Sconto</label>
 					<div class="col-xl-8">
-						<input type="text" class="form-input" value="<%=bean.getDiscount_prod()%>" name="discount_prod">
-					</div>
-				</div>
-				<div class="row form-group">
-					<label for="discounted_price_prod" class="4 form-label">Prezzo Prodotto in Sconto</label>
-					<div class="col-xl-8">
-						<input type="text" class="form-input" value="<%=bean.getDiscounted_price_prod()%>" name="discounted_price_prod">
+						<input type="text" class="form-input" value="<%=bean.getPercentualeSconto()%>" name="discount_prod">
 					</div>
 				</div>
 				<div class="row form-group">
 					<label for="family_prod" class="4 form-label">Informazioni Prodotto</label>
-					<div class="col-xl-8">
-						<input type="text" class="form-input" value="<%=bean.getFamily_prod()%>" name="family_prod">
-					</div>
-				</div>
 				<div class="row form-group">
 					<label for="qnt_prod" class="4 form-label">Quantità Prodotto</label>
 					<div class="col-xl-8">
@@ -279,7 +263,7 @@
 						<input type="text" class="form-input" value="<%=bean.getImmagine()%>" name="img_folder_path" >
 					</div>
 				</div>			
-					<!-- <a href="Product?action=modify_product&type_prod=<%=bean.getTipo()%>&model_prod=<%=bean.getModello()%>&Brand_prod=<%=bean.getMarca()%>&name_prod=<%=bean.getNome()%>&year_prod=<%=bean.getYear_prod()%>&description_prod=<%=bean.getDescription_prod()%>&price_prod=<%=bean.getPrezzo()%>&discount_prod=<%=bean.getDiscount_prod()%>&discounted_price_prod=<%=bean.getDiscounted_price_prod()%>&family_prod=<%=bean.getFamily_prod()%>&qnt_prod=<%=bean.getQuantita()%>&img_folder_path=<%=bean.getImmagine()%>"><input type="button" class="form-button" value="Modifica"></a>			
+					<!-- <a href="Product?action=modify_product&type_prod=<%=bean.getTipo()%>&model_prod=<%=bean.getModello()%>&Brand_prod=<%=bean.getMarca()%>&name_prod=<%=bean.getNome()%>&year_prod=<%=bean.getYear_prod()%>&description_prod=<%=bean.getDescrizione()%>&price_prod=<%=bean.getPrezzo()%>&discount_prod=<%=bean.getPercentualeSconto()%>&discounted_price_prod=<%=bean.getDiscounted_price_prod()%>&family_prod=<%=bean.getFamily_prod()%>&qnt_prod=<%=bean.getQuantita()%>&img_folder_path=<%=bean.getImmagine()%>"><input type="button" class="form-button" value="Modifica"></a>			
 					 -->
 					<div class="row justify-content-center">
 					<input type="submit" class="form-button" value="Modifica">				

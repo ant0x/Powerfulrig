@@ -75,7 +75,7 @@
 						</div>
 						<div style="visibility: hidden">
 							<span>USELESS<label>*</label></span>
-							<input id="usernameUtente" name="username" type="text" value="<%=utenteLoggato.getUsername()%>" disabled> 
+							<input id="usernameUtente" name="username" type="text" value="<%=utenteLoggato.getEmail()%>" disabled> 
 						</div>
 						<div>
 						<span>Nuova Password<label>*</label></span>
