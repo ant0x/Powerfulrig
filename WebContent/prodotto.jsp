@@ -2,7 +2,7 @@
 		contentType="text/html; charset=ISO-8859-1"
     	pageEncoding="ISO-8859-1"
     	import="com.Powerfulrig.Bean.*"
-    	import="com.TechLord.util.*"
+    	import="com.Powerfulrig.Model.*"
     	import="java.util.*"
 %>
 <%	
@@ -97,12 +97,7 @@
 					</div>
 					<div>
 						<p id="stiletitle">Prezzo: </p>
-						<%	if(bean.getFamily_prod()!=2) { %>
-						<p class="stilep"><%=bean.getPrezzo()%> &euro;</p>
-						<%	} else { %>
 						<p style="text-decoration: line-through;" class="stilep"> <%=bean.getPrezzo()%> &euro; </p>
-						<p class="stilep" style="margin-left: 10px;"><%=bean.getDiscounted_price_prod()%> &euro;</p>
-						<%	} %>
 					</div>
 					<div>
 						<p id="stiletitle">Disponibilita: </p>
@@ -203,7 +198,7 @@
 							</tr>
 							<tr>
 								<th scope="row">Anno di Rilascio</th>
-								<td><%=bean.getYear_prod()%></td>
+								
 							</tr>
 							<tbody>
 						</table>

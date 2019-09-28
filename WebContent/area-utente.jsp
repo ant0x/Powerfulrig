@@ -418,8 +418,7 @@
 						<div class="col-xl-6">
 							<div class="row">
 								<h4 class="upH43">SPEDITO A: </h4>
-								<p class="ordP"><%= 
-								String s =" "+ordini.get(I).getUser().getVia())+
+								<p class="ordP"><%=" "+ordini.get(I).getUser().getVia()+
 								ordini.get(I).getUser().getCap()+
 								ordini.get(I).getUser().getNumeroCivico()
 								%></p>

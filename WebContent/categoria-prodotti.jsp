@@ -94,7 +94,7 @@
 								array = model_product.retrieveByBrand(brand);
 							}
 						}
-					}
+					
 					
 					if(array!=null && array.size()!=0)
 					{
