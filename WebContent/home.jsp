@@ -14,7 +14,7 @@
 <html>
 <head>
 
-	<title>Powerfulrig</title>
+	<title>PowerfulRig - Home</title>
 	<meta name="description" content="EndGam Gaming Magazine Template">
 	<meta name="keywords" content="endGam,gGaming, magazine, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,14 +35,14 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/style.css"/>
-	<!--  <link rel="stylesheet" href="css/font-awesome.min.css"/> -->
+	<link rel="stylesheet" href="css/style.css"/> 
+	<link rel="stylesheet" href="css/font-awesome.min.css"/> 
 	
 </head>
 
 <body>
 
-	<!-- Page Preloder xd-->
+	<!-- Page Preloder-->
 	<div id="preloder">
 		<div class="loader"></div>
 	</div>
@@ -58,18 +58,35 @@
 			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>	
 			<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
 				<img src="img/gamingwp.jpg" alt="Second slide">
 				<div class="carousel-caption d-none d-md-block">
-					<h2>Powerfulrig</h2>
-					<p><br>TODO<br>TODO<br><br><br></p>
-					<a href="catalogo.html" class="site-btn">Vai ai Prodotti</a>
+					<h2>PowerfulRig</h2>
+					<p>Tanti prodotti per<br>configurare PC di ogni tipo<br><br><br><br></p>
+					<a href="catalogo.jsp" class="site-btn">Vai al catalogo</a>
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="img/intelxd.png" alt="First slide" style="width: 4000px; height: 675px;">
+				<img src="img/gamingrig.jpg" alt="Second slide">
+				<div class="carousel-caption d-none d-md-block">
+					<h2>Configurazioni Personalizzate</h2>
+					<p><br>Configura il tuo PC<br>come meglio preferisci! <br><br><br></p>
+					<% if(utenteLoggato != null)
+						{%>					
+							<a href="configurazioni.jsp" class="site-btn">Inizia ora...</a>
+						
+					<%	}
+						else
+						{%>
+							<a href="log-area.jsp" class="site-btn">Inizia ora...</a>
+						<%}%>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="img/intelxd.jpg" alt="First slide">
 				<div class="carousel-caption d-none d-md-block">
 					<h2></h2>
 					<p><br><br> <br><br><br></p>
@@ -85,7 +102,7 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="img/2080ti2.jpg" alt="Second slide" style="width: 4000px; height: 675px;">
+				<img src="img/2080ti2.jpg" alt="Second slide">
 				<div class="carousel-caption d-none d-md-block">
 					<h2></h2>
 					<p><br><br><br><br><br></p>
@@ -169,7 +186,7 @@
 			</div>
 			<div class="row">
 				<div class="headerCatalogo col-xl-5">
-					<p>PRODOTTI IN VETRINA</p>
+					<p>Prodotti in vetrina</p>
 				</div>
 				<div class="headerCatalogo col-xl-7">
 					<hr>

@@ -57,6 +57,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="copyright"><a href="home.jsp">TechLord 2019 @ Tutti i diritti riservati. Realizzato da A.D.R. Company </a></div>
+		<div class="copyright"><a href="home.jsp">PowerfulRig 2019 @ Tutti i diritti riservati.</a></div>
 	</footer>
 </body>

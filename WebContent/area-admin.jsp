@@ -461,7 +461,7 @@
 			  cancelButtonColor: '#d33',
 			  confirmButtonText: 'Conferma',
 			  cancelButtonText: 'Annulla'
-			}).then((result) =>{
+			}).then((result) ={
 			  if (result.value) {
 				  $.ajax({ //INVOCAZIONE AJAX
 					  	type: "GET",
