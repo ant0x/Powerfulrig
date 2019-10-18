@@ -3,7 +3,6 @@
 	<name>Powerfulrig</name>
 	<comment></comment>
 	<projects>
-		<project>TechLord2</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

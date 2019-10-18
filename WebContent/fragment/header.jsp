@@ -6,6 +6,7 @@
     import="com.Powerfulrig.controller.*"    
     import="com.Powerfulrig.Model.*"    
     import="com.Powerfulrig.Util.*"
+    import="java.util.*"
     
     
 %>
@@ -69,8 +70,10 @@
 						<div class="col-xl-3">
 							<i class="glyphicon glyphicon-user men"> </i>
 						</div>
-								<% 	
-											Utente utenteLoggato = new Utente();
+									
+				
+								<% 
+											Utente utenteLoggato;
 											synchronized(session) 
 											{
 												utenteLoggato = (Utente) request.getSession().getAttribute("utenteLoggato"); 
