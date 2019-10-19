@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.Powerfulrig.Model.DAOUser;
 
-@WebServlet("/Utente")
+@WebServlet("/Utente1")
 public class UtenteControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	

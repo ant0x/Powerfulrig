@@ -158,6 +158,8 @@ public class DAOUser
 				{
 					utenteLoggato = new Utente();
 					utenteLoggato.setEmail(set.getString(1));
+					utenteLoggato.setTipo(set.getString(2));
+
 				}
 					
 			}
@@ -233,7 +235,7 @@ public class DAOUser
 		modifyAccount="UPDATE PowerfulRig.utente SET";
 		checkEmail="SELECT nome FROM utente where Email=?";
 		showAccount="SELECT * FROM utente where Email=?\"";
-		checkLogin="SELECT Email FROM utente where Email=? AND Password=?";
+		checkLogin="SELECT Email,Tipo FROM utente where Email=? AND Password=?";
 	}
 }
 

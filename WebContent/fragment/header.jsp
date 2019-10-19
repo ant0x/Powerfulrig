@@ -187,11 +187,11 @@
 			  cancelButtonColor: '#d33',
 			  confirmButtonText: 'Logout',
 			  cancelButtonText: 'Annulla'
-			}).then((result) = {   //=>
+			}).then((result) => {
  			  if (result.value) {
 				  $.ajax({
 					  	type: "POST",
-					    url: "Utente",
+					    url: "Utente1",
 					    data: {"action" : value},
 					    success: function(results){
 					    	Swal.fire({

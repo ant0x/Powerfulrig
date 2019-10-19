@@ -87,11 +87,11 @@
 					DAOProdotto model_product=new DAOProdotto();
 										
 					if(comp_name != null) {
-						array = model_product.retrieveByCategory(action);					
+						array = model_product.viewProduct(action);					
 					} else {
 							if(brand!=null)
 							{
-								array = model_product.retrieveByBrand(brand);
+								array = model_product.viewProduct(brand);
 							}
 						}
 					
@@ -115,7 +115,7 @@
 					</div>
 				</div>
 				<div class="col-xl-2 list-group">
-				<a href="Product?action=cpu_comp&comp_name=Processori" class="list-group-item list-group-item-action">Processori</a>
+				<a href="Product?action=Cpu&comp_name=Processori" class="list-group-item list-group-item-action">Processori</a>
 					<a href="Product?action=gpu_comp&comp_name=Schede Grafiche" class="list-group-item list-group-item-action">Schede Grafiche</a>		
 					<a href="Product?action=ram_comp&comp_name=RAM" class="list-group-item list-group-item-action">RAM</a>
 					<a href="Product?action=storage_comp&comp_name=Archiviazione" class="list-group-item list-group-item-action">Archiviazione</a>
