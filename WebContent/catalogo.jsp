@@ -59,7 +59,7 @@
 		<div class="container border-cataPage">
 			<div class="row">
 				<div class="col-xl">
-					<a href="Product?action=cpu_comp&comp_name=Processori"><img src="img/categorie/cpu.jpg" width="200" height="200" class="imgItem4"></a>	
+					<a href="Product?action=Cpu_comp&comp_name=Processori"><img src="img/categorie/cpu.jpg" width="200" height="200" class="imgItem4"></a>	
 				</div>
 				<div class="col-xl">
 					<a href="Product?action=gpu_comp&comp_name=Schede Grafiche"><img src="img/categorie/schedevideo.jpg" width="200" height="200" class="imgItem4"></a>

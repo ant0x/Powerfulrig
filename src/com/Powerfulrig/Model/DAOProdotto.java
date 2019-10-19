@@ -91,6 +91,7 @@ public class DAOProdotto
 
 	public ArrayList<Prodotto> viewProduct(String ...strings) throws SQLException
 	{
+		viewProduct="SELECT * FROM prodotto";
 		ArrayList<Prodotto> prodotti=new ArrayList<Prodotto>();
 		int j=1;
 		if(strings.length>0)
@@ -98,6 +99,7 @@ public class DAOProdotto
 			if(!Utilites.fieldOk(strings))
 				throw new SQLException("parametri di ricerca errati");
 			viewProduct+=" WHERE Visualizzabile=true AND ";
+			System.out.println("le stringe di merd"+strings.toString());
 			for(int i=0;i<strings.length;i+=2)
 			{					
 				if(i!=strings.length-2)
@@ -112,6 +114,8 @@ public class DAOProdotto
 			statement=con.prepareStatement(viewProduct);
 			for(int i=1;i<strings.length;i+=2,j++) 
 				statement.setString(j,strings[i]);
+			System.out.println("lo statement è il seguente"+statement);
+			System.out.println("lo statement è il seguente"+statement);
 			set=statement.executeQuery();
 			while(set.next())
 			{
@@ -184,7 +188,6 @@ public class DAOProdotto
 	{
 		addProduct="INSERT INTO prodotto(Watt,PercentualeSconto,Prezzo,Specifica,Marca,Quantita,Nome,Modello,Tipo,Descrizione,path) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
 		modifyProduct="UPDATE PowerfulRig.prodotto SET";
-		viewProduct="SELECT * FROM prodotto";
 		deleteProduct="UPDATE PowerfulRig.prodotto SET Visualizzabile=false WHERE Visualizzabile=true AND IdProdotto=?";
 	}
 }

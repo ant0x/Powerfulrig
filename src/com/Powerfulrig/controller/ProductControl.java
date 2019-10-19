@@ -47,6 +47,9 @@ public class ProductControl extends HttpServlet
 		String action = request.getParameter("action");
 		String comp_name = request.getParameter("comp_name");
 		String action_name = "Ultimi Arrivi";
+		log("l'action è "+action);
+		log("comp_name   "+comp_name);
+		log("action name "+ action_name);
 		
 		try {
 			if(action != null) 
@@ -57,6 +60,9 @@ public class ProductControl extends HttpServlet
 					request.removeAttribute("comp_name");
 					request.removeAttribute("component");
 					request.removeAttribute("action_name");
+					//action="'"+action+"'";
+					log("l'action nuovo è "+action);
+					System.out.println("l'action nuovo è "+action);
 					/*SET ATTRIBUTE*/
 					request.setAttribute("component", action);
 					request.setAttribute("comp_name", comp_name);
@@ -155,7 +161,7 @@ public class ProductControl extends HttpServlet
 		//TODO
 		RequestDispatcher dispatcher;
 					
-		if(action.equals("cpu_comp")) 
+		if(action.equals("Cpu_comp")) 
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
 		else if(action.equals("heatsink_comp"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");

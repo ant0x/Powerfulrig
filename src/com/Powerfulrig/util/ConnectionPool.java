@@ -64,6 +64,7 @@ public class ConnectionPool
 			catch(SQLException ex)
 			{
 				//ho riscontrato un errore in getConnetion();
+				System.out.println("errore in connection");
 				con.close();
 				con=getConnection();
 			}

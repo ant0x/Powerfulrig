@@ -11,7 +11,8 @@
 	String comp_name = (String) request.getAttribute("comp_name");
 	String action = (String) request.getAttribute("component");
 	String brand = (String) request.getAttribute("brand");
-	
+	log("il componente è : "+action);
+	log("Comp_name ha valore null la seconda volta : "+comp_name);
 	String ricerca = (String) session.getAttribute("ricerca");
 	ArrayList<?> array = (ArrayList<?>) session.getAttribute("products");
 %>
@@ -85,15 +86,15 @@
 					
 					<%
 					DAOProdotto model_product=new DAOProdotto();
-										
+					
 					if(comp_name != null) {
-						array = model_product.viewProduct(action);					
-					} else {
-							if(brand!=null)
-							{
-								array = model_product.viewProduct(brand);
-							}
-						}
+						array = model_product.viewProduct("Tipo",action);					
+					}
+					else 
+					{
+							array = model_product.viewProduct(brand);
+					}
+						
 					
 					
 					if(array!=null && array.size()!=0)
@@ -102,6 +103,8 @@
 						while (it.hasNext()) 
 						{
 							Prodotto bean = (Prodotto) it.next();	
+							System.out.println("il path immagine è : "+bean.getImmagine());
+							log("il path immagine è : "+bean.getImmagine());
 					%>
 					
 						<div class="col-xl-4 spacerProdotti">
@@ -115,7 +118,7 @@
 					</div>
 				</div>
 				<div class="col-xl-2 list-group">
-				<a href="Product?action=Cpu&comp_name=Processori" class="list-group-item list-group-item-action">Processori</a>
+				<a href="Product?action=cpu_comp&comp_name=Processori" class="list-group-item list-group-item-action">Processori</a>
 					<a href="Product?action=gpu_comp&comp_name=Schede Grafiche" class="list-group-item list-group-item-action">Schede Grafiche</a>		
 					<a href="Product?action=ram_comp&comp_name=RAM" class="list-group-item list-group-item-action">RAM</a>
 					<a href="Product?action=storage_comp&comp_name=Archiviazione" class="list-group-item list-group-item-action">Archiviazione</a>
