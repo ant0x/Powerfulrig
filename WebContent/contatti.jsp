@@ -51,7 +51,7 @@
 		<!-- Contact page -->
 	<section class="contact-page">
 		<div class="container">
-			<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.859379930551!2d13.914495715656189!3d40.74311964364766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b6aa7a6e5a78d%3A0x8b84caa5bfc53712!2sVia+Cretaio%2C+80074+Casamicciola+Terme+NA!5e0!3m2!1sit!2sit!4v1557677955819!5m2!1sit!2sit" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+			<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.6112000806993!2d14.798984315406761!3d40.7705753793256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133bc507a5514a11%3A0x8115118a3c081d2a!2sVia%20della%20Rimembranza%2C%2084084%20Fisciano%20SA!5e0!3m2!1sit!2sit!4v1571599475349!5m2!1sit!2sit" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 			<div class="row">
 				<div class="col-lg-7 order-2 order-lg-1">
 					<form class="contact-form">
@@ -67,7 +67,7 @@
 					<p>Per qualsiasi problematica riguardante il sito, ordini, acquisti o se solo volete dei consigli sulla vostra configurazione gaming/maning o semplicemente volete sapere un parere di un esperto, siamo disponibili dalle 9:00 del mattino fino alle 20:00 di sera, dal lunedì al venerdì, per fornire supporto a chiunque dei nostri clienti. Non esitate a contattarci in qualsimodo voi preferite da quelli sotto elencati.</p>
 					<div class="cont-info">
 						<div class="ci-icon"><i class="glyphicon glyphicon-home"> </i></div>
-						<div class="ci-text">Via Cretaio, no 28, Ischia</div>
+						<div class="ci-text">Via della Rimembranza, n° 28, Fisciano</div>
 					</div>
 					<div class="cont-info">
 						<div class="ci-icon"><i class="glyphicon glyphicon-earphone"> </i></div>
