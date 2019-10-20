@@ -67,6 +67,7 @@ CREATE TABLE `fattura` (
 -- Dumping data for table `fattura`
 --
 
+
 LOCK TABLES `fattura` WRITE;
 /*!40000 ALTER TABLE `fattura` DISABLE KEYS */;
 INSERT INTO `fattura` VALUES (1,256,'paypal','2019-07-31','antonio.baldi98@gmail.com'),(2,4999.99,'postepay','2019-07-31','francesco.lauro@gmail.com');
