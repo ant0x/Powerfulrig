@@ -9,7 +9,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>TL - Area Utente</title>
+	<title>PR - Area Utente</title>
 	<meta name="description" content="EndGam Gaming Magazine Template">
 	<meta name="keywords" content="endGam,gGaming, magazine, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">

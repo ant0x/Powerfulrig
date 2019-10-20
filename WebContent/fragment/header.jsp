@@ -43,20 +43,20 @@
 						<ul class="row main-menu">
 							<li><a href="catalogo.jsp"><b>Prodotti</b></a>
 								<ul class="sub-menu">
-									<li><a href="Product?action=cpu_comp&comp_name=Processori">Processori</a></li>
-									<li><a href="Product?action=gpu_comp&comp_name=Schede Grafiche">Schede Grafiche</a></li>
+									<li><a href="Product?action=Cpu_comp&comp_name=Processori">Processori</a></li>
+									<li><a href="Product?action=Gpu_comp&comp_name=Schede Grafiche">Schede Grafiche</a></li>
 									<li><a href="Product?action=ram_comp&comp_name=RAM">RAM</a></li>
 									<li><a href="Product?action=storage_comp&comp_name=Archiviazione">Archiviazione</a></li>
-									<li><a href="Product?action=powersupply_comp&comp_name=Alimentatori">Alimentatori</a></li>
+									<li><a href="Product?action=Psu_comp&comp_name=Alimentatori">Alimentatori</a></li>
 									<li><a href="Product?action=motherboard_comp&comp_name=Schede Madre">Scheda Madre</a></li>								
 									<li><a href="Product?action=heatsink_comp&comp_name=Dissipatori">Dissipatore</a></li>
-									<li><a href="Product?action=case_comp&comp_name=Case">Case</a></li>
-									<li><a href="Product?action=monitor_comp&comp_name=Monitor">Monitor</a></li>
+									<li><a href="Product?action=Case_comp&comp_name=Case">Case</a></li>
+									<li><a href="Product?action=Monitor_comp&comp_name=Monitor">Monitor</a></li>
 									<li><a href="Product?action=keyboard_comp&comp_name=Tastiere">Tastiere</a></li>
 									<li><a href="Product?action=mouse_comp&comp_name=Mouse">Mouse</a></li>
 									<li><a href="Product?action=headphones_comp&comp_name=Cuffie">Cuffie</a></li>
-									<li><a href="Product?action=chair_comp&comp_name=Sedie Gaming">Sedie Gaming</a></li>
-									<li><a href="Product?action=conf_comp&comp_name=Configurazioni">Configurazioni</a></li>
+									<li><a href="Product?action=Sedia_comp&comp_name=Sedie Gaming">Sedie Gaming</a></li>
+									<li><a href="Product?action=Pc_comp&comp_name=Configurazioni">Configurazioni</a></li>
 								</ul>
 							</li>
 							<li><a href="Product?action=lastarrived"><b>Ultime novità</b></a></li>

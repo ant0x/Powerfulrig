@@ -11,7 +11,7 @@
 
 <head>
 
-	<title>TL - Chi Siamo</title>
+	<title>PR - Chi Siamo</title>
 	<meta name="description" content="EndGam Gaming Magazine Template">
 	<meta name="keywords" content="endGam,gGaming, magazine, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,8 +58,8 @@
 		</div>
 		<div class="container border-grcndPage">
 			<div class="row" id="spacergrcnd">
-				<p id="grcndP">La realtà di PowerfulRig nasce come progetto realizzato da tre amici: Antonio Baldi, Francesco Galasso. Nell'intento di voler creare un sito web che unisse tutti gli appassionati di Gaming-PC e di Mining-PC, si è deciso di voler creare un e-Commerce che avrebbe dato l'opportunità a chiunque di poter sfruttare la potenza massima degli hardware più potenti in commercio.<br>
-				<br>Il progetto ha avuto origine nella primavera del 2019 ed è stato portato a termine per inizio estate 2019 ed ha riscosso subito un successo nel mondo del marketing video-ludico con molti utenti che hanno sfruttato l'apertura del magazzino virtuale per poter acquistare prodotti di elevata qualità a prezzi nettamente più bassi rispetto ad altre realtà. <br>
+				<p id="grcndP">La realtà di PowerfulRig nasce come progetto realizzato da due amici: Antonio Baldi, Francesco Galasso. Nell'intento di voler creare un sito web che unisse tutti gli appassionati di Gaming-PC e di Mining-PC, si è deciso di voler creare un e-Commerce che avrebbe dato l'opportunità a chiunque di poter sfruttare la potenza massima degli hardware più potenti in commercio.<br>
+				<br>Il progetto ha avuto origine nella primavera del 2019 ed è stato portato a termine per inizio autunno 2019 ed ha riscosso subito un successo nel mondo del marketing video-ludico con molti utenti che hanno sfruttato l'apertura del magazzino virtuale per poter acquistare prodotti di elevata qualità a prezzi nettamente più bassi rispetto ad altre realtà. <br>
 				<br>PowerfulRig, per il futuro, si propone di continuare ad offrire il TOP della Gamma ai propri clienti, cercando sempre di soddisfare ogni Loro richiesa con cortesia e professionalità, cercando di divenire uno dei migliori rivenditori online più utilizzati dalla community video-ludica, aggiornandosi e migliorandosi passo dopo passo.</p>
 			</div>
 		</div>

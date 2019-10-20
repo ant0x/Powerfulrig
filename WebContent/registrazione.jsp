@@ -23,7 +23,7 @@
 <head>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>TL - Registrazione</title>
+	<title>PR - Registrazione</title>
 	
 	<meta name="description" content="EndGam Gaming Magazine Template">
 	<meta name="keywords" content="endGam,gGaming, magazine, html">

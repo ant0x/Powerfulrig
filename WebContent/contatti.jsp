@@ -11,7 +11,7 @@
 
 <head>
 
-	<title>TL - Contatti</title>
+	<title>PR - Contatti</title>
 	<meta name="description" content="EndGam Gaming Magazine Template">
 	<meta name="keywords" content="endGam,gGaming, magazine, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,7 +83,7 @@
 					</div>
 					<div class="cont-info">
 						<div class="ci-icon"><i class="glyphicon glyphicon-envelope envelope"> </i></div>
-						<div class="ci-text">teklord@info.it</div>
+						<div class="ci-text">PowerfulRig@info.it</div>
 					</div>
 				</div>
 			</div>

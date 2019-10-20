@@ -15,7 +15,7 @@
 <html>
 <head>
 
-	<title>TL - <%=bean.getMarca()+" "+bean.getNome()+" "+bean.getModello()%></title>
+	<title>PR - <%=bean.getMarca()+" "+bean.getNome()+" "+bean.getModello()%></title>
 	<meta name="description" content="EndGam Gaming Magazine Template">
 	<meta name="keywords" content="endGam,gGaming, magazine, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">

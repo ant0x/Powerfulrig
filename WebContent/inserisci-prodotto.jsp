@@ -112,7 +112,7 @@
 							<option class="singleOption" value="keyboard">Tastiere</option>
 							<option class="singleOption" value="mouse">Mouse</option>
 							<option class="singleOption" value="headphones">Cuffie</option>
-							<option class="singleOption" value="chair">Sedie Gaming</option>
+							<option class="singleOption" value="Sedia">Sedie Gaming</option>
 						</select>
 					</div>
 				</div>

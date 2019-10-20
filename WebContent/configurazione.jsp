@@ -19,7 +19,7 @@
 <head>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>TL - Configurazione</title>
+	<title>PR - Configurazione</title>
 	
 	<meta name="description" content="EndGam Gaming Magazine Template">
 	<meta name="keywords" content="endGam,gGaming, magazine, html">
@@ -121,7 +121,7 @@
 				{
 				%>
 				<div class="col-xl-2">
-					<a href="Product?action=gpu_comp&comp_name=Schede Grafiche"><img src="img/plus.png" width="150" height="150" class="imgItem6"></a>
+					<a href="Product?action=Gpu_comp&comp_name=Schede Grafiche"><img src="img/plus.png" width="150" height="150" class="imgItem6"></a>
 				</div>
 				<div class="col-xl-2">
 					<div class="row" id="spacerConf">
@@ -268,7 +268,7 @@
 				{
 				%>
 				<div class="col-xl-2">
-					<a href="Product?action=powersupply_comp&comp_name=Alimentatori"><img src="img/plus.png" width="150" height="150" class="imgItem6"></a>
+					<a href="Product?action=Psu_comp&comp_name=Alimentatori"><img src="img/plus.png" width="150" height="150" class="imgItem6"></a>
 				</div>
 				<div class="col-xl-2">
 					<div class="row" id="spacerConf">
@@ -367,7 +367,7 @@
 				{
 				%>
 				<div class="col-xl-2">
-					<a href="Product?action=case_comp&comp_name=Case"><img src="img/plus.png" width="150" height="150" class="imgItem6"></a>
+					<a href="Product?action=Case_comp&comp_name=Case"><img src="img/plus.png" width="150" height="150" class="imgItem6"></a>
 				</div>
 				<div class="col-xl-2">
 					<div class="row" id="spacerConf">

@@ -62,7 +62,7 @@
 					<a href="Product?action=Cpu_comp&comp_name=Processori"><img src="img/categorie/cpu.jpg" width="200" height="200" class="imgItem4"></a>	
 				</div>
 				<div class="col-xl">
-					<a href="Product?action=gpu_comp&comp_name=Schede Grafiche"><img src="img/categorie/schedevideo.jpg" width="200" height="200" class="imgItem4"></a>
+					<a href="Product?action=Gpu_comp&comp_name=Schede Grafiche"><img src="img/categorie/schedevideo.jpg" width="200" height="200" class="imgItem4"></a>
 				</div>
 				<div class="col-xl">
 					<a href="Product?action=ram_comp&comp_name=RAM"><img src="img/categorie/ram.jpg" width="200" height="200" class="imgItem4"></a>
@@ -77,7 +77,7 @@
 			<div class="row">
 				
 				<div class="col-xl">
-					<a href="Product?action=powersupply_comp&comp_name=Alimentatori"><img src="img/categorie/alimentatore.jpg" width="200" height="200" class="imgItem4"></a>
+					<a href="Product?action=Psu_comp&comp_name=Alimentatori"><img src="img/categorie/alimentatore.jpg" width="200" height="200" class="imgItem4"></a>
 				</div>
 				<div class="col-xl">
 					<a href="Product?action=motherboard_comp&comp_name=Schede Madre"><img src="img/categorie/schedemadre.jpg" width="200" height="200" class="imgItem4"></a>
@@ -86,15 +86,15 @@
 					<a href="Product?action=heatsink_comp&comp_name=Dissipatori"><img src="img/categorie/dissipatori.jpg" width="200" height="200" class="imgItem4"></a>	
 				</div>
 				<div class="col-xl">
-					<a href="Product?action=case_comp&comp_name=Case"><img src="img/categorie/case.jpg" width="200" height="200" class="imgItem4"></a>
+					<a href="Product?action=Case_comp&comp_name=Case"><img src="img/categorie/case.jpg" width="200" height="200" class="imgItem4"></a>
 				</div>
 				<div class="col-xl">
-					<a href="Product?action=monitor_comp&comp_name=Monitor"><img src="img/categorie/monitor.jpg" width="200" height="200" class="imgItem4"></a>
+					<a href="Product?action=Monitor_comp&comp_name=Monitor"><img src="img/categorie/monitor.jpg" width="200" height="200" class="imgItem4"></a>
 				</div>
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-xl-3">
-					<a href="Product?action=chair_comp&comp_name=Sedie Gaming"><img src="img/categorie/sedie.jpg" width="200" height="200" class="imgItem4"></a>	
+					<a href="Product?action=Sedia_comp&comp_name=Sedie Gaming"><img src="img/categorie/sedie.jpg" width="200" height="200" class="imgItem4"></a>	
 				</div>
 				<div class="col-xl-3">
 					<a href="Product?action=mouse_comp&comp_name=Mouse"><img src="img/categorie/mouse.jpg" width="200" height="200" class="imgItem4"></a>
@@ -103,7 +103,7 @@
 					<a href="Product?action=headphones_comp&comp_name=Cuffie"><img src="img/categorie/cuffie.jpg" width="200" height="200" class="imgItem4"></a>
 				</div>
 				<div class="col-xl-3">
-					<<a href="Product?action=conf_comp&comp_name=Configurazioni"><img src="img/configurationpic2.png" width="200" height="200" class="imgItem4" style="background-color: rgb(217, 217, 217);"></a>	
+					<<a href="Product?action=Pc_comp&comp_name=Configurazioni"><img src="img/configurationpic2.png" width="200" height="200" class="imgItem4" style="background-color: rgb(217, 217, 217);"></a>	
 				</div>
 			</div>
 		</div>

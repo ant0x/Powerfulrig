@@ -47,16 +47,13 @@ public class ProductControl extends HttpServlet
 		String action = request.getParameter("action");
 		String comp_name = request.getParameter("comp_name");
 		String action_name = "Ultimi Arrivi";
-		log("l'action è "+action);
-		log("comp_name   "+comp_name);
-		log("action name "+ action_name);
 		
 		try {
 			if(action != null) 
 			{
 				if(action.contains("_comp"))
 				{
-					/*REMOVE*/
+				/*REMOVE*/
 					request.removeAttribute("comp_name");
 					request.removeAttribute("component");
 					request.removeAttribute("action_name");
@@ -165,7 +162,7 @@ public class ProductControl extends HttpServlet
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
 		else if(action.equals("heatsink_comp"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
-		else if(action.equals("gpu_comp"))
+		else if(action.equals("Gpu_comp"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
 		else if(action.equals("motherboard_comp"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
@@ -173,13 +170,13 @@ public class ProductControl extends HttpServlet
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
 		else if(action.equals("storage_comp"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
-		else if(action.equals("powersupply_comp"))
+		else if(action.equals("Psu_comp"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
-		else if(action.equals("case_comp"))
+		else if(action.equals("Case_comp"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
 		else if(action.equals("lastarrived"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
-		else if(action.equals("monitor_comp"))
+		else if(action.equals("Monitor_comp"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
 		else if(action.equals("keyboard_comp"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
@@ -187,9 +184,9 @@ public class ProductControl extends HttpServlet
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
 		else if(action.equals("headphones_comp"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
-		else if(action.equals("chair_comp"))
+		else if(action.equals("Sedia_comp"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
-		else if(action.equals("conf_comp"))
+		else if(action.equals("Pc_comp"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
 		else if(action.equals("prodotto"))
 			dispatcher = getServletContext().getRequestDispatcher("/prodotto.jsp");

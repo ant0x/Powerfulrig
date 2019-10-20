@@ -11,8 +11,6 @@
 	String comp_name = (String) request.getAttribute("comp_name");
 	String action = (String) request.getAttribute("component");
 	String brand = (String) request.getAttribute("brand");
-	log("il componente è : "+action);
-	log("Comp_name ha valore null la seconda volta : "+comp_name);
 	String ricerca = (String) session.getAttribute("ricerca");
 	ArrayList<?> array = (ArrayList<?>) session.getAttribute("products");
 %>
@@ -23,7 +21,7 @@
 
 <head>
 
-	<title>TL - Categoria Prodotti</title>
+	<title>PR - Categoria Prodotti</title>
 	<meta name="description" content="EndGam Gaming Magazine Template">
 	<meta name="keywords" content="endGam,gGaming, magazine, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -103,8 +101,7 @@
 						while (it.hasNext()) 
 						{
 							Prodotto bean = (Prodotto) it.next();	
-							System.out.println("il path immagine è : "+bean.getImmagine());
-							log("il path immagine è : "+bean.getImmagine());
+		
 					%>
 					
 						<div class="col-xl-4 spacerProdotti">
@@ -119,19 +116,19 @@
 				</div>
 				<div class="col-xl-2 list-group">
 				<a href="Product?action=cpu_comp&comp_name=Processori" class="list-group-item list-group-item-action">Processori</a>
-					<a href="Product?action=gpu_comp&comp_name=Schede Grafiche" class="list-group-item list-group-item-action">Schede Grafiche</a>		
+					<a href="Product?action=Gpu_comp&comp_name=Schede Grafiche" class="list-group-item list-group-item-action">Schede Grafiche</a>		
 					<a href="Product?action=ram_comp&comp_name=RAM" class="list-group-item list-group-item-action">RAM</a>
 					<a href="Product?action=storage_comp&comp_name=Archiviazione" class="list-group-item list-group-item-action">Archiviazione</a>
-					<a href="Product?action=powersupply_comp&comp_name=Alimentatori" class="list-group-item list-group-item-action">Alimentatori</a>
+					<a href="Product?action=Psu_comp&comp_name=Alimentatori" class="list-group-item list-group-item-action">Alimentatori</a>
 					<a href="Product?action=motherboard_comp&comp_name=Schede Madre" class="list-group-item list-group-item-action">Schede Madre</a>
 					<a href="Product?action=heatsink_comp&comp_name=Dissipatori e Ventole" class="list-group-item list-group-item-action">Dissipatori</a>
-					<a href="Product?action=case_comp&comp_name=Case" class="list-group-item list-group-item-action">Case</a>
-					<a href="Product?action=monitor_comp&comp_name=Monitor" class="list-group-item list-group-item-action">Monitor</a>
+					<a href="Product?action=Case_comp&comp_name=Case" class="list-group-item list-group-item-action">Case</a>
+					<a href="Product?action=Monitor_comp&comp_name=Monitor" class="list-group-item list-group-item-action">Monitor</a>
 					<a href="Product?action=keyboard_comp&comp_name=Tastiere" class="list-group-item list-group-item-action">Tastiere</a>
 					<a href="Product?action=mouse_comp&comp_name=Mouse" class="list-group-item list-group-item-action">Mouse</a>
 					<a href="Product?action=headphones_comp&comp_name=Cuffie" class="list-group-item list-group-item-action">Cuffie</a>
-					<a href="Product?action=chair_comp&comp_name=Sedie Gaming" class="list-group-item list-group-item-action">Sedie Gaming</a>
-					<a href="Product?action=conf_comp&comp_name=Configurazioni" class="list-group-item list-group-item-action">Configurazioni</a>
+					<a href="Product?action=Sedia_comp&comp_name=Sedie Gaming" class="list-group-item list-group-item-action">Sedie Gaming</a>
+					<a href="Product?action=Pc_comp&comp_name=Configurazioni" class="list-group-item list-group-item-action">Configurazioni</a>
 					<a href="Product?action=lastarrived" class="list-group-item list-group-item-action">Ultimi Arrivi</a>
 				</div>
 			</div>
