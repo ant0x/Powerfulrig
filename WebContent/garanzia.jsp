@@ -58,12 +58,12 @@
 		</div>
 		<div class="container border-grcndPage">
 			<div class="row" id="spacergrcnd">
-				<h7>GARANZIA DI 2 ANNI SUI PC TechLord Corporation</h7>
-				<p id="grcndP">Tutti i pc TechLord Corporation sono garantiti 2 anni. La garanzia copre solo i guasti di tipo hardware, quindi problemi dei componenti interni del pc. Problemi riconducibili al software installato (Microsoft Windows, driver, programmi o software di terze parti) o legati all'infezione di sistema da parte di virus e malware, non sono coperti da garanzia.</p>
+				<h7>GARANZIA DI 2 ANNI SUI PC PowerfulRig Corporation</h7>
+				<p id="grcndP">Tutti i pc PowerfulRig Corporation sono garantiti 2 anni. La garanzia copre solo i guasti di tipo hardware, quindi problemi dei componenti interni del pc. Problemi riconducibili al software installato (Microsoft Windows, driver, programmi o software di terze parti) o legati all'infezione di sistema da parte di virus e malware, non sono coperti da garanzia.</p>
 			</div>
 			<div class="row" id="spacergrcnd">
 				<h7>MODALITÀ DI GESTIONE DEI PRODOTTI IN GARANZIA</h7>
-				<p id="grcndP">Per ottenere assistenza sui prodotti in garanzia, i clienti dovranno scrivere una mail ad techlord@mail.it specificando il numero d'ordine o allegando la prova d'acquisto del prodotto. E' necessario anche scrivere nel dettaglio il problema. I nostri tecnici ricontatteranno i clienti e, in caso di conferma del guasto, sarà necessario spedire il prodotto presso i nostri laboratori. Verrà inviato anche un modulo da compilare e includere nel pacco. Qualora il problema sia effettivamente coperto da garanzia, i nostri tecnici procederanno con la riparazione oppure la sostituzione se necessario. Per più dettagli circa le condizioni di riparazione e reso, rimandiamo al punto 6.0 delle <a href="#">Condizioni Generali</a>.</p>
+				<p id="grcndP">Per ottenere assistenza sui prodotti in garanzia, i clienti dovranno scrivere una mail ad PowerfulRig@mail.it specificando il numero d'ordine o allegando la prova d'acquisto del prodotto. E' necessario anche scrivere nel dettaglio il problema. I nostri tecnici ricontatteranno i clienti e, in caso di conferma del guasto, sarà necessario spedire il prodotto presso i nostri laboratori. Verrà inviato anche un modulo da compilare e includere nel pacco. Qualora il problema sia effettivamente coperto da garanzia, i nostri tecnici procederanno con la riparazione oppure la sostituzione se necessario. Per più dettagli circa le condizioni di riparazione e reso, rimandiamo al punto 6.0 delle <a href="#">Condizioni Generali</a>.</p>
 			</div>
 		</div>
 	</section>

@@ -17,7 +17,7 @@
 		try
 		{  
 			Class.forName("com.mysql.cj.jdbc.Driver");  
-			Connection con = DriverManager.getConnection("jdbc:mysql://root:root@localhost:3306/techlord_db?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");  
+			Connection con = DriverManager.getConnection("jdbc:mysql://root:root@localhost:3306/PowerfulRig_db?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");  
 			PreparedStatement ps = con.prepareStatement("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '"+type_prod+"_component' ORDER BY ordinal_position");   
 			ResultSet rs = ps.executeQuery();  
 			
