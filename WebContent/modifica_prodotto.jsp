@@ -19,7 +19,11 @@
 
 <head>
 
+<<<<<<< HEAD
 	<title>TechLord e-Shop</title>
+=======
+	<title>PowerfulRig e-Shop</title>
+>>>>>>> branch 'master' of https://github.com/ant0x/Powerfulrig.git
 	<meta name="description" content="EndGam Gaming Magazine Template">
 	<meta name="keywords" content="endGam,gGaming, magazine, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
