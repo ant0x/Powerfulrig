@@ -91,7 +91,7 @@
 					}
 					else 
 					{
-							array = model_product.viewProduct(brand);
+							array = model_product.viewProduct("Marca",brand);
 					}
 						
 					
