@@ -89,7 +89,7 @@
 				<div class="carousel-caption d-none d-md-block">
 					<h2></h2>
 					<p><br><br> <br><br><br></p>
-					<a href="Product?action=prodotto&type_prod=cpu_comp&model_prod=i9-9980XE" class="site-btn">Vai al Prodotto</a>
+					<a href="Product?action=prodotto&type_prod=Cpu_comp&model_prod=i9-9980XE" class="site-btn">Vai al Prodotto</a>
 				</div>
 			</div>
 			<div class="carousel-item">
@@ -161,7 +161,7 @@
 							<div class="dropdown show">
 							<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false"> Seleziona Categoria</a>
 								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<a class="dropdown-item" href="Product?action=cpu_comp&comp_name=Processori">Processori</a>
+									<a class="dropdown-item" href="Product?action=Cpu_comp&comp_name=Processori">Processori</a>
 									<a class="dropdown-item" href="Product?action=Gpu_comp&comp_name=Schede Grafiche">Schede Grafiche</a>
 									<a class="dropdown-item" href="Product?action=ram_comp&comp_name=RAM">RAM</a>
 									<a class="dropdown-item" href="Product?action=storage_comp&comp_name=Archiviazione">Archiviazione</a>

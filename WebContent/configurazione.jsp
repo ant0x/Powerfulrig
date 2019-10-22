@@ -72,7 +72,7 @@
 				{
 				%>
 				<div class="col-xl-2">
-					<a href="Product?action=cpu_comp&comp_name=Processori"><img src="img/plus.png" width="150" height="150" class="imgItem6"></a>
+					<a href="Product?action=Cpu_comp&comp_name=Processori"><img src="img/plus.png" width="150" height="150" class="imgItem6"></a>
 				</div>
 				<div class="col-xl-2">
 					<div class="row" id="spacerConf">

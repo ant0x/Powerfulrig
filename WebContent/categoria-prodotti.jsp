@@ -1,7 +1,8 @@
 <%@page language="java" 
 		contentType="text/html; charset=ISO-8859-1"
     	pageEncoding="ISO-8859-1"
-    	import="com.Powerfulrig.Bean.*"     import="com.Powerfulrig.controller.*"
+    	import="com.Powerfulrig.Bean.*"     
+    	import="com.Powerfulrig.controller.*"
     	import="com.Powerfulrig.Model.*" 
     	import="java.util.*"
 %>
@@ -115,7 +116,7 @@
 					</div>
 				</div>
 				<div class="col-xl-2 list-group">
-				<a href="Product?action=cpu_comp&comp_name=Processori" class="list-group-item list-group-item-action">Processori</a>
+				<a href="Product?action=Cpu_comp&comp_name=Processori" class="list-group-item list-group-item-action">Processori</a>
 					<a href="Product?action=Gpu_comp&comp_name=Schede Grafiche" class="list-group-item list-group-item-action">Schede Grafiche</a>		
 					<a href="Product?action=ram_comp&comp_name=RAM" class="list-group-item list-group-item-action">RAM</a>
 					<a href="Product?action=storage_comp&comp_name=Archiviazione" class="list-group-item list-group-item-action">Archiviazione</a>

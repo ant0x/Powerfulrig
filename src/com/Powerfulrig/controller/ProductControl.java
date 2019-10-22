@@ -58,8 +58,8 @@ public class ProductControl extends HttpServlet
 					request.removeAttribute("component");
 					request.removeAttribute("action_name");
 					//action="'"+action+"'";
-					log("l'action nuovo è "+action);
-					System.out.println("l'action nuovo è "+action);
+					log("l'action nuovo Ã¨ "+action);
+					System.out.println("l'action nuovo Ã¨ "+action);
 					/*SET ATTRIBUTE*/
 					request.setAttribute("component", action);
 					request.setAttribute("comp_name", comp_name);
