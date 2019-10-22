@@ -1,9 +1,6 @@
-<%@page	language="java" 
-		contentType="text/html; charset=ISO-8859-1"
-    	pageEncoding="ISO-8859-1"
-    	import="com.Powerfulrig.Bean.*"     import="com.Powerfulrig.controller.*"
-    	import="java.util.*"
-%>
+<%@page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1" import="com.Powerfulrig.Bean.*"
+	import="com.Powerfulrig.controller.*" import="java.util.*"%>
 
 <%
 
@@ -22,32 +19,45 @@
 
 <head>
 
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>PR - Registrazione</title>
-	
-	<meta name="description" content="EndGam Gaming Magazine Template">
-	<meta name="keywords" content="endGam,gGaming, magazine, html">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<!-- Icona -->
-	<link href="img/icona.ico" rel="shortcut icon"/>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>PR - Registrazione</title>
 
-	<!-- Google Font -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<meta name="description" content="EndGam Gaming Magazine Template">
+<meta name="keywords" content="endGam,gGaming, magazine, html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- JQUERY 3.4.1 -->
-	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<!-- Icona -->
+<link href="img/icona.ico" rel="shortcut icon" />
 
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Google Font -->
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i"
+	rel="stylesheet">
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/style.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	
+<!-- JQUERY 3.4.1 -->
+<script src="https://code.jquery.com/jquery-3.4.1.js"
+	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	crossorigin="anonymous"></script>
+
+<!-- Bootstrap -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	crossorigin="anonymous"></script>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+
 </head>
 
 <body>
@@ -58,73 +68,71 @@
 	</div>
 
 	<!-- Header section start -->
-    	<%@ include file="fragment/header3.jsp" %>
+	<%@ include file="fragment/header3.jsp"%>
 	<!-- Header section end -->
-	
+
 	<!-- MAIN SECTION Registrazione-->
 
 	<div class="main">
 		<div class="shop_top" id="regimargin">
-		    <div class="container">
-				
-					<div class="register-top-grid">
-						<h3>INFORMAZIONI PERSONALI</h3>
-						<div>
-							<span>Username<label>*</label></span>
-							<input name="username" type="text"  id="username" autofocus maxlength="16"> 
-						</div>
-						<div>
-							<span>Indirizzo e-mail<label>*</label></span>
-							<input name="user_email" type="email" id="email_user" placeholder="example@example.it"> 
-						</div>
-						<div>
-						    <span>Nome<label>*</label></span>
-							<input name="user_firstname" id="user_firstname" type="text" maxlength="50"> 
-						</div>
-						<div>
-						    <span>Cognome<label>*</label></span>
-							<input name="user_lastname"  id="user_lastname" type="text" maxlength="50"> 
-						</div>
-						<div class="clear"> </div>
+			<div class="container">
+
+				<div class="register-top-grid">
+					<h3>INFORMAZIONI PERSONALI</h3>
+					<div>
+						<span>Indirizzo e-mail<label>*</label></span> <input
+							name="user_email" type="email" id="email_user"
+							placeholder="example@example.it" autocomplete="on">
 					</div>
-					<div class="clear"> </div>
-				    <div class="register-bottom-grid">
-						<h3>INFORMAZIONI LOGIN</h3>
-						<div>
-							<span>Password<label>*</label></span>
-							<input name="user_password" type="password" id="password_user">
-						</div>
-						<div>
-							<span>Conferma Password<label>*</label></span>
-							<input name="confirm_user_password" type="password" id="confirm_password_user">
-						</div>
-						<div class="clear"> </div>
+					<div>
+						<span>Nome<label>*</label></span> <input name="user_firstname"
+							id="user_firstname" type="text" maxlength="50" autocomplete="on">
 					</div>
-					<div class="clear"> </div>
-					<div class="button2">
-						<input type="button" id="buttonreg" class="setButton" value="REGISTRATI">
+					<div>
+						<span>Cognome<label>*</label></span> <input name="user_lastname"
+							id="user_lastname" type="text" maxlength="50" autocomplete="on">
 					</div>
-			
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+				<div class="register-bottom-grid">
+					<h3>INFORMAZIONI LOGIN</h3>
+					<div>
+						<span>Password<label>*</label></span> <input name="user_password"
+							type="password" id="password_user" autocomplete="off">
+					</div>
+					<div>
+						<span>Conferma Password<label>*</label></span> <input
+							name="confirm_user_password" type="password"
+							id="confirm_password_user" autocomplete="off">
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+				<div class="button2">
+					<input type="button" id="buttonreg" class="setButton"
+						value="REGISTRATI">
+				</div>
+
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- MAIN SECTION Registrazione END -->
-	
+
 	<!-- Header section start -->
-    	<%@ include file="fragment/footer.jsp" %>
+	<%@ include file="fragment/footer.jsp"%>
 	<!-- Header section end -->
-	
+
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery.slicknav.min.js"></script>
 	<script src="js/main.js"></script>
-	
-	
+
+
 	<script>
 	
 	//funzione jquery con ajax annidato per eliminare il metodo di pagamento scelto
 	$("#buttonreg").on('click', function validate(){	
-		var username  = $('#username').val();
 		var user_firstname  = $('#user_firstname').val();
 		var user_lastname  = $('#user_lastname').val();
 		var email_user = $('#email_user').val();
@@ -152,11 +160,11 @@
 			$.ajax({ 
 			type: "POST",
 			url: "Registration",
-			data: {"username": username, "user_firstname": user_firstname, "user_lastname": user_lastname,"user_email":email_user, "user_password":password_user, "confirm_user_password": confirm_password_user},
+			data: {"user_firstname": user_firstname, "user_lastname": user_lastname,"user_email":email_user, "user_password":password_user, "confirm_user_password": confirm_password_user},
 			success: function(results){
 				Swal.fire({ //SECONDO POPUP
 					title: 'Registrato!',
-					timer: 4000,
+					timer: 40000,
 					type: 'success',
 					showCancelButton: false,
 					showConfirmButton: false,
@@ -172,7 +180,7 @@
 	
 		
 	</script>
-	
+
 
 </body>
 </html>

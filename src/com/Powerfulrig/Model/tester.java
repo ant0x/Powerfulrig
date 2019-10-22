@@ -39,7 +39,7 @@ public class tester
 				System.out.println(p.getProdotti().get(i).toString());
 			System.out.println("\n");
 		}*/
-		
+		/*
 		Prodotto prod=new Prodotto();
 		prod.setDescrizione("lavor bene");
 		prod.setImmagine("nero col pisello lungo");
@@ -66,6 +66,13 @@ public class tester
 			System.out.println("fail");
 	}
 	//System.out.println(DAOProdotto.modifyProduct("Quantita",));
-
+*/
+		DAOUser acc= new DAOUser();
+		
+		if(!acc.checkEmail("antoniobaldi75@gmail.com"))
+			System.out.println("non c'è");
+		else
+			System.out.println(" c'è");
+}
 }
 

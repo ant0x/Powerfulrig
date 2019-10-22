@@ -25,18 +25,15 @@ public class Registration extends HttpServlet {
 		super();
 	}
 	
-	DAOUser model_utente = new DAOUser();
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
-		String username = null; 
 		String user_firstname = null;
 		String user_lastname = null;
 		String user_email = null;
 		String user_password = null;
 		String confirm_user_password = null;
 		
-		//date_registration_user sara presa come java.time.LocalDate.now()
 		user_firstname = request.getParameter("user_firstname");
 		user_lastname = request.getParameter("user_lastname");
 		user_email = request.getParameter("user_email");
@@ -45,8 +42,13 @@ public class Registration extends HttpServlet {
 		
 		if(user_password != null && !(user_password.isEmpty()) && !(user_password.equals(confirm_user_password)))
 		{
-			user_password = "porcodiovegetale1283";
+			System.out.println("porcodiovegetale1283");
 		}
+		
+		
+		
+		
+		
 		
 		//creazione del nuovo utente
 		Utente utente = new Utente();
@@ -55,14 +57,11 @@ public class Registration extends HttpServlet {
 		utente.setCognome(user_lastname);
 		utente.setEmail(user_email);
 		utente.setPassword(user_password);
-		//first_address= NULL
-		//second_address= NULL
-		//third_address= NULL
-		utente.setTipo("user");
 		
 		try {
-			if(model_utente.regUtente(utente))
+			if(!DAOUser.checkEmail(user_email))
 			{
+				DAOUser.regUtente(utente);
 				request.setAttribute("inserimentoUtente", "true");
 				RequestDispatcher dispatcher = request.getRequestDispatcher("/log-area.jsp");
 				dispatcher.forward(request, response);
