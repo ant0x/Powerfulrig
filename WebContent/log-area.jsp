@@ -69,21 +69,13 @@
 				    <div class="login-title">
 						<h4 class="title">Utente Registrato</h4>
 							<% 	Boolean login = (Boolean) request.getAttribute("login");	
-								Boolean isBanned = (Boolean) request.getAttribute("isBanned");
-										if(isBanned != null)
-										{
-											if(!isBanned)
-											{
 												if(login!=null) 
 												{
 													if(!login) %>
 													<i style="color: red" class="glyphicon glyphicon-remove"> </i><h4 style="color:red; display: inline-block;"> Email e/o password errati!</h4>
 							<%					}
-											}	
-											else { %>
-												<i style="color: red" class="glyphicon glyphicon-remove"> </i><h4 style="color:red; display: inline-block;">Utente Bannato</h4>
-							<%				}
-										}
+											
+										
 							%>
 											
 						<div id="loginbox" class="loginbox">
