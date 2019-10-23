@@ -147,6 +147,7 @@
 		
 		if(email_userRES == false)
 		{
+			alert("email errata gesucri ");
 			setTimeout(function(){location.href="registrazione.jsp"} , 200);
 			return false;	
 		}
