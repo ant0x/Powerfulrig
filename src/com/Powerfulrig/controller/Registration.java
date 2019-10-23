@@ -40,10 +40,6 @@ public class Registration extends HttpServlet {
 		user_password = request.getParameter("user_password");
 		confirm_user_password = request.getParameter("confirm_user_password");
 		
-		if(user_password != null && !(user_password.isEmpty()) && !(user_password.equals(confirm_user_password)))
-		{
-			System.out.println("porcodiovegetale1283");
-		}
 		
 		
 		
@@ -53,18 +49,24 @@ public class Registration extends HttpServlet {
 		//creazione del nuovo utente
 		Utente utente = new Utente();
 		
+		
 		utente.setNome(user_firstname);
 		utente.setCognome(user_lastname);
 		utente.setEmail(user_email);
 		utente.setPassword(user_password);
 		
+	
+		
 		try {
 			if(!DAOUser.checkEmail(user_email))
 			{
-				DAOUser.regUtente(utente);
-				request.setAttribute("inserimentoUtente", "true");
-				RequestDispatcher dispatcher = request.getRequestDispatcher("/log-area.jsp");
-				dispatcher.forward(request, response);
+				if(DAOUser.regUtente(utente))
+				{
+					request.setAttribute("inserimentoUtente", "true");
+					RequestDispatcher dispatcher = request.getRequestDispatcher("/log-area.jsp");
+					dispatcher.forward(request, response);
+					
+				}
 			}
 			else 
 			{

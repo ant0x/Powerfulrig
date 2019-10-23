@@ -37,7 +37,7 @@ public class ConnectionPool
 		String port = "3306";
 		String db = "powerfulrig";
 		String username = "root";
-		String password = "";
+		String password = "root";
 				
 		newConnection = DriverManager.getConnection("jdbc:mysql://"+ip+":"+port+"/"+db+"?zeroDateTimeBehavior=convertToNull&serverTimezone=GMT",username, password);
 		newConnection.setAutoCommit(false);

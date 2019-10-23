@@ -3,14 +3,11 @@
 	import="com.Powerfulrig.controller.*" import="java.util.*"%>
 
 <%
+	String checkRegistration = null;
 
-	String checkRegistration = null;	
-
-	if((String) request.getAttribute("inserimentoUtente") != null)
-	{
+	if ((String) request.getAttribute("inserimentoUtente") != null) {
 		checkRegistration = (String) request.getAttribute("inserimentoUtente");
 	}
-	
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -86,11 +83,11 @@
 					</div>
 					<div>
 						<span>Nome<label>*</label></span> <input name="user_firstname"
-							id="user_firstname" type="text" maxlength="50" autocomplete="on">
+							id="user_firstname" type="text" maxlength="50" autocomplete="on" required>
 					</div>
 					<div>
 						<span>Cognome<label>*</label></span> <input name="user_lastname"
-							id="user_lastname" type="text" maxlength="50" autocomplete="on">
+							id="user_lastname" type="text" maxlength="50" autocomplete="on" required>
 					</div>
 					<div class="clear"></div>
 				</div>
@@ -131,7 +128,7 @@
 
 	<script>
 	
-	//funzione jquery con ajax annidato per eliminare il metodo di pagamento scelto
+	//Registrazione
 	$("#buttonreg").on('click', function validate(){	
 		var user_firstname  = $('#user_firstname').val();
 		var user_lastname  = $('#user_lastname').val();
@@ -147,15 +144,68 @@
 		
 		if(email_userRES == false)
 		{
-			alert("email errata gesucri ");
-			setTimeout(function(){location.href="registrazione.jsp"} , 200);
+			Swal.fire({ //Popup mail errata
+				title: 'Formato Email errato!',
+				type: 'warning',
+				  confirmButtonColor: '#3085d6',
+				  confirmButtonText: 'OK',
+				width: '400px',
+				})
+			setTimeout(function(){location.href="registrazione.jsp"} , 135000);
 			return false;	
 		}
 		else if(password_userRES == false)
 		{
-			setTimeout(function(){location.href="registrazione.jsp"} , 200);
+			Swal.fire({ //Password non conforme
+				title: 'Passowrd non conforme',
+				text: "La password dev'essere almeno di 8 caratteri ed almeno 1 maiuscolo.",
+				type: 'warning',
+				  confirmButtonColor: '#3085d6',
+				  confirmButtonText: 'OK',
+				width: '400px',
+				})
+			setTimeout(function(){location.href="registrazione.jsp"} , 135000);
 			return false;
 		}
+		
+		else if(password_user != confirm_password_user)
+			{
+			Swal.fire({ //Popup password non corrisponde
+				title: 'Le password non corrispondono',
+				type: 'warning',
+				  confirmButtonColor: '#3085d6',
+				  confirmButtonText: 'OK',
+				width: '400px',
+				})
+			setTimeout(function(){location.href="registrazione.jsp"} , 135000);
+			return false;
+			}
+		else if(user_firstname === "")
+		{
+			Swal.fire({ //Password non conforme
+				title: 'Inserire il nome',
+				type: 'warning',
+				  confirmButtonColor: '#3085d6',
+				  confirmButtonText: 'OK',
+				width: '400px',
+				})
+			setTimeout(function(){location.href="registrazione.jsp"} , 135000);
+			return false;
+		}
+		if(user_lastname === "")
+		{
+			Swal.fire({ //Password non conforme
+				title: 'Inserire il cognome',
+				type: 'warning',
+				  confirmButtonColor: '#3085d6',
+				  confirmButtonText: 'OK',
+				width: '400px',
+				})
+			setTimeout(function(){location.href="registrazione.jsp"} , 135000);
+			return false;
+		}
+		
+		
 		else if(password_userRES == true && email_userRES == true)
 		{
 			$.ajax({ 
@@ -175,6 +225,9 @@
 				}    
 			})
 		}
+		
+		
+		
 	});
 	
 	
