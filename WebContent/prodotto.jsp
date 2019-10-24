@@ -3,6 +3,7 @@
     	pageEncoding="ISO-8859-1"
     	import="com.Powerfulrig.Bean.*"
     	import="com.Powerfulrig.Model.*"
+    	import="com.Powerfulrig.controller.*"
     	import="java.util.*"
 %>
 <%	
@@ -53,18 +54,16 @@
 	<!-- Header section start -->
      	  <%@ include file="fragment/header.jsp" %>
 	<!-- Header section end -->
-	
-	 <!-- 
+	<% 
 	 	UserConfigurationDAO model_user_conf = null;
 	  	ArrayList<UserConfigurationBean> userconfs = null;
 	 	
 	  	if(utenteLoggato != null)
 	 	{
      	  model_user_conf = new UserConfigurationDAO();
-     	  userconfs = model_user_conf.retrieveByUsername(utenteLoggato.getUsername()); 
+     	  userconfs = model_user_conf.retrieveByEmail(utenteLoggato.getEmail()); 
 	 	}
-     -->	
-	
+	 %>
 	<!-- Prodotto Singolo section -->
 
 	<section class="prodsing-section">
@@ -129,7 +128,7 @@
 									
 									for(i = 0; i < size_userconfs; i++) 
 									{%>
-										<a class="dropdown-item" id="addToConf" style="cursor:pointer;"><input type="hidden" id="id_conf" value="<%=userconfs.get(i).getId_user_configuration()%>"> <%=userconfs.get(i).getName_user_configuration()%> </a>
+										<a class="dropdown-item" id="addToConf" style="cursor:pointer;"><input type="hidden" id="id_conf" value="<%=userconfs.get(i).get_id_configuration()%>"> <%=userconfs.get(i).getname_configuration()%> </a>
 									<%
 									J++;
 									} 
@@ -196,10 +195,6 @@
 								<th scope="row">Modello</th>
 								<td><%=bean.getModello()%></td>
 							</tr>
-							<tr>
-								<th scope="row">Anno di Rilascio</th>
-								
-							</tr>
 							<tbody>
 						</table>
 					</div>
@@ -212,30 +207,30 @@
 								</tr>
 							</thead>
 							<tbody>
-							<% 
+							<!-- 
 							 for (Map.Entry<String,String> entry : component.entrySet())
 								{
 									 if(entry.getKey().contains("id") || entry.getKey().contains("model") || entry.getKey().contains("label"))
 									 {
 										 if(entry.getKey().contains("id"))
 										 {
-							%>
-											 	<input type="hidden" id="id_comp" value="<%=entry.getValue()%>">
-							<%
+							
+											 	<input type="hidden" id="id_comp" value="entry.getValue()">
+							
 										 }
 										 continue;
 									 }										
 									 else
 									 {
-							%>
+							
 										<tr>
-											<th scope="row"><%=entry.getKey()%></th>
-											<td><%=entry.getValue()%></td>
+											<th scope="row">entry.getKey()</th>
+											<td>entry.getValue()</td>
 										</tr>
-							<%
+							
 									}									
 								}
-							%>
+							-->
 							</tbody>
 						</table>
 					</div>
@@ -243,6 +238,7 @@
 			</div>
 		</div>
 	</section>
+
 
 	<script>
 

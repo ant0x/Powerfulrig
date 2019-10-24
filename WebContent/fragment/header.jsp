@@ -82,7 +82,7 @@
 											{
 												if((utenteLoggato.getTipo()).equals("user")){ %>
 													<div class="col-xl-6">
-														<a href="area-utente.jsp"><%=utenteLoggato.getEmail()%>  </a>
+														<a href="area-utente.jsp"><%=utenteLoggato.getNome()%>  </a>
 													</div>
 													<div class="col-xl-2">
 														<a href="#"><i class="glyphicon glyphicon-log-out log-out" onclick="logout()"> </i></a>

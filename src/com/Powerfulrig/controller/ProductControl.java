@@ -87,8 +87,8 @@ public class ProductControl extends HttpServlet
 					
 					String type_prod = request.getParameter("type_prod");
 					String model_prod = request.getParameter("model_prod");
-
-					request.setAttribute("product", model_product.viewProduct(type_prod, model_prod));
+					ArrayList<Prodotto> app=model_product.viewProduct("Modello", model_prod,"Tipo",type_prod);
+					request.setAttribute("product", app.get(0));
 				}
 				else if(action.equals("addProduct"))
 				{

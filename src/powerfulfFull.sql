@@ -172,6 +172,44 @@ LOCK TABLES `utente` WRITE;
 INSERT INTO `utente` VALUES ('antonio.baldi98@gmail.com','user','password','antonio','baldi','via e. berlinguer ','84010',51,'3922412988'),('antoniobaldi7575@gmail.com','admin','admin','anton','bald','via umberto I','84010',23,'3921234121'),('francesco.lauro@gmail.com','user','password','Francesco','Lauro','via fontana','84016',65,'3981729210');
 /*!40000 ALTER TABLE `utente` ENABLE KEYS */;
 UNLOCK TABLES;
+
+
+use powerfulrig;
+CREATE TABLE `users_configurations` (
+  `id_user_configuration` int(11) NOT NULL AUTO_INCREMENT,
+  `name_configuration` varchar(100) DEFAULT NULL,
+  `owner_configuration` varchar(100) NOT NULL,
+  `creation_date` date NOT NULL,
+  `configuration_price` float DEFAULT NULL,
+  `cpu_in_configuration` int(11) DEFAULT NULL,
+  `gpu_in_configuration` int(11) DEFAULT NULL,
+  `ram_in_configuration` int(11) DEFAULT NULL,
+  `case_in_configuration` int(11) DEFAULT NULL,
+  `motherboard_in_configuration` int(11) DEFAULT NULL,
+  `powersupply_in_configuration` int(11) DEFAULT NULL,
+  `storage_in_configuration` int(11) DEFAULT NULL,
+  `heatsink_in_configuration` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_user_configuration`),
+  KEY `owner_configuration` (`owner_configuration`),
+  KEY `cpu_in_configuration` (`cpu_in_configuration`),
+  KEY `gpu_in_configuration` (`gpu_in_configuration`),
+  KEY `ram_in_configuration` (`ram_in_configuration`),
+  KEY `case_in_configuration` (`case_in_configuration`),
+  KEY `motherboard_in_configuration` (`motherboard_in_configuration`),
+  KEY `powersupply_in_configuration` (`powersupply_in_configuration`),
+  KEY `storage_in_configuration` (`storage_in_configuration`),
+  KEY `heatsink_in_configuration` (`heatsink_in_configuration`),
+  CONSTRAINT `users_configurations_ibfk_1` FOREIGN KEY (`owner_configuration`) REFERENCES `utente` (`Email`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `users_configurations_ibfk_2` FOREIGN KEY (`cpu_in_configuration`) REFERENCES `prodotto` (`IdProdotto`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `users_configurations_ibfk_3` FOREIGN KEY (`gpu_in_configuration`) REFERENCES `prodotto` (`IdProdotto`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `users_configurations_ibfk_4` FOREIGN KEY (`ram_in_configuration`) REFERENCES `prodotto` (`IdProdotto`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `users_configurations_ibfk_5` FOREIGN KEY (`case_in_configuration`) REFERENCES `prodotto` (`IdProdotto`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `users_configurations_ibfk_6` FOREIGN KEY (`motherboard_in_configuration`) REFERENCES `prodotto` (`IdProdotto`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `users_configurations_ibfk_7` FOREIGN KEY (`powersupply_in_configuration`) REFERENCES `prodotto` (`IdProdotto`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `users_configurations_ibfk_8` FOREIGN KEY (`storage_in_configuration`) REFERENCES `prodotto` (`IdProdotto`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `users_configurations_ibfk_9` FOREIGN KEY (`heatsink_in_configuration`) REFERENCES `prodotto` (`IdProdotto`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

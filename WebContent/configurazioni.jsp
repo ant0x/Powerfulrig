@@ -71,7 +71,7 @@
 		<%
 		
 			UserConfigurationDAO model_user_conf = new UserConfigurationDAO();
-			ArrayList<UserConfigurationBean> userconfs = model_user_conf.retrieveByUsername(utenteLoggato.getUsername());
+			ArrayList<UserConfigurationBean> userconfs = model_user_conf.retrieveByEmail(utenteLoggato.getEmail());
 			
 			int size_userconfs = userconfs.size();
 			int I=0;
@@ -86,8 +86,8 @@
 						 <div class="yConf">
 						 	<div class="row">			
 								<div class="col-xl-8">
-									<a href="UserConfiguration?action=showConf&id_conf=<%=userconfs.get(I).getId_user_configuration()%>"><p class="confP4" id="confP41"><%=userconfs.get(I).getName_user_configuration()%></p></a>
-									<input type="hidden" id="id_conf" value="<%=userconfs.get(I).getId_user_configuration()%>">
+									<a href="UserConfiguration?action=showConf&id_conf=<%=userconfs.get(I).get_id_configuration()%>"><p class="confP4" id="confP41"><%=userconfs.get(I).getname_configuration()%></p></a>
+									<input type="hidden" id="id_conf" value="<%=userconfs.get(I).get_id_configuration()%>">
 								</div>
 								<div class="col-xl-3">
 									<div class="row">
@@ -118,7 +118,7 @@
 					</div>
 					<div class="col-xl-10">
 						<p class="confP" id="confP1">Aggiungi Configurazione</p>
-						<input type="hidden" id="username_conf" value="<%=utenteLoggato.getEmail()%>">
+						<input type="hidden" id="mail_conf" value="<%=utenteLoggato.getEmail()%>">
 					</div>
 				</div>
 			<%
@@ -160,11 +160,11 @@
 				  }
 				})
 				if (nameConf) {
-					var username = $('#username_conf').val();
+					var Mail = $('#mail_conf').val();
 					$.ajax({
 						type: "GET",
 				        url: "UserConfiguration",
-				        data: {"action" : "createConf", "username" : username, "confName" : nameConf}, 
+				        data: {"action" : "createConf", "Mail" : Mail, "confName" : nameConf}, 
 				        success: function(results){
 				        	Swal.fire({
 				  			  title: 'Configurazione Creata',
@@ -181,13 +181,13 @@
 			})()
 		}
 		
-		//funzione jquery con ajax annidato per eliminare il metodo di pagamento scelto
+		//funzione jquery con ajax annidato per eliminare la configurazione
 		$("[id ='removeConfIcon']").on('click', function deleteConf(){	
 			var value1 = ("deleteConf");
 			var value2 = $(this).parent().parent().find('input#id_conf').val();
 				Swal.fire({ //PRIMO POPUP
 				  title: "Sei sicuro di voler eliminare la configurazione?",
-				  text: "La configurazione sarÃ  eliminata permanentemente.",
+				  text: "La configurazione sar� eliminata permanentemente.",
 				  type: 'warning',
 				  showCancelButton: true,
 				  confirmButtonColor: '#3085d6',
