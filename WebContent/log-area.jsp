@@ -34,7 +34,7 @@
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="css/font-awesome.min.css"/>
 </head>
-<body>
+<body style="background-color:#001a1a">
 
 	<!-- Page Preloder -->
 	<div id="preloder">
@@ -60,7 +60,7 @@
 							<li>Accesso anticipato ai contenuti in offerta ed agli ultimi arrivi.</li>
 						</ul>
 						<div class="button1">
-							<a href="registrazione.jsp"><input type="submit" name="Submit" value="REGISTRATI"></a>
+							<a href="registrazione.jsp"><input type="submit" name="Submit" value="Registrati"></a>
 					    </div>
 					   	<div class="clear"></div>
 					</div>
@@ -93,7 +93,7 @@
 										<p id="login-form-remember">
 											<label for="modlgn_remember"><a href="#">Hai dimenticato la password? </a></label>
 										</p>
-										<input type="submit" name="Submit" class="button" value="LOGIN">
+										<input type="submit" name="Submit" class="button" value="Login">
 										<div class="clear"></div>
 									</div>
 								</fieldset>

@@ -130,7 +130,7 @@
 					<a href="Product?action=headphones_comp&comp_name=Cuffie" class="list-group-item list-group-item-action">Cuffie</a>
 					<a href="Product?action=Sedia_comp&comp_name=Sedie Gaming" class="list-group-item list-group-item-action">Sedie Gaming</a>
 					<a href="Product?action=Pc_comp&comp_name=Configurazioni" class="list-group-item list-group-item-action">Configurazioni</a>
-					<a href="Product?action=lastarrived" class="list-group-item list-group-item-action">Ultimi Arrivi</a>
+					<a href="Product?action=lastarrived" class="list-group-item list-group-item-action">Ultime novità</a>
 				</div>
 			</div>
 		</div>

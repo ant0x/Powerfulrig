@@ -57,7 +57,7 @@
 
 </head>
 
-<body>
+<body style="background-color:#001a1a">
 
 	<!-- Page Preloder -->
 	<div id="preloder">

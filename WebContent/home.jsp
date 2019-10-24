@@ -63,9 +63,9 @@
 			<div class="carousel-item active">
 				<img src="img/gamingwp.jpg" alt="Second slide">
 				<div class="carousel-caption d-none d-md-block">
-					<h2>PowerfulRig</h2>
+					<h2>Benvenuto in PowerfulRig</h2>
 					<p>Tanti prodotti per<br>configurare PC di ogni tipo<br><br><br><br></p>
-					<a href="catalogo.jsp" class="site-btn">Vai al catalogo</a>
+					<a href="catalogo.jsp" class="site-btn">Scopri...</a>
 				</div>
 			</div>
 			<div class="carousel-item">
@@ -191,6 +191,8 @@
 					<hr>
 				</div>
 			</div>
+		</div>
+	</section>
 		
 		
 		

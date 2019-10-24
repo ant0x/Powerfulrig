@@ -7,10 +7,10 @@
 					<p id="style2">L'E-Commerce è sottoposto ad alcuni vincoli giuridici<br>che devono essere osservati diligentemente.</p>
 				</div>
 				<div class="col-xl-1 prefooter-button" id="pfb1">
-					<a href="condizioni-generali.jsp"><input type="button" class="site-btn2" id="btnResp" value="INFORMATI"></a>
+					<a href="condizioni-generali.jsp"><input type="button" class="site-btn2" id="btnResp" value="Informati"></a>
 				</div>
 				<div class="col-xl-1 prefooter-button">
-					<a href="garanzia.jsp"><input type="button" class="site-btn2" id="btnResp" value="SCOPRI DI PIÙ"></a>
+					<a href="garanzia.jsp"><input type="button" class="site-btn2" id="btnResp" value="Scopri di più"></a>
 				</div>
 				<div class="col-xl-4 prefooter-text" id="pft2">
 					<h4>GARANZIE E SOLUZIONI 360</h4>
