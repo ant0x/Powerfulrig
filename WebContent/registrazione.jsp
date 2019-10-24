@@ -69,7 +69,7 @@
 	<!-- Header section end -->
 
 	<!-- MAIN SECTION Registrazione-->
-
+<form>
 	<div class="main">
 		<div class="shop_top" id="regimargin">
 			<div class="container">
@@ -79,15 +79,15 @@
 					<div>
 						<span>Indirizzo e-mail<label>*</label></span> <input
 							name="user_email" type="email" id="email_user"
-							placeholder="example@example.it" autocomplete="on">
+							placeholder="example@example.it" autocomplete=on autofocus autocomplete="on">
 					</div>
 					<div>
 						<span>Nome<label>*</label></span> <input name="user_firstname"
-							id="user_firstname" type="text" maxlength="50" autocomplete="on" required>
+							id="user_firstname" type="text" maxlength="50" autocomplete="on">
 					</div>
 					<div>
 						<span>Cognome<label>*</label></span> <input name="user_lastname"
-							id="user_lastname" type="text" maxlength="50" autocomplete="on" required>
+							id="user_lastname" type="text" maxlength="50" autocomplete="on">
 					</div>
 					<div class="clear"></div>
 				</div>
@@ -114,7 +114,7 @@
 			</div>
 		</div>
 	</div>
-
+</form>
 	<!-- MAIN SECTION Registrazione END -->
 
 	<!-- Header section start -->
