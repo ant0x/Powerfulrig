@@ -89,7 +89,7 @@
 					if(comp_name != null) {
 						array = model_product.viewProduct("Tipo",action);					
 					}
-					else 
+					if(brand != null) 
 					{
 							array = model_product.viewProduct("Marca",brand);
 					}
