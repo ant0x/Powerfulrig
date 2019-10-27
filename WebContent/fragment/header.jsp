@@ -27,7 +27,7 @@
 %>
 
 <body>
-	<header class="sezioneHeader">
+	<header class="sezioneHeader1">
 		<div class="container-fluid header-background">
 			<div class="row">
 				<div class="header-left col-xl-3">

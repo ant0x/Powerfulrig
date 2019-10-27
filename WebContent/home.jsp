@@ -48,7 +48,9 @@
 
 <!-- Header section start -->
      	  <%@ include file="fragment/header.jsp" %>
+     	  <%@ include file="fragment/NewFile.jsp" %>
 	<!-- Header section end -->
+
 
 	<!-- Main section -->
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="9000">
@@ -118,7 +120,7 @@
 			<span class="sr-only">Next</span>
 		</a>
 	</div>
-	<!-- Main section END -->
+	<!-- Main section END --> 
 	
 	<section class="catalogo-section">
 		<div class="container">
@@ -183,7 +185,8 @@
 					</form>
 				</div>
 			</div>
-			<div class="row">
+		</div>
+		<div class="row">
 				<div class="headerCatalogo col-xl-5">
 					<p>Prodotti in vetrina</p>
 				</div>
@@ -191,8 +194,8 @@
 					<hr>
 				</div>
 			</div>
-		</div>
 	</section>
+
 		
 		
 		
