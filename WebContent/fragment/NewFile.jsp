@@ -104,7 +104,7 @@
 							<button class="btn btn-outline-info my-2 my-sm-0 rounded-pill" type="submit">Cerca</button>
 							</form>
 				  </div>
-			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+			<ul class="navbar-nav navbar-right mt-2 mt-lg-0">
 			<li class="nav-item">
 			
 			<% 
