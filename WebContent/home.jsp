@@ -8,6 +8,7 @@
     import="java.util.*"
 %>
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
@@ -48,7 +49,7 @@
 
 <!-- Header section start -->
 
-     	  <%@ include file="fragment/NewFile.jsp" %>
+     	  <%@ include file="fragment/header.jsp" %>
 	<!-- Header section end -->
 
 
@@ -124,60 +125,10 @@
 	
 	<section class="catalogo-section">
 		<div class="container">
-			<div class="row searchBarFiltered">
-				<div class="row">
-					<p>Ricerca per categoria</p>
-						<div class="searchBarElement col-xl-3 ">
-							<div class="dropdown show">
-							<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false"> Seleziona Brand</a>
-								<div class="dropdown-menu" style="margin-left:15px" aria-labelledby="dropdownMenuLink">
-									<a class="dropdown-item" href="Product?action=brands&brand=MSI">MSI</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=Corsair">Corsair</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=NZXT">NZXT</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=WOLTU">WOLTU</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=Sparco">Sparco</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=Intel">Intel</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=Nvidia">Nvidia</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=Diablo">Diablo</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=Gigabyte">Gigabyte</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=HyperX">HyperX</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=Logitech">Logitech</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=DeepCool">DeepCool</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=AOC">AOC</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=Asus">Asus</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=ITEK">ITEK</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=TOSHIBA">TOSHIBA</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=KINGSTON">KINGSTON</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=Samsung">Samsung</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=CoolerMaster">CoolerMaster</a>
-									<a class="dropdown-item" href="Product?action=brands&brand=Razer">Razer</a>
-									
-								</div>
-							</div>
-						</div>
-						<div class="searchBarElement col-xl-3">
-							<div class="dropdown show">
-							<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false"> Seleziona Categoria</a>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<a class="dropdown-item" href="Product?action=Cpu_comp&comp_name=Processori">Processori</a>
-									<a class="dropdown-item" href="Product?action=Gpu_comp&comp_name=Schede Grafiche">Schede Grafiche</a>
-									<a class="dropdown-item" href="Product?action=ram_comp&comp_name=RAM">RAM</a>
-									<a class="dropdown-item" href="Product?action=storage_comp&comp_name=Archiviazione">Archiviazione</a>
-									<a class="dropdown-item" href="Product?action=Psu_comp&comp_name=Alimentatori">Alimentatori</a>
-									<a class="dropdown-item" href="Product?action=motherboard_comp&comp_name=Schede Madre">Schede Madre</a>							
-									<a class="dropdown-item" href="Product?action=heatsink_comp&comp_name=Dissipatori">Dissipatori</a>
-									<a class="dropdown-item" href="Product?action=Case_comp&comp_name=Case">Case</a>
-									<a class="dropdown-item" href="Product?action=Monitor_comp&comp_name=Monitor">Monitor</a>
-									<a class="dropdown-item" href="Product?action=keyboard_comp&comp_name=Tastiere">Tastiere</a>
-									<a class="dropdown-item" href="Product?action=mouse_comp&comp_name=Mouse">Mouse</a>
-									<a class="dropdown-item" href="Product?action=headphones_comp&comp_name=Cuffie">Cuffie</a>
-									<a class="dropdown-item" href="Product?action=Sedia_comp&comp_name=Sedie Gaming">Sedie Gaming</a>
-								</div>
-							</div>	
-						</div>
+		
 				</div>
-			</div>
-		</div>
+			
+		
 		<div class="row">
 				<div class="headerCatalogo col-xl-5">
 					<p>Prodotti in vetrina</p>

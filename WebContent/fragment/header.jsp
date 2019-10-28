@@ -27,52 +27,91 @@
 %>
 
 <body>
-	<header class="sezioneHeader1">
-		<div class="container-fluid header-background">
-			<div class="row">
-				<div class="header-left col-xl-3">
-					<div class="row">
-						<a href="home.jsp" class="site-logo">
-							<img src="./img/logotech.png" alt="">
-						</a>
-					</div>
-				</div>
-				<div class="header-center col-xl-7">
-					<nav class="top-nav-area">
-						<div class="bg"></div>
-						<ul class="row main-menu">
-							<li><a href="catalogo.jsp"><b>Prodotti</b></a>
-								<ul class="sub-menu">
-									<li><a href="Product?action=Cpu_comp&comp_name=Processori">Processori</a></li>
-									<li><a href="Product?action=Gpu_comp&comp_name=Schede Grafiche">Schede Grafiche</a></li>
-									<li><a href="Product?action=ram_comp&comp_name=RAM">RAM</a></li>
-									<li><a href="Product?action=storage_comp&comp_name=Archiviazione">Archiviazione</a></li>
-									<li><a href="Product?action=Psu_comp&comp_name=Alimentatori">Alimentatori</a></li>
-									<li><a href="Product?action=motherboard_comp&comp_name=Schede Madre">Scheda Madre</a></li>								
-									<li><a href="Product?action=heatsink_comp&comp_name=Dissipatori">Dissipatore</a></li>
-									<li><a href="Product?action=Case_comp&comp_name=Case">Case</a></li>
-									<li><a href="Product?action=Monitor_comp&comp_name=Monitor">Monitor</a></li>
-									<li><a href="Product?action=keyboard_comp&comp_name=Tastiere">Tastiere</a></li>
-									<li><a href="Product?action=mouse_comp&comp_name=Mouse">Mouse</a></li>
-									<li><a href="Product?action=headphones_comp&comp_name=Cuffie">Cuffie</a></li>
-									<li><a href="Product?action=Sedia_comp&comp_name=Sedie Gaming">Sedie Gaming</a></li>
-									<li><a href="Product?action=Pc_comp&comp_name=Configurazioni">Configurazioni</a></li>
-								</ul>
-							</li>
-							<li><a href="Product?action=lastarrived"><b>Ultime novità</b></a></li>
-							<li><a href="chisiamo.jsp"><b>Info</b></a></li>
-							<li><a href="contatti.jsp"><b>Contattaci</b></a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="header-right col-xl-2">
-					<div class="row user-option" id="uo1">
-						<div class="col-xl-3">
-							<i class="glyphicon glyphicon-user men"> </i>
-						</div>
-									
+	<header class="sezioneHeader">
+	<nav class="navbar navbar-expand-lg navbar-dark">
+	  <a href="home.jsp" class="navbar-brand site-logo">
+			<img src="./img/logotech.png" alt="">
+			</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuToggler" aria-controls="menuToggler" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	
+	  <div class="collapse navbar-collapse" style="background-color:#001a1a;" id="menuToggler">
+	    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+	    <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="catalogo.jsp" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	         <b>Prodotti</b>
+	        </a>
+	        <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdownMenuLink">
+	            <a class="dropdown-item" href="Product?action=Cpu_comp&comp_name=Processori">Processori</a>
+				<a class="dropdown-item" href="Product?action=Gpu_comp&comp_name=Schede Grafiche">Schede Grafiche</a>
+				<a class="dropdown-item" href="Product?action=ram_comp&comp_name=RAM">RAM</a>
+				<a class="dropdown-item" href="Product?action=storage_comp&comp_name=Archiviazione">Archiviazione</a>
+				<a class="dropdown-item" href="Product?action=Psu_comp&comp_name=Alimentatori">Alimentatori</a>
+				<a class="dropdown-item" href="Product?action=motherboard_comp&comp_name=Schede Madre">Scheda Madre</a>							
+				<a class="dropdown-item" href="Product?action=heatsink_comp&comp_name=Dissipatori">Dissipatore</a>
+				<a class="dropdown-item" href="Product?action=Case_comp&comp_name=Case">Case</a>
+				<a class="dropdown-item" href="Product?action=Monitor_comp&comp_name=Monitor">Monitor</a>
+				<a class="dropdown-item" href="Product?action=keyboard_comp&comp_name=Tastiere">Tastiere</a>
+				<a class="dropdown-item" href="Product?action=mouse_comp&comp_name=Mouse">Mouse</a>
+				<a class="dropdown-item" href="Product?action=headphones_comp&comp_name=Cuffie">Cuffie</a>
+				<a class="dropdown-item" href="Product?action=Sedia_comp&comp_name=Sedie Gaming">Sedie Gaming</a>
+				<a class="dropdown-item" href="Product?action=Pc_comp&comp_name=Configurazioni">Configurazioni</a>
+	        </div>
+	      </li>
+	       <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="catalogo.jsp" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	         <b>Brand</b>
+	        </a>
+	        <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdownMenuLink">
+	            <a class="dropdown-item" href="Product?action=brands&brand=MSI">MSI</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=Corsair">Corsair</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=NZXT">NZXT</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=WOLTU">WOLTU</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=Sparco">Sparco</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=Intel">Intel</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=Nvidia">Nvidia</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=Diablo">Diablo</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=Gigabyte">Gigabyte</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=HyperX">HyperX</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=Logitech">Logitech</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=DeepCool">DeepCool</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=AOC">AOC</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=Asus">Asus</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=ITEK">ITEK</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=TOSHIBA">TOSHIBA</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=KINGSTON">KINGSTON</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=Samsung">Samsung</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=CoolerMaster">CoolerMaster</a>
+				<a class="dropdown-item" href="Product?action=brands&brand=Razer">Razer</a>
+	        </div>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="Product?action=lastarrived"><b>Ultime novità</b></a>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	         <b>Info</b>
+	        </a>
+	        <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdownMenuLink">
+	            <a class="dropdown-item" href="chisiamo.jsp">Chi siamo</a>
+				<a class="dropdown-item" href="contatti.jsp">Contattaci</a>
+	        </div>
+	     </ul>
+			<div class="searchBarElement  mx-auto">	
+			  <form action="Cerca" method="POST">
+							<input class="input-large2" id="inputSearch" name="cerca" type="text" placeholder="Cerca nel sito..." onclick="closeOutside()">
+							<button class="btn btn-outline-info my-2 my-sm-0 rounded-pill" type="submit">Cerca</button>
+							</form>
+				  </div>
+			<ul class="nav navbar-nav navbar-right">
 				
-								<% 
+				
+				<!-- UTENTE -->
+				
+				<li class="nav-item">
+			
+											<% 
 											Utente utenteLoggato;
 											synchronized(session) 
 											{
@@ -81,100 +120,86 @@
 											if(utenteLoggato!=null) 
 											{
 												if((utenteLoggato.getTipo()).equals("user")){ %>
-													<div class="col-xl-6">
-														<a href="area-utente.jsp"><%=utenteLoggato.getNome()%>  </a>
-													</div>
-													<div class="col-xl-2">
-														<a href="#"><i class="glyphicon glyphicon-log-out log-out" onclick="logout()"> </i></a>
-													</div>
+														<a class="nav-link" href="area-utente.jsp"><span class="glyphicon glyphicon-user men"></span><%=utenteLoggato.getNome()%> </a>
+														<li class="nav-item"><a class="nav-link" href="#"><span class="d-inline-block glyphicon glyphicon-log-out log-out" onclick="logout()"> </span></a></li>
 											<%} else{ %>
-													<div class="col-xl-6">
-														<a href="area-admin.jsp" style = "font-size:10px">Admin:<%=utenteLoggato.getEmail()%></a>													
-													</div>
-													<div class="col-xl-2">
-														<a href="#"><i class="glyphicon glyphicon-log-out log-out" onclick="logout()"> </i></a>
-													</div>
+														<a class="nav-link" href="area-admin.jsp" style = "font-size:10px"><span class="glyphicon glyphicon-user men"></span>Admin:<%=utenteLoggato.getEmail()%></a>											
+														<li class="nav-item"><a class="nav-link" href="#"><span class="d-inline-block glyphicon glyphicon-log-out log-out" onclick="logout()"> </span></a></li>
+													
 												<%} %>
 												
 											<%} else {%>
-												<a href="log-area.jsp" style="margin-left:10px;">Utente</a>
-										<%} %>					
-					</div>
-					
-					<% if(utenteLoggato != null)
-						{%>					
- 						<div class="row user-option" id="uo2">
-							<i class="glyphicon glyphicon-cog cog"> </i> 
-							<a href="configurazioni.jsp">Configurazioni</a>
-						</div>
-						
-					<%	}
-						else
-						{%>
-						<div class="row user-option" id="uo2">
-							<i class="glyphicon glyphicon-cog cog"> </i> 
-							<a href="log-area.jsp">Configurazioni</a>
-						</div>
-						<%}%>
-						
-					<div class="row user-option" id="uo3">
-						<i class="glyphicon glyphicon-shopping-cart cart"> </i> 
-						<%	Cart cart;
+												<a class="nav-link" href="log-area.jsp"><span class="glyphicon glyphicon-user men"></span>Utente</a>
+										<%} %>
+				
+				
+				
+				<!-- CARRELLO -->
+				
+				
+				<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="glyphicon glyphicon-shopping-cart cart"></span> Carrello<span class="caret"></span></a>
+          <%	Cart cart;
 							synchronized(session) 
 							{ 
 								cart = (Cart) request.getSession().getAttribute("Carrello");
 							} %>
 						<%	if(cart==null || cart.getProducts().isEmpty()) { %>
-						<a href="#" id="cartdrop">Carrello</a>
-					</div>
-						<div class="apri">
-							<div class="carrello">
-								<div class="row setupRow">
-									<div class="col-xl-12">
-										<h4 class="cartH4noElem">Nessun prodotto presente nel carrello!</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<% 	} else { 
+          <ul class="dropdown-menu dropdown-cart" role="menu">
+              <li><a class="dropdown-item disabled" href="#">Nessun prodotto aggiunto!</a></ul>
+             <% 	} else { 
 							ArrayList<Prodotto> arraycart = cart.getProducts();
-						%>
-						<a href="#" id="cartdrop">Carrello</a>
-					</div>
-						<div class="apri">
-							<div class="carrello">
-							<% for(int I=0;I<arraycart.size();I++) {%>
-								<div class="row setupRow">
-									<div class="col-xl-3">
-										<img src=<%=arraycart.get(I).getImmagine()+"/img1.jpg"%> width="50" height="50" class="imgItem8">
-									</div>
-									<div class="col-xl-6">
-										<a id="productInCart" href="Product?action=prodotto&type_prod=<%=arraycart.get(I).getTipo()%>&model_prod=<%=arraycart.get(I).getModello()%>"><h4 class="cartH4"><%=arraycart.get(I).getNome()%></h4></a>
-									</div>
-									<div class="col-xl-3">
-										<h3 class="cartH3"><%=arraycart.get(I).getPrezzo()%> &euro;</h3>
-										<i id="trashDel" class="glyphicon glyphicon-trash trash2" style="cursor: pointer;"> </i>
-									</div>
-								</div>
-							<% } %>
-							</div>
-							<div class="row setupRow2 justify-content-center">
-								<div class="col-xl-12">
-								<% 	if(utenteLoggato!=null) 
+						%> 
+             <ul class="dropdown-menu dropdown-cart" role="menu">  
+             <% for(int I=0;I<arraycart.size();I++) {%>
+              <li>   
+                  <span class="item">
+                    <span class="item-left">
+                        <img src=<%=arraycart.get(I).getImmagine()+"/img1.jpg"%> width="50" height="50" class="imgItem8" alt="" />
+                        <span class="item-info">
+                            <span><%=arraycart.get(I).getNome()%></span>
+                            <span><%=arraycart.get(I).getPrezzo()%> &euro;</span>
+                        </span>
+                    </span>
+                    <span class="item-right">
+                        <button class="btn btn-danger  fa fa-close"></button>
+                    </span>
+                </span>
+              </li>
+              <% } %>
+
+              <li class="divider"></li>
+              <% 	if(utenteLoggato!=null) 
 									{ %>
-									<a href="checkout.jsp"><input type="button" class="site-btn6 setupbtncart2" value="ACQUISTA ORA"></a>
+									<li><a class="text-center" href="checkout.jsp">Vai al Checkout</a></li>
 								<%	} else { %>
-									<a href="log-area.jsp"><input type="button" class="site-btn6 setupbtncart2" value="ACQUISTA ORA"></a>
+									<li><a class="text-center" href="log-area.jsp">Vai al Checkout</a></li>
 								<% 	} %>
-								</div>
-							</div>
-						</div>
-						<% 	} %>
-			</div>
-		</div>
-	</header>	
-	
-	<script>
+              
+          </ul>
+            <% 	} %>
+        </li>
+      
+	         
+	         
+	         
+	         
+				<!-- CONFIGURAZIONI -->
+				<li class="nav-item">
+						<% if(utenteLoggato != null)
+							{%>					
+								<a class="nav-link" href="configurazioni.jsp"><span class="glyphicon glyphicon-cog cog"> </span> Configurazioni</a>
+									
+							<%}
+								else
+								{%>
+									<a class="nav-link" href="log-area.jsp"><span class="glyphicon glyphicon-cog cog"> </span> Configurazioni</a>
+								<%}%>	
+			</ul>
+		</nav>
+	</header>
+
+<script>
 			
 		function logout(){
 			var value = ("logout");

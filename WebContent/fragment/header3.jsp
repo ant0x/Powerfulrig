@@ -25,7 +25,7 @@
 
 <body>
 	<header class="sezioneHeader2">
-	<nav class="navbar navbar-expand-lg navbar-dark">
+	<nav class="nav2 navbar navbar-expand-lg navbar-dark">
 	  <a href="home.jsp" class="navbar-brand site-logo">
 			<img src="./img/logotech.png" alt="">
 			</a>
