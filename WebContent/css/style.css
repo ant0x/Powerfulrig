@@ -397,9 +397,9 @@ ul {
 ---------------------*/
 
 .navbar{
-		height:100px;
-		background-color: #004d66;
-		border-bottom: 2px solid #001821;
+		height:70px;
+		background-color: #001a1a;
+		border-bottom: 1px solid #b3ffff;
 }
 
 
@@ -435,7 +435,7 @@ ul {
 }
 
 .sezioneHeader2 {
-	position: fixed;
+	position: relative;
 	width: 100%;
 	z-index: 99;
 }
@@ -456,11 +456,10 @@ ul {
 .site-logo {
 	/*float: left;
 	margin-top: -15px;*/
-	max-width:25%;
+	max-width:20%;
 	min-width:180px;
 	height:auto;
 }
-
 
 
 .header-right {
@@ -513,7 +512,7 @@ ul {
 	background: #00c3ff;
 }
 
-.user-option {
+/*.user-option {
 	height: 40px;
 	border: none;
 	background-color: transparent;  
@@ -548,7 +547,7 @@ ul {
 
 .user-option a:hover {
 	color: #42f5ef;
-}
+}*/
 
 .bg {
 	background: rgba(0, 0, 0, 0.628);
@@ -724,6 +723,7 @@ ul {
 .log-out {
 	margin-left: 15px;
 	margin-top: 3.5px;
+	color:#c28c8c;
 }
 
 .apri {
@@ -1391,22 +1391,21 @@ ul {
 	text-align: center;
 	width: 5%;
 	margin-right: 20px;
-	color: rgb(0, 53, 155);
+	color: #b3f9ff;
 }
 
 .cart {
 	text-align: center;
 	width: 5%;
 	margin-right: 20px;
-	color: rgb(0, 53, 155);
+	color: #b3f9ff;
 }
 
 .cog {
 	text-align: center;
 	width: 5%;
-	margin-top: 7px;
 	margin-right: 15px;
-	color: rgb(0, 53, 155);
+	color: #b3f9ff;
 }
 	
 .spacer hr {
@@ -3470,7 +3469,7 @@ input[type="radio"]:checked + .label:after {
 	}
 }
 
-@media (min-width: 1200px) and (max-width: 1919px) {
+@media screen and (max-width: 1919px) {
 	
 	.container {
 		max-width: 1175px;
@@ -3701,10 +3700,25 @@ input[type="radio"]:checked + .label:after {
 		font-size: 11px;
 		width: 190px;
 	}
-	
+	.site-btn{
+			display: inline-block;
+			border: none;
+			font-size: 18px;
+			font-weight: 700;
+			min-width: 50px;
+			padding: 24px 30px;
+			border-radius: 30px;
+			color: #003366;
+			line-height: normal;
+			cursor: pointer;
+			text-align: center;
+			background: #e6ffff;
+			position: relative;
+			z-index: 1;
+	}
 	.carousel-caption h2 {
-		font-size: 100px;
-		margin-top: 10px;
+		font-size: 50px;
+		margin-top: 50px;
 		margin-bottom: 20px;
 	}
 	

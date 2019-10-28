@@ -25,16 +25,10 @@
 
 <body>
 	<header class="sezioneHeader2">
-		<div class="container-fluid au-reg-background">
-			<div class="row">
-				<div class="header-left col-xl-3">
-					<div class="row">
-						<a href="home.jsp" class="site-logo">
-							<img src="./img/logotech.png" alt="">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+	<nav class="navbar navbar-expand-lg navbar-dark">
+	  <a href="home.jsp" class="navbar-brand site-logo">
+			<img src="./img/logotech.png" alt="">
+			</a>
+		</nav>
+		</header>
 </body>

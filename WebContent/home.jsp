@@ -47,7 +47,7 @@
 	</div>
 
 <!-- Header section start -->
-     	  <%@ include file="fragment/header.jsp" %>
+
      	  <%@ include file="fragment/NewFile.jsp" %>
 	<!-- Header section end -->
 
@@ -64,7 +64,7 @@
 		<div class="carousel-inner">
 			<div class="carousel-item active">
 				<img src="img/gamingwp.jpg" alt="Second slide">
-				<div class="carousel-caption d-none d-md-block">
+				<div class="carousel-caption">
 					<h2>Benvenuto in PowerfulRig</h2>
 					<p>Tanti prodotti per<br>configurare PC di ogni tipo<br><br><br><br></p>
 					<a href="catalogo.jsp" class="site-btn">Scopri...</a>
@@ -126,11 +126,7 @@
 		<div class="container">
 			<div class="row searchBarFiltered">
 				<div class="row">
-					<form action="Cerca" method="POST">
-						<div class="searchBarElement col-xl-4">
-							<span id="iconSearchSend" class="leftButton"><i class="fa fa-search" aria-hidden="true"> </i></span>
-							<input class="input-large2" id="inputSearch" name="cerca" type="text" placeholder="Ricerca per nome..." onclick="closeOutside()">
-						</div>
+					<p>Ricerca per categoria</p>
 						<div class="searchBarElement col-xl-3 ">
 							<div class="dropdown show">
 							<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false"> Seleziona Brand</a>
@@ -179,10 +175,6 @@
 								</div>
 							</div>	
 						</div>
-						<div class="searchBarElement col-xl-1">
-							<input type="submit" class="site-btn2" value="CERCA">
-						</div>
-					</form>
 				</div>
 			</div>
 		</div>
@@ -237,8 +229,8 @@
 			$('.input-large2').css("border-bottom", "1px solid blue");
 		}
 		});
-	
-	</script>
+
+</script>
 	
 	<script src="js/jquery.slicknav.min.js"></script>
 	<script src="js/main.js"></script>

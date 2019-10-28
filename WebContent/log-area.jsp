@@ -34,16 +34,15 @@
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="css/font-awesome.min.css"/>
 </head>
+<!-- Header section start -->
+     	  <%@ include file="fragment/header3.jsp" %>
+	<!-- Header section end -->	
 <body style="background-color:#001a1a">
 
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
 	</div>
-
-	<!-- Header section start -->
-     	  <%@ include file="fragment/header3.jsp" %>
-	<!-- Header section end -->	
 	
 	<!-- MAIN PAGE login -->
 
