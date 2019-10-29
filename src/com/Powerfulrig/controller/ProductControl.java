@@ -96,7 +96,7 @@ public class ProductControl extends HttpServlet
 					String model_prod = request.getParameter("model_prod");
 
 					ArrayList<Prodotto> bean = new ArrayList<Prodotto>();
-					bean=model_product.viewProduct(type_prod, model_prod);
+					bean=model_product.viewProduct("Tipo",type_prod,"Modello",model_prod);
 					Prodotto beanApp= bean.get(0);
 					
 					beanApp.setPrezzo((beanApp.getPrezzo()*beanApp.getPercentualeSconto())/100);

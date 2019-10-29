@@ -6,9 +6,9 @@
 
 <%
 
-	//UserConfigurationBean bean = (UserConfigurationBean) request.getAttribute("conf");
+	UserConfigurationBean bean = (UserConfigurationBean) request.getAttribute("conf");
 
-	//DAOProdotto model_prod = new DAOProdotto();
+	DAOProdotto model_prod = new DAOProdotto();
 
 %>
 
@@ -62,7 +62,7 @@
 	<section class="confSing-section">
 		<div class="container">
 			<div class="row justify-content-center">
-					<h1>CONFIGURAZIONE - <%=bean.getName_user_configuration() %></h1>
+					<h1>CONFIGURAZIONE - <%=bean.getname_configuration() %></h1>
 			</div>
 		</div>
 		<div class="container border-confSingPage">
@@ -84,7 +84,8 @@
 				</div>
 				<%
 				} else {
-					Prodotto prod_bean = model_prod.retrieveComponentById(bean.getCpu_in_configuration());
+					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getCpu_in_configuration()).get(0);
+					
 				%>	
 				<div class="col-xl-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
@@ -98,7 +99,7 @@
 							<p id="pConf"><%=prod_bean.getMarca()%></p>
 							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">
 							<input type="hidden" id="id_comp" value="<%=bean.getCpu_in_configuration()%>">
-							<input type="hidden" id="id_conf" value="<%=bean.getId_user_configuration()%>">
+							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
 					</div>
 					<div class="row" id="spacerConf2">
@@ -133,7 +134,7 @@
 				</div>
 				<%
 				} else {
-					Prodotto prod_bean = model_prod.retrieveComponentById(bean.getGpu_in_configuration());
+					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getGpu_in_configuration()).get(0);
 				%>	
 				<div class="col-xl-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
@@ -146,7 +147,7 @@
 							<p id="pConf"><%=prod_bean.getMarca()%></p>
 							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">
 							<input type="hidden" id="id_comp" value="<%=bean.getGpu_in_configuration()%>">
-							<input type="hidden" id="id_conf" value="<%=bean.getId_user_configuration()%>">
+							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
 					</div>
 					<div class="row" id="spacerConf2">
@@ -181,7 +182,7 @@
 				</div>
 				<%
 				} else {
-					Prodotto prod_bean = model_prod.retrieveComponentById(bean.getMotherboard_in_configuration());
+					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getMotherboard_in_configuration()).get(0);
 				%>	
 				<div class="col-xl-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
@@ -194,7 +195,7 @@
 							<p id="pConf"><%=prod_bean.getMarca()%></p>.
 							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">							
 							<input type="hidden" id="id_comp" value="<%=bean.getMotherboard_in_configuration()%>">
-							<input type="hidden" id="id_conf" value="<%=bean.getId_user_configuration()%>">
+							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
 					</div>
 					<div class="row" id="spacerConf2">
@@ -232,7 +233,7 @@
 				</div>
 				<%
 				} else {
-					Prodotto prod_bean = model_prod.retrieveComponentById(bean.getRam_in_configuration());
+					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getRam_in_configuration()).get(0);
 				%>	
 				<div class="col-xl-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
@@ -245,7 +246,7 @@
 							<p id="pConf"><%=prod_bean.getMarca()%></p>
 							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">							
 							<input type="hidden" id="id_comp" value="<%=bean.getRam_in_configuration()%>">
-							<input type="hidden" id="id_conf" value="<%=bean.getId_user_configuration()%>">
+							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
 					</div>
 					<div class="row" id="spacerConf2">
@@ -280,7 +281,7 @@
 				</div>
 				<%
 				} else {
-					Prodotto prod_bean = model_prod.retrieveComponentById(bean.getPowersupply_in_configuration());
+					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getPowersupply_in_configuration()).get(0);
 				%>	
 				<div class="col-xl-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
@@ -293,7 +294,7 @@
 							<p id="pConf"><%=prod_bean.getMarca()%></p>
 							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">							
 							<input type="hidden" id="id_comp" value="<%=bean.getPowersupply_in_configuration()%>">
-							<input type="hidden" id="id_conf" value="<%=bean.getId_user_configuration()%>">
+							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
 					</div>
 					<div class="row" id="spacerConf2">
@@ -328,7 +329,7 @@
 				</div>
 				<%
 				} else {
-					Prodotto prod_bean = model_prod.retrieveComponentById(bean.getStorage_in_configuration());
+					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getStorage_in_configuration()).get(0);
 				%>	
 				<div class="col-xl-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
@@ -341,7 +342,7 @@
 							<p id="pConf"><%=prod_bean.getMarca()%></p>	
 							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">						
 							<input type="hidden" id="id_comp" value="<%=bean.getStorage_in_configuration()%>">
-							<input type="hidden" id="id_conf" value="<%=bean.getId_user_configuration()%>">
+							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
 					</div>
 					<div class="row" id="spacerConf2">
@@ -379,7 +380,7 @@
 				</div>
 				<%
 				} else {
-					Prodotto prod_bean = model_prod.retrieveComponentById(bean.getCase_in_configuration());
+					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getCase_in_configuration()).get(0);
 				%>	
 				<div class="col-xl-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
@@ -392,7 +393,7 @@
 							<p id="pConf"><%=prod_bean.getMarca()%></p>
 							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">							
 							<input type="hidden" id="id_comp" value="<%=bean.getCase_in_configuration()%>">
-							<input type="hidden" id="id_conf" value="<%=bean.getId_user_configuration()%>">
+							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
 					</div>
 					<div class="row" id="spacerConf2">
@@ -427,7 +428,7 @@
 				</div>
 				<%
 				} else {
-					Prodotto prod_bean = model_prod.retrieveComponentById(bean.getHeatsink_in_configuration());
+					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getHeatsink_in_configuration()).get(0);
 				%>	
 				<div class="col-xl-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
@@ -440,7 +441,7 @@
 							<p id="pConf"><%=prod_bean.getMarca()%></p>
 							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">							
 							<input type="hidden" id="id_comp" value="<%=bean.getHeatsink_in_configuration()%>">
-							<input type="hidden" id="id_conf" value="<%=bean.getId_user_configuration()%>">
+							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
 					</div>
 					<div class="row" id="spacerConf2">
@@ -465,7 +466,7 @@
 				<p id="pTOTConf"><%=bean.getConfiguration_price()%> &euro;</p>
 			</div>
 			<div class="row spacer-ordbutton justify-content-center">
-				<input type="hidden" id="id_conf" value="<%=bean.getId_user_configuration()%>">
+				<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 				<input type="button" class="site-btn3" id="buyConfigurationButton" value="ACQUISTA ORA">
 			</div>
 		</div>

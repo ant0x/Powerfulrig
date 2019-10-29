@@ -202,35 +202,14 @@
 						<table class="table">
 							<thead>
 								<tr>
-									<th scope="col"></th>
+									<th scope="col">
+									<input type="hidden" id="id_comp" value="comp_cpu">
+									</th>
 									<th scope="col"></th>
 								</tr>
 							</thead>
 							<tbody>
-							<!-- 
-							 for (Map.Entry<String,String> entry : component.entrySet())
-								{
-									 if(entry.getKey().contains("id") || entry.getKey().contains("model") || entry.getKey().contains("label"))
-									 {
-										 if(entry.getKey().contains("id"))
-										 {
 							
-											 	<input type="hidden" id="id_comp" value="entry.getValue()">
-							
-										 }
-										 continue;
-									 }										
-									 else
-									 {
-							
-										<tr>
-											<th scope="row">entry.getKey()</th>
-											<td>entry.getValue()</td>
-										</tr>
-							
-									}									
-								}
-							-->
 							</tbody>
 						</table>
 					</div>
@@ -309,6 +288,9 @@
 			var value3 = $(this).find("input#id_conf").val();
 			var value4 = $('#id_comp').val();
 			var value5 = $('#model_prod').html();
+			//TODO id_comp null
+			alert("l'id comp è "+value4)
+			alert("l'id comp è "+$('#id_comp').val());
 			$.ajax({
 				type: "POST",
 			    url: "UserConfiguration",

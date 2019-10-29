@@ -239,7 +239,8 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 		}
 		
 		//ottenimento del prezzo della componente da aggiungere
-			query_price_prod = "SELECT price_prod FROM prodotti WHERE model_prod IN (SELECT model_"+comp+" FROM "+comp+"_component WHERE id_"+comp+" = '"+id_comp+"' AND model_"+comp+" = '"+model_comp+"')";
+		//TODO
+			query_price_prod = "SELECT price_prod FROM prodotto WHERE model_prod IN (SELECT model_"+comp+" FROM "+comp+"_component WHERE id_"+comp+" = '"+id_comp+"' AND model_"+comp+" = '"+model_comp+"')";
 			query_price_conf = "SELECT configuration_price FROM users_configurations WHERE  id_configuration = '"+id_conf+"' ";
 	
 			try {
@@ -282,7 +283,7 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 
 	public boolean checkConf(String id_comp, String id_conf) throws SQLException
 	{
-	
+		System.out.println("la comp è "+id_comp);
 		String comp = id_comp.substring(id_comp.lastIndexOf("_")+1);
 		boolean esito = false;
 		
@@ -336,7 +337,8 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 		}
 		
 		//ottenimento del prezzo della componente da aggiungere
-		query_price_prod = "SELECT price_prod FROM prodotti WHERE model_prod IN (SELECT model_"+comp+" FROM "+comp+"_component WHERE id_"+comp+" = '"+id_comp+"' AND model_"+comp+" = '"+model_comp+"')";
+		//TODO
+		query_price_prod = "SELECT price_prod FROM prodotto WHERE model_prod IN (SELECT model_"+comp+" FROM "+comp+"_component WHERE id_"+comp+" = '"+id_comp+"' AND model_"+comp+" = '"+model_comp+"')";
 		query_price_conf = "SELECT configuration_price FROM users_configurations WHERE  id_configuration = '"+id_conf+"' ";
 		try {
 			
