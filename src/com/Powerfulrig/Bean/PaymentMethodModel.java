@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public interface PaymentMethodModel {
 
-	public ArrayList<PaymentMethodBean> doRetrieveByUsername(String username) throws SQLException;
+	public ArrayList<PaymentMethodBean> doRetrieveByEmail(String Email) throws SQLException;
 	
 	public PaymentMethodBean doRetrieveByCardNumber(String card_number) throws SQLException;
 	

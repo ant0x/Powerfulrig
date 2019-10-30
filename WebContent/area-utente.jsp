@@ -2,6 +2,7 @@
 	contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"
     import="com.Powerfulrig.Bean.*"
+    import="com.Powerfulrig.Model.*"
     import="java.util.*"
     import="java.time.format.DateTimeFormatter"
     import="java.time.*"
@@ -9,6 +10,8 @@
 
 <%
 	//Utente utente = (Utente) request.getSession().getAttribute("utenteLoggato");
+	PaymentMethodDAO model_payment = new PaymentMethodDAO();
+	DAOUser model_utente = new DAOUser();
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -55,9 +58,9 @@
 	<!-- Header section start -->
      	  <%@ include file="fragment/header.jsp" %>
      	  <!-- ottenimento dei metodi di pagamanto dell'utenteLoggato(questo è incluso nel fragment/header) -->>
-     	  <% ArrayList<PaymentMethodBean> payment_methods = model_payment.doRetrieveByUsername(utenteLoggato.getUsername());
+     	  <% ArrayList<PaymentMethodBean> payment_methods = model_payment.doRetrieveByEmail(utenteLoggato.getEmail());
      	  
-     	  	ArrayList<String> addresses = model_utente.retrieveUserAddress(utenteLoggato.getUsername());%>
+     	  	ArrayList<String> addresses = model_utente.showAddres(utenteLoggato.getEmail());%>
 	<!-- Header section end -->
 	
 	<section class="utente-section">
@@ -102,12 +105,6 @@
 				<div class="row spacerUP2 justify-content-start">
 					<div class="col-xl-3">
 						<div class="row">
-							<h4 class="upH4">Username: </h4>
-							<p class="upPCircle"><%=utenteLoggato.getUsername()%></p>
-						</div>
-					</div>
-					<div class="col-xl-3">
-						<div class="row">
 							<h4 class="upH4">Password: </h4>
 							<p class="upPCircle">&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;</p>
 						</div>
@@ -146,10 +143,6 @@
 					</div>
 					<div class="row spacerUP2 justify-content-start">
 						<div class="col-xl-3">
-							<div class="row">
-								<h4 class="upH4">Username: </h4>
-								<input type="text" name="username" class="form-input" readonly value="<%=utenteLoggato.getUsername()%>">
-							</div>
 						</div>
 						<div class="col-xl-3">
 							<div class="row">
@@ -226,17 +219,17 @@
 								%>	
 									<div class="row justify-content-start">
 										<input type="hidden" id="addressNumber" value="<%=i%>">
-										<input type="hidden" id="username" value="<%=utenteLoggato.getUsername()%>">
+										<input type="hidden" id="username" value="<%=utenteLoggato.getEmail()%>">
 											<div class="col-xl-6">
 												<div class="row">
 													<h4 class="upH4">Indirizzo: </h4>
-													<p class="upPCircle"><%=addresses.get(i).substring(0,addresses.get(i).indexOf("<"))%></p>
+													<p class="upPCircle"><%=addresses.get(i).substring(0,addresses.get(i).indexOf(""))%></p>
 												</div>
 											</div>
 											<div class="col-xl-5">
 												<div class="row">
 													<h4 class="upH4">Città: </h4>
-													<p class="upPCircle"><%=addresses.get(i).substring(addresses.get(i).indexOf(">")+1)%></p>
+													<p class="upPCircle"><%=addresses.get(i).substring(addresses.get(i).indexOf("")+1)%></p>
 												</div>
 											</div>
 											<div class="col-xl-1">
@@ -388,14 +381,14 @@
 		<!--  codice generato -->
 		<%			
 			DAOOrdine model_ordine = new DAOOrdine();
-			ArrayList<Ordine> ordini = model_ordine.doRetrieveByUsername(utenteLoggato.getUsername());			
+			ArrayList<Ordine> ordini = model_ordine.viewOrdineById(utenteLoggato.getEmail());			
 		%>
 			<div class="container spacerUP2 borderutdiv">
 		<%				
 			for(int I=0; I<ordini.size(); I++)
 			{
 				DateTimeFormatter pattern = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-				String data = ordini.get(I).getData().format(pattern);
+				String data = ordini.get(I).getData();
 			%>
 				<div class="container" style="margin-bottom: 15px">
 					<div class="row justify-content-start test">
@@ -428,7 +421,7 @@
 					<div class="row justify-content-start test3">
 						<div class="col-xl-12">
 						<%
-							if(ordini.get(I).isConsegnato()) {
+							if(ordini.get(I).getStato().equalsIgnoreCase("consegnato")) {
 						%>
 							<div class="row">
 								<h4 class="upH43">Consegnato: <%LocalDate.parse(ordini.get(I).getData().toString()).plusDays(3).toString();%></h4>
@@ -447,7 +440,7 @@
 							</div>
 						<%
 							}
-								ArrayList<Prodotto> prod_ordini = ordini.get(I).getProducts();	
+								ArrayList<Prodotto> prod_ordini = ordini.get(I).getLista();	
 								for(int J=0; J<prod_ordini.size(); J++)
 								{
 						%>
@@ -470,7 +463,7 @@
 										<h4 class="uph44" style="margin-bottom: 0px;">Metodo di pagamento:</h4>
 										<h4 class="upH45"><%=ordini.get(I).getMetodoPagamento()%></h4>
 										<h4 class="uph44" style="margin-bottom: 0px;">Spedito a:</h4>
-										<h4 class="upH45"><%=utenteLoggato.getNome()%> <%=utenteLoggato.getCognome() %>, <br> <%=ordini.get(I).getOrder_address() %></h4>
+										<h4 class="upH45"><%=utenteLoggato.getNome()%> <%=utenteLoggato.getCognome() %>, <br> <%=ordini.get(I).getUser().getVia()%> <br> <%=ordini.get(I).getUser().getCap()%> <br> <%=ordini.get(I).getUser().getNumeroCivico()%></h4>
 									</div>
 									<%
 										if(J==0) //se è il primo prodotto stampato dell'ordine, alalora stampa il div di informazioni laterale

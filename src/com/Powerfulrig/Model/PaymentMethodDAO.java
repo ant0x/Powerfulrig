@@ -17,13 +17,12 @@ public class PaymentMethodDAO implements PaymentMethodModel{
 	
 	String query = null;
 	Connection con=null;
-	Connection connection;
 	PreparedStatement preparedStatement;		// parametric queries
 	Statement statement;						//normal queries
 	ResultSet results;
 
 	@Override
-	public ArrayList<PaymentMethodBean> doRetrieveByUsername(String username) throws SQLException {
+	public ArrayList<PaymentMethodBean> doRetrieveByEmail(String Email) throws SQLException {
 		
 		ArrayList<PaymentMethodBean> payment_methods = new ArrayList<PaymentMethodBean>();
 		
@@ -39,9 +38,9 @@ public class PaymentMethodDAO implements PaymentMethodModel{
 		
 		try {
 			
-			preparedStatement=connection.prepareStatement(query);
+			preparedStatement=con.prepareStatement(query);
 			
-			preparedStatement.setString(1, username);
+			preparedStatement.setString(1, Email);
 					
 			results=preparedStatement.executeQuery();
 			
@@ -63,8 +62,8 @@ public class PaymentMethodDAO implements PaymentMethodModel{
 					if (statement != null)
 						statement.close();
 				} finally {
-					if (connection != null)
-						connection.close();
+					if (con != null)
+						con.close();
 				}
 			}
 		return payment_methods;
@@ -87,7 +86,7 @@ public class PaymentMethodDAO implements PaymentMethodModel{
 		
 		try {
 			
-			preparedStatement = connection.prepareStatement(query);
+			preparedStatement = con.prepareStatement(query);
 			
 			preparedStatement.setString(1, card_number);
 			
@@ -105,8 +104,8 @@ public class PaymentMethodDAO implements PaymentMethodModel{
 					if (statement != null)
 						statement.close();
 				} finally {
-					if (connection != null)
-						connection.close();
+					if (con != null)
+						con.close();
 				}
 			}
 		
@@ -130,7 +129,7 @@ public class PaymentMethodDAO implements PaymentMethodModel{
 		System.out.println("payemnwrgDAO---->"+query);
 		try {
 			
-			statement=connection.createStatement();		
+			statement=con.createStatement();		
 			rs=statement.executeUpdate(query);
 			
 		} finally {
@@ -138,8 +137,8 @@ public class PaymentMethodDAO implements PaymentMethodModel{
 					if (statement != null)
 						statement.close();
 				} finally {
-					if (connection != null)
-						connection.close();
+					if (con != null)
+						con.close();
 				}
 		}
 		
@@ -158,7 +157,7 @@ public class PaymentMethodDAO implements PaymentMethodModel{
 		
 		query = "SELECT * FROM users_payement_method WHERE card_number = '"+card_number+"'";
 		
-		statement = connection.createStatement();
+		statement = con.createStatement();
 		results = statement.executeQuery(query);
 		
 		if(results.first())
@@ -168,7 +167,7 @@ public class PaymentMethodDAO implements PaymentMethodModel{
 		query="INSERT INTO users_payement_method(card_number,card_bank,card_cvc,card_expiry,card_owner,date_registration_card) VALUES (?,?,?,?,?,?)";
 		
 		try {
-			preparedStatement=connection.prepareStatement(query);
+			preparedStatement=con.prepareStatement(query);
 			
 			preparedStatement.setString(1, card_number);
 			preparedStatement.setString(2, card_bank);
@@ -184,8 +183,8 @@ public class PaymentMethodDAO implements PaymentMethodModel{
 					if (preparedStatement != null)
 						preparedStatement.close();
 				} finally {
-					if (connection != null)
-						connection.close();
+					if (con != null)
+						con.close();
 				}
 		}
 		

@@ -91,7 +91,13 @@ public class Ordine
 		return user.clone();
 	}
 
+	public String getStato() {
+		return stato;
+	}
 
+	public void setStato(String stato) {
+		this.stato = stato;
+	}
 
 
 
@@ -121,5 +127,7 @@ public class Ordine
 	private Utente user;
 	private String data;
 	private String metodoPagamento;
+	private String stato;
+	
 
 }

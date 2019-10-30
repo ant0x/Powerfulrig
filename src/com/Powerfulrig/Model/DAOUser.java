@@ -210,6 +210,7 @@ public class DAOUser
 		}
 		return user;	
 	}
+	
 	public static ArrayList<Utente> showAccountall() throws SQLException
 	{
 		ArrayList<Utente> utenti= new ArrayList<Utente>();
@@ -249,6 +250,41 @@ public class DAOUser
 		return utenti;	
 	}
 	
+	
+	public static ArrayList<String> showAddres(String Email) throws SQLException
+	{
+		int civico;
+		ArrayList<String> compIndirizzo = new ArrayList<String>();
+
+		try 
+		{
+			con=ConnectionPool.getConnection();
+			statement=con.prepareStatement(showAccount);
+			statement.setString(1,Email);
+			set=statement.executeQuery();
+			while(set.next())
+			{
+				compIndirizzo.add(set.getString(6));
+				compIndirizzo.add(set.getString(7));
+				civico=(set.getInt(8));
+				compIndirizzo.add(Integer.toString(civico));
+			}
+		} 		
+		finally
+		{
+			try
+			{
+				if(statement!=null)
+					statement.close();
+			}
+			finally
+			{
+				ConnectionPool.rilasciaConnessione(con);
+			}
+		}
+		return compIndirizzo;	
+	}
+	
 	public synchronized void logout(HttpSession session) throws SQLException
 	{
 		synchronized(session) 
@@ -275,7 +311,7 @@ public class DAOUser
 		DeleteAccount="DELETE  FROM utene WHERE Email=?";
 		modifyAccount="UPDATE PowerfulRig.utente SET";
 		checkEmail="SELECT nome FROM utente where Email=?";
-		showAccount="SELECT * FROM utente where Email=?\"";
+		showAccount="SELECT * FROM utente where Email=?";
 		showAccountall="SELECT * FROM utente";
 		checkLogin="SELECT Email,Tipo,Nome,Cognome FROM utente where Email=? AND Password=?";
 	}

@@ -118,6 +118,7 @@ public class DAOOrdine
 					order.setData(set.getString(11));
 					order.setQuantita(set.getInt(12));
 					order.setPrezzo(set.getFloat(13));
+					order.setStato(set.getString(14));
 					order.setProdotto(prod);
 					order.setUser(user);
 					ordini.add(order);
@@ -318,12 +319,13 @@ public class DAOOrdine
 				"     from fattura inner join utente on fattura.Email_utente=utente.Email \r\n" + 
 				"       where data_fattura between ? AND ? ) as table2\r\n" + 
 				"       on table1.fattura=table2.numero_fattura;";
-		viewOrdineById="select table2.Email,table2.Nome,table2.Cognome,table2.Via,table2.cap,table2.NumeroCivico,path,table1.Nome,numero_fattura,totale,data_fattura,quantita,table1.prezzo,table1.IdProdotto\r\n" + 
+		viewOrdineById="select table2.Email,table2.Nome,table2.Cognome,table2.Via,table2.cap,table2.NumeroCivico,path,table1.Nome,numero_fattura,totale,data_fattura,quantita,table1.prezzo,table1.IdProdotto,stato\r\n" + 
 				"from (select path,Nome,composizione.quantita,composizione.prezzo,fattura,prodotto.IdProdotto\r\n" + 
 				"    from prodotto inner join composizione on prodotto.IdProdotto=composizione.IdProdotto) as table1\r\n" + 
 				"      inner join \r\n" + 
-				"      (select numero_fattura,totale,data_fattura,Cognome,Nome,Email,Via,cap,NumeroCivico\r\n" + 
-				"     from fattura inner join utente on fattura.Email_utente=utente.Email \r\n" + 
+				"      (select numero_fattura,totale,data_fattura,Cognome,Nome,Email,Via,cap,NumeroCivico,stato\r\n" + 
+				"     from fattura inner join utente on fattura.Email_utente=utente.Email \r\n" +
+				"	  inner join spedizione on fattura.numero_fattura = spedizione.fattura \r\n"+
 				"       where Email like ? ) as table2\r\n" + 
 				"       on table1.fattura=table2.numero_fattura;";
 		addOrdine="INSERT INTO fattura(totale,metodo_pagamento,data_fattura,Email_Utente) VALUES (?,?,?,?)";
