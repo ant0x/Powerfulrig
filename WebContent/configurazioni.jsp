@@ -94,7 +94,7 @@
 										<p id="confPP2"><%=data%></p>
 									</div>
 									<div class="row">
-										<p id="confPP3">Prezzo: <%=userconfs.get(I).getConfiguration_price()%> &euro;</p>
+										<p id="confPP3">Prezzo: <%=String.format(Locale.US,"%.2f",userconfs.get(I).getConfiguration_price())%> &euro;</p>
 									</div>
 								</div>
 								<div class="col-xl-1">

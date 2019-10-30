@@ -145,7 +145,7 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 				bean.setRam_in_configuration(results.getString(8));
 				bean.setCase_in_configuration(results.getString(9));
 				bean.setMotherboard_in_configuration(results.getString(10));
-				bean.setPowersupply_in_configuration(results.getString(11));
+				bean.setpsu_in_configuration(results.getString(11));
 				bean.setStorage_in_configuration(results.getString(12));
 				bean.setHeatsink_in_configuration(results.getString(13));
 				
@@ -198,7 +198,7 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 				bean.setRam_in_configuration(results.getString(8));
 				bean.setCase_in_configuration(results.getString(9));
 				bean.setMotherboard_in_configuration(results.getString(10));
-				bean.setPowersupply_in_configuration(results.getString(11));
+				bean.setpsu_in_configuration(results.getString(11));
 				bean.setStorage_in_configuration(results.getString(12));
 				bean.setHeatsink_in_configuration(results.getString(13));
 			}
@@ -222,6 +222,7 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 	@Override
 	public boolean deleteComponentFromConfiguration(String id_conf, String id_comp, String model_comp) throws SQLException
 	{
+		System.out.println("l'id comp "+id_comp);
 		String comp = id_comp.substring(0, id_comp.lastIndexOf("_"));
 		comp=comp.toLowerCase();
 		String query_price_prod = null;
@@ -330,6 +331,8 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 		int esito = 0;
 		float price_prod = 0;
 		float price_conf = 0;
+		float finalprice = 0;
+		int percentuale =0;
 		
 		try {
 			con=ConnectionPool.getConnection();
@@ -339,21 +342,25 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 		}
 		//ottenimento del prezzo della componente da aggiungere
 		//TODO
-		query_price_prod = "SELECT Prezzo FROM prodotto WHERE IdProdotto = '"+id_prod+"' ";
+		query_price_prod = "SELECT Prezzo,PercentualeSconto FROM prodotto WHERE IdProdotto = '"+id_prod+"' ";
 		query_price_conf = "SELECT configuration_price FROM users_configurations WHERE  id_configuration = '"+id_conf+"' ";
 		try {
 			
 			statement=con.createStatement();
 			results = statement.executeQuery(query_price_prod);
 			
-			if(results.first())			
+			if(results.first())		
+			{
 				price_prod = results.getFloat(1);
+				percentuale = results.getInt(2);
+			finalprice= ((100-percentuale)*price_prod)/100;
+			}
 						
 			statement=con.createStatement();
 			results = statement.executeQuery(query_price_conf);
 			
 			if(results.first())			
-				price_conf = results.getFloat(1) + price_prod;
+				price_conf = results.getFloat(1) + finalprice;
 		} finally {
 					if (statement != null)
 						statement.close();

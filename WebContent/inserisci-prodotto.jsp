@@ -106,7 +106,7 @@
 							<option class="singleOption" value="motherboard">Schede Madre</option>
 							<option class="singleOption" value="ram">RAM</option>
 							<option class="singleOption" value="storage">Archiviazione</option>
-							<option class="singleOption" value="powersupply">Alimentatore</option>
+							<option class="singleOption" value="psu">Alimentatore</option>
 							<option class="singleOption" value="case">Case</option>
 							<option class="singleOption" value="monitor">Monitor</option>
 							<option class="singleOption" value="keyboard">Tastiere</option>

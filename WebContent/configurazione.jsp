@@ -159,7 +159,26 @@
 					<div class="row" id="spacerConf2">
 						<div>
 							<p id="titleConf">Prezzo: </p>
-							<p id="pConf"><%=prod_bean.getPrezzo()%> &euro;</p>
+							<%if(prod_bean.getPercentualeSconto()>0)
+							{
+							%>
+							<p id="stiletitle">Prezzo consigliato: </p>
+							<p style="text-decoration: line-through;" class="stilep"> <%=prod_bean.getPrezzo()%> &euro; </p>
+						<% int s=prod_bean.getPercentualeSconto();
+						s=100-s;
+						float prezzo = (s*prod_bean.getPrezzo()/100);%>
+						<br>
+						<p id="stiletitle">Prezzo: </p>
+						<p class="stilep"> <%=String.format(Locale.US,"%.2f", prezzo)%> &euro; </p>
+						<%
+						}
+						else
+						{
+						%>
+						<p id="stiletitle">Prezzo: </p>
+							<p class="stilep"> <%=prod_bean.getPrezzo()%> &euro; </p>
+						<%
+						}%>
 						</div>
 					</div>
 				</div>
@@ -265,7 +284,7 @@
 				<%
 				}
 
-				if(bean.getPowersupply_in_configuration()==null || bean.getPowersupply_in_configuration().isEmpty())
+				if(bean.getpsu_in_configuration()==null || bean.getpsu_in_configuration().isEmpty())
 				{
 				%>
 				<div class="col-xl-2">
@@ -281,7 +300,7 @@
 				</div>
 				<%
 				} else {
-					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getPowersupply_in_configuration()).get(0);
+					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getpsu_in_configuration()).get(0);
 				%>	
 				<div class="col-xl-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
@@ -293,7 +312,7 @@
 							<p id="titleConf">Marca: </p>
 							<p id="pConf"><%=prod_bean.getMarca()%></p>
 							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">							
-							<input type="hidden" id="id_comp" value="<%=bean.getPowersupply_in_configuration()%>">
+							<input type="hidden" id="id_comp" value="<%=prod_bean.getTipo()%>">
 							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
 					</div>
@@ -504,7 +523,8 @@
 	$("[id ='removeCompIcon']").on('click', function deleteComponent(){
 			var value1 = $(this).parent().next().find("input#id_comp").val();			
 			var value2 = $('#id_conf').val();
-			var value3 = $(this).parent().next().find("input#model_prod").val();					
+			var value3 = $(this).parent().next().find("input#model_prod").val();	
+			alert("l'id è "+value1);
 		    $.ajax({
 		        type: "POST",
 		        url: "UserConfiguration",

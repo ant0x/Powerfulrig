@@ -15,7 +15,7 @@ public class UserConfigurationBean {
 	private String ram_in_configuration = null;
 	private String case_in_configuration = null;
 	private String motherboard_in_configuration = null;
-	private String powersupply_in_configuration = null;
+	private String psu_in_configuration = null;
 	private String storage_in_configuration = null;
 	private String heatsink_in_configuration = null;
 	
@@ -67,11 +67,11 @@ public class UserConfigurationBean {
 	public void setMotherboard_in_configuration(String motherboard_in_configuration) {
 		this.motherboard_in_configuration = motherboard_in_configuration;
 	}
-	public String getPowersupply_in_configuration() {
-		return powersupply_in_configuration;
+	public String getpsu_in_configuration() {
+		return psu_in_configuration;
 	}
-	public void setPowersupply_in_configuration(String powersupply_in_configuration) {
-		this.powersupply_in_configuration = powersupply_in_configuration;
+	public void setpsu_in_configuration(String psu_in_configuration) {
+		this.psu_in_configuration = psu_in_configuration;
 	}
 	public String getStorage_in_configuration() {
 		return storage_in_configuration;
@@ -105,8 +105,8 @@ public class UserConfigurationBean {
 				+ configuration_price + ", name_configuration=" + name_configuration
 				+ ", cpu_in_configuration=" + cpu_in_configuration + ", gpu_in_configuration=" + gpu_in_configuration
 				+ ", ram_in_configuration=" + ram_in_configuration + ", case_in_configuration=" + case_in_configuration
-				+ ", motherboard_in_configuration=" + motherboard_in_configuration + ", powersupply_in_configuration="
-				+ powersupply_in_configuration + ", storage_in_configuration=" + storage_in_configuration
+				+ ", motherboard_in_configuration=" + motherboard_in_configuration + ", psu_in_configuration="
+				+ psu_in_configuration + ", storage_in_configuration=" + storage_in_configuration
 				+ ", heatsink_in_configuration=" + heatsink_in_configuration + "]";
 	}
 		

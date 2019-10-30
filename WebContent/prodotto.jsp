@@ -105,7 +105,7 @@
 						float prezzo = (s*bean.getPrezzo()/100);%>
 						<br>
 						<p id="stiletitle">Prezzo: </p>
-						<p class="stilep"> <%=String.format("%.2f", prezzo)%> &euro; </p>
+						<p class="stilep"> <%=String.format(Locale.US,"%.2f", prezzo)%> &euro; </p>
 						<%
 						}
 						else
