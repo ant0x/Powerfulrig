@@ -15,6 +15,9 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+drop database if exists powerfulrig;
+create database powerfulrig;
+use powerfulrig;
 --
 -- Table structure for table `composizione`
 --
@@ -31,7 +34,7 @@ CREATE TABLE `composizione` (
   KEY `IdProdotto` (`IdProdotto`),
   CONSTRAINT `composizione_ibfk_1` FOREIGN KEY (`fattura`) REFERENCES `fattura` (`numero_fattura`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `composizione_ibfk_2` FOREIGN KEY (`IdProdotto`) REFERENCES `prodotto` (`IdProdotto`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -60,7 +63,7 @@ CREATE TABLE `fattura` (
   PRIMARY KEY (`numero_fattura`),
   KEY `Email_utente` (`Email_utente`),
   CONSTRAINT `fattura_ibfk_1` FOREIGN KEY (`Email_utente`) REFERENCES `utente` (`Email`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,7 +98,7 @@ CREATE TABLE `prodotto` (
   `path` varchar(50) DEFAULT NULL,
   `Visualizzabile` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`IdProdotto`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -125,7 +128,7 @@ CREATE TABLE `spedizione` (
   PRIMARY KEY (`ID_spedizione`),
   KEY `fattura` (`fattura`),
   CONSTRAINT `spedizione_ibfk_1` FOREIGN KEY (`fattura`) REFERENCES `fattura` (`numero_fattura`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -178,7 +181,7 @@ CREATE TABLE `users_configurations` (
   CONSTRAINT `users_configurations_ibfk_7` FOREIGN KEY (`psu_in_configuration`) REFERENCES `prodotto` (`IdProdotto`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `users_configurations_ibfk_8` FOREIGN KEY (`storage_in_configuration`) REFERENCES `prodotto` (`IdProdotto`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `users_configurations_ibfk_9` FOREIGN KEY (`heatsink_in_configuration`) REFERENCES `prodotto` (`IdProdotto`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=38;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -209,7 +212,7 @@ CREATE TABLE `utente` (
   `NumeroCivico` int(2) DEFAULT NULL,
   `NumeroTelefono` varchar(12) DEFAULT NULL,
   PRIMARY KEY (`Email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
