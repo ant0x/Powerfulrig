@@ -110,8 +110,11 @@
 					</div>
 					<div class="row" id="spacerConf2">
 						<div>
-							<p id="titleConf">Prezzo: </p>
-							<p id="pConf"><%=prod_bean.getPrezzo()%> &euro;</p>
+						<% int s=prod_bean.getPercentualeSconto();
+						s=100-s;
+						float prezzo = (s*prod_bean.getPrezzo()/100);%>
+						<p id="titleConf">Prezzo: </p>
+						<p id="pConf"> <%=String.format(Locale.US,"%.2f", prezzo)%> &euro; </p>
 						</div>
 					</div>
 				</div>
@@ -158,27 +161,11 @@
 					</div>
 					<div class="row" id="spacerConf2">
 						<div>
-							<p id="titleConf">Prezzo: </p>
-							<%if(prod_bean.getPercentualeSconto()>0)
-							{
-							%>
-							<p id="stiletitle">Prezzo consigliato: </p>
-							<p style="text-decoration: line-through;" class="stilep"> <%=prod_bean.getPrezzo()%> &euro; </p>
 						<% int s=prod_bean.getPercentualeSconto();
 						s=100-s;
 						float prezzo = (s*prod_bean.getPrezzo()/100);%>
-						<br>
-						<p id="stiletitle">Prezzo: </p>
-						<p class="stilep"> <%=String.format(Locale.US,"%.2f", prezzo)%> &euro; </p>
-						<%
-						}
-						else
-						{
-						%>
-						<p id="stiletitle">Prezzo: </p>
-							<p class="stilep"> <%=prod_bean.getPrezzo()%> &euro; </p>
-						<%
-						}%>
+						<p id="titleConf">Prezzo: </p>
+						<p id="pConf"> <%=String.format(Locale.US,"%.2f", prezzo)%> &euro; </p>
 						</div>
 					</div>
 				</div>
@@ -225,8 +212,11 @@
 					</div>
 					<div class="row" id="spacerConf2">
 						<div>
-							<p id="titleConf">Prezzo: </p>
-							<p id="pConf"><%=prod_bean.getPrezzo()%> &euro;</p>
+							<% int s=prod_bean.getPercentualeSconto();
+						s=100-s;
+						float prezzo = (s*prod_bean.getPrezzo()/100);%>
+						<p id="titleConf">Prezzo: </p>
+						<p id="pConf"> <%=String.format(Locale.US,"%.2f", prezzo)%> &euro; </p>
 						</div>
 					</div>
 				</div>
@@ -276,8 +266,11 @@
 					</div>
 					<div class="row" id="spacerConf2">
 						<div>
-							<p id="titleConf">Prezzo: </p>
-							<p id="pConf"><%=prod_bean.getPrezzo()%> &euro;</p>
+							<% int s=prod_bean.getPercentualeSconto();
+						s=100-s;
+						float prezzo = (s*prod_bean.getPrezzo()/100);%>
+						<p id="titleConf">Prezzo: </p>
+						<p id="pConf"> <%=String.format(Locale.US,"%.2f", prezzo)%> &euro; </p>
 						</div>
 					</div>
 				</div>
@@ -324,8 +317,11 @@
 					</div>
 					<div class="row" id="spacerConf2">
 						<div>
-							<p id="titleConf">Prezzo: </p>
-							<p id="pConf"><%=prod_bean.getPrezzo()%> &euro;</p>
+							<% int s=prod_bean.getPercentualeSconto();
+						s=100-s;
+						float prezzo = (s*prod_bean.getPrezzo()/100);%>
+						<p id="titleConf">Prezzo: </p>
+						<p id="pConf"> <%=String.format(Locale.US,"%.2f", prezzo)%> &euro; </p>
 						</div>
 					</div>
 				</div>
@@ -372,8 +368,11 @@
 					</div>
 					<div class="row" id="spacerConf2">
 						<div>
-							<p id="titleConf">Prezzo: </p>
-							<p id="pConf"><%=prod_bean.getPrezzo()%> &euro;</p>
+							<% int s=prod_bean.getPercentualeSconto();
+						s=100-s;
+						float prezzo = (s*prod_bean.getPrezzo()/100);%>
+						<p id="titleConf">Prezzo: </p>
+						<p id="pConf"> <%=String.format(Locale.US,"%.2f", prezzo)%> &euro; </p>
 						</div>
 					</div>
 				</div>
@@ -423,8 +422,11 @@
 					</div>
 					<div class="row" id="spacerConf2">
 						<div>
-							<p id="titleConf">Prezzo: </p>
-							<p id="pConf"><%=prod_bean.getPrezzo()%> &euro;</p>
+							<% int s=prod_bean.getPercentualeSconto();
+						s=100-s;
+						float prezzo = (s*prod_bean.getPrezzo()/100);%>
+						<p id="titleConf">Prezzo: </p>
+						<p id="pConf"> <%=String.format(Locale.US,"%.2f", prezzo)%> &euro; </p>
 						</div>
 					</div>
 				</div>
@@ -471,8 +473,11 @@
 					</div>
 					<div class="row" id="spacerConf2">
 						<div>
-							<p id="titleConf">Prezzo: </p>
-							<p id="pConf"><%=prod_bean.getPrezzo()%> &euro;</p>
+						<% int s=prod_bean.getPercentualeSconto();
+						s=100-s;
+						float prezzo = (s*prod_bean.getPrezzo()/100);%>
+						<p id="titleConf">Prezzo: </p>
+						<p id="pConf"> <%=String.format(Locale.US,"%.2f", prezzo)%> &euro; </p>
 						</div>
 					</div>
 				</div>
@@ -482,7 +487,7 @@
 			</div>	
 			<div class="row justify-content-center" id="spacerTOT">
 				<h7 id=titleTOTConf>Prezzo Totale: </h7>
-				<p id="pTOTConf"><%=bean.getConfiguration_price()%> &euro;</p>
+				<p id="pTOTConf"><%=String.format(Locale.US,"%.2f", bean.getConfiguration_price())%> &euro;</p>
 			</div>
 			<div class="row spacer-ordbutton justify-content-center">
 				<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
