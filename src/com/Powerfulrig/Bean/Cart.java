@@ -21,7 +21,6 @@ public class Cart
 	public synchronized boolean addProduct(Prodotto product)
 	{
 		int I=0;
-		
 		if(products.size()==0)
 		{
 			products.add(product);

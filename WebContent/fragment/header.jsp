@@ -158,7 +158,7 @@
                         <img src=<%=arraycart.get(I).getImmagine()+"/img1.jpg"%> width="50" height="50" class="imgItem8" alt="" />
                         <span class="item-info">
                             <span><%=arraycart.get(I).getNome()%></span>
-                            <span><%=arraycart.get(I).getPrezzo()%> &euro;</span>
+                            <span><%=String.format("%.2f", arraycart.get(I).getPrezzo())%> &euro;</span>
                         </span>
                     </span>
                     <span class="item-right">

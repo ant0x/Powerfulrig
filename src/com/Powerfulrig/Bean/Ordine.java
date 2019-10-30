@@ -7,9 +7,16 @@ public class Ordine
 {
 	public Ordine()
 	{
-		prodotti=new ArrayList<Prodotto>();
 	}
-	
+
+	public Prodotto getProdotti() {
+		return prodotti;
+	}
+
+	public void setProdotti(Prodotto prodotti) {
+		this.prodotti = prodotti;
+	}
+
 	public String getData() 
 	{
 		return data;
@@ -29,7 +36,7 @@ public class Ordine
 	{
 		this.numeroOrdine = numeroOrdine;
 	}
-	
+
 	public int getQuantita()
 	{
 		return quantita;
@@ -38,6 +45,13 @@ public class Ordine
 	public void setQuantita(int quantita) 
 	{
 		this.quantita = quantita;
+	}
+
+	@Override
+	public String toString() {
+		return "Ordine [quantita=" + quantita + ", prezzo=" + prezzo + ", prodotti=" + prodotti + ", totale=" + totale
+				+ ", numeroOrdine=" + numeroOrdine + ", user=" + user + ", data=" + data + ", metodoPagamento="
+				+ metodoPagamento + "]";
 	}
 
 	public float getPrezzo() 
@@ -59,41 +73,28 @@ public class Ordine
 	{
 		this.totale = totale;
 	}
-	
+
 	public void setProdotto(Prodotto prod)
 	{
-		this.prodotti.add(prod);
+		this.prodotti = prod;
 	}
-	
-	public ArrayList<Prodotto> getProdotti()
-	{
-		ArrayList<Prodotto> clone=new ArrayList<Prodotto>();
-		for(Prodotto prod:prodotti)
-			clone.add(prod);
-		return clone;
-	}
-	
+
+
+
 	public void setUser(Utente user)
 	{
 		this.user=user.clone();
 	}
-	
+
 	public Utente getUser()
 	{
 		return user.clone();
 	}
-	
-	
-	@Override
-	public String toString() 
-	{
-		String s="quantita=" + quantita + ", prezzo=" + prezzo + ", totale=" + totale + ", numeroOrdine="
-				+ numeroOrdine + ", data=" + data +"\n"+ user.toString()+"\n";
-		for(Prodotto prod:prodotti)
-			s+=prod.toString()+"\n";
-		return s;
-		
-	}
+
+
+
+
+
 
 	public String getMetodoPagamento() 
 	{
@@ -104,14 +105,21 @@ public class Ordine
 	{
 		this.metodoPagamento = metodoPagamento;
 	}
-	
+	public ArrayList<Prodotto> getLista() {
+		return lista;
+	}
+
+	public void setLista(ArrayList<Prodotto> productsToBuy) {
+		this.lista = productsToBuy;
+	}
+	private ArrayList<Prodotto> lista;
 	private int quantita;
 	private float prezzo;
-	private ArrayList<Prodotto> prodotti;
+	private Prodotto prodotti;
 	private float totale;
 	private String numeroOrdine;
 	private Utente user;
 	private String data;
 	private String metodoPagamento;
-	
+
 }

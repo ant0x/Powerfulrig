@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.Powerfulrig.Bean.Cart;
+import com.Powerfulrig.Bean.Ordine;
 import com.Powerfulrig.Bean.Prodotto;
 import com.Powerfulrig.Bean.Utente;
 import com.Powerfulrig.Model.DAOOrdine;
@@ -31,6 +32,8 @@ public class CreateOrder extends HttpServlet {
         }
 		
 		DAOOrdine model_order = new DAOOrdine();
+		Ordine app = new Ordine();
+		Utente user = new Utente();
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
@@ -38,7 +41,7 @@ public class CreateOrder extends HttpServlet {
 		Utente utenteLoggato = (Utente)request.getSession().getAttribute("utenteLoggato");
 		Cart cart = (Cart)request.getSession().getAttribute("Carrello");
 		
-		String username = utenteLoggato.getEmail();
+		String email = utenteLoggato.getEmail();
 		ArrayList<Prodotto> productsToBuy = cart.getProducts();
 				
 		//parametri della requests
@@ -52,9 +55,15 @@ public class CreateOrder extends HttpServlet {
 		String order_date = formatter.format(date);
 		
 		Boolean isConsegnato = false;
-		/* TODO
+		app.setMetodoPagamento(order_payment_method);
+		app.setLista(productsToBuy);
+		app.setData(order_date);
+		app.setTotale(totalOrderPrice);
+		user.setEmail(email);
+		app.setUser(user);
+
 		try {
-			model_order.addOrder(username, order_payment_method, productsToBuy, order_address, order_date, totalOrderPrice, isConsegnato);
+			model_order.addOrder(app);
 			
 			request.getSession().setAttribute("Carrello", null);
 			request.setAttribute("inserimento", true);
@@ -66,7 +75,7 @@ public class CreateOrder extends HttpServlet {
 			
 			e.printStackTrace();
 		}
-	*/
+	
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 

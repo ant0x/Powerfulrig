@@ -58,8 +58,6 @@ public class ProductControl extends HttpServlet
 					request.removeAttribute("component");
 					request.removeAttribute("action_name");
 					//action="'"+action+"'";
-					log("l'action nuovo è "+action);
-					System.out.println("l'action nuovo è "+action);
 					/*SET ATTRIBUTE*/
 					request.setAttribute("component", action);
 					request.setAttribute("comp_name", comp_name);
@@ -98,8 +96,19 @@ public class ProductControl extends HttpServlet
 					ArrayList<Prodotto> bean = new ArrayList<Prodotto>();
 					bean=model_product.viewProduct("Tipo",type_prod,"Modello",model_prod);
 					Prodotto beanApp= bean.get(0);
+					if(beanApp.getPercentualeSconto()<1)
+						beanApp.setPrezzo(beanApp.getPrezzo());
+					else
+					{
+						int s=beanApp.getPercentualeSconto();
+						s=100-s;
+						beanApp.setPrezzo((s*beanApp.getPrezzo())/100);
+						System.out.println("dentro else");
+					}
 					
-					beanApp.setPrezzo((beanApp.getPrezzo()*beanApp.getPercentualeSconto())/100);
+					System.out.println("alla fine il prezzo nel prodcontr "+beanApp.getPrezzo());
+					System.out.println("ma lo sconto funziona? ");
+					
 					cart.addProduct(beanApp);
 					
 					

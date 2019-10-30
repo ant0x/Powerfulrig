@@ -98,7 +98,7 @@
 							<p id="titleConf">Marca: </p>
 							<p id="pConf"><%=prod_bean.getMarca()%></p>
 							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">
-							<input type="hidden" id="id_comp" value="<%=bean.getCpu_in_configuration()%>">
+							<input type="hidden" id="id_comp" value="<%=prod_bean.getTipo()%>">
 							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
 					</div>

@@ -99,7 +99,6 @@ public class DAOProdotto
 			if(!Utilites.fieldOk(strings))
 				throw new SQLException("parametri di ricerca errati");
 			viewProduct+=" WHERE Visualizzabile=true AND ";
-			System.out.println("le stringe di merd"+strings.toString());
 			for(int i=0;i<strings.length;i+=2)
 			{					
 				if(i!=strings.length-2)
@@ -114,8 +113,6 @@ public class DAOProdotto
 			statement=con.prepareStatement(viewProduct);
 			for(int i=1;i<strings.length;i+=2,j++) 
 				statement.setString(j,strings[i]);
-			System.out.println("lo statement è il seguente"+statement);
-			System.out.println("lo statement è il seguente"+statement);
 			set=statement.executeQuery();
 			while(set.next())
 			{

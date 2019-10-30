@@ -95,8 +95,26 @@
 						<p class="stilep" id="model_prod"><%=bean.getModello()%></p>
 					</div>
 					<div>
+						<%if(bean.getPercentualeSconto()>0)
+							{
+							%>
+							<p id="stiletitle">Prezzo consigliato: </p>
+							<p style="text-decoration: line-through;" class="stilep"> <%=bean.getPrezzo()%> &euro; </p>
+						<% int s=bean.getPercentualeSconto();
+						s=100-s;
+						float prezzo = (s*bean.getPrezzo()/100);%>
+						<br>
 						<p id="stiletitle">Prezzo: </p>
-						<p style="text-decoration: line-through;" class="stilep"> <%=bean.getPrezzo()%> &euro; </p>
+						<p class="stilep"> <%=String.format("%.2f", prezzo)%> &euro; </p>
+						<%
+						}
+						else
+						{
+						%>
+						<p id="stiletitle">Prezzo: </p>
+							<p class="stilep"> <%=bean.getPrezzo()%> &euro; </p>
+						<%
+						}%>
 					</div>
 					<div>
 						<p id="stiletitle">Disponibilita: </p>
@@ -168,6 +186,7 @@
 					<hr>
 				</div>
 			</div>
+			
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-6">
@@ -178,7 +197,10 @@
 									<th scope="col"></th>
 								</tr>
 							</thead>
+							<input type="hidden" id="idprod" value="<%=bean.getIdProdotto()%>">
 							<tbody>
+								<input type="hidden" id="id_comp" value="<%=bean.getTipo()%>">
+								
 							<tr style="display: none;">
 								<th scope="row">Tipo</th>
 								<td id="type_prod"><%=bean.getTipo()%></td>
@@ -194,22 +216,7 @@
 							<tr>
 								<th scope="row">Modello</th>
 								<td><%=bean.getModello()%></td>
-							</tr>
-							<tbody>
-						</table>
-					</div>
-					<div class="col-xl-6">
-						<table class="table">
-							<thead>
-								<tr>
-									<th scope="col">
-									<input type="hidden" id="id_comp" value="comp_cpu">
-									</th>
-									<th scope="col"></th>
-								</tr>
-							</thead>
-							<tbody>
-							
+							</tr>					
 							</tbody>
 						</table>
 					</div>
@@ -286,15 +293,13 @@
 		// funzione jquery per inserire il prodotto in questione nella configurazione
 		$("[id ='addToConf']").on('click', function addComponent(){
 			var value3 = $(this).find("input#id_conf").val();
-			var value4 = $('#id_comp').val();
+			var value4 = $("#id_comp").val();
 			var value5 = $('#model_prod').html();
-			//TODO id_comp null
-			alert("l'id comp è "+value4)
-			alert("l'id comp è "+$('#id_comp').val());
+			var value6 = $("#idprod").val();
 			$.ajax({
 				type: "POST",
 			    url: "UserConfiguration",
-			    data: {"action" : "addComponentToConf", "id_conf" : value3, "id_comp" : value4, "model_comp" : value5},
+			    data: {"action" : "addComponentToConf", "id_conf" : value3, "id_comp" : value4, "model_comp" : value5, "idprod" : value6},
 			    success: function(results){
 			   		Swal.fire({
 			  			title: 'Aggiunto a Configurazione!',

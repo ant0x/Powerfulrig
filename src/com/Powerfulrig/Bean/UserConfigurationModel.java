@@ -11,7 +11,7 @@ public interface UserConfigurationModel {
 	
 	public boolean deleteComponentFromConfiguration(String id_conf, String id_comp, String model_comp) throws SQLException;
 	
-	public boolean addComponentToConf(String id_comp, String label_comp, String model_comp) throws SQLException;
+	public boolean addComponentToConf(String id_comp, String id_prod, String label_comp, String model_comp) throws SQLException;
 
 	public ArrayList<UserConfigurationBean> retrieveByEmail(String Email) throws SQLException;
 	

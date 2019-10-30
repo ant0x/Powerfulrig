@@ -30,16 +30,14 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 		SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd");  
 		Date date = new Date(System.currentTimeMillis());  
 		String dateFormatted = formatter.format(date);
-		System.out.println("la data è   : "+dateFormatted);
 		
-		System.out.println("sto nel dao fra ");
 		try {
 			con=ConnectionPool.getConnection();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 				
-		query = "INSERT INTO users_configurations(name_configuration, owner_configuration, creation_date, configuration_price, cpu_in_configuration, gpu_in_configuration, ram_in_configuration, case_in_configuration, motherboard_in_configuration, powersupply_in_configuration, storage_in_configuration, heatsink_in_configuration) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+		query = "INSERT INTO users_configurations(name_configuration, owner_configuration, creation_date, configuration_price, cpu_in_configuration, gpu_in_configuration, ram_in_configuration, case_in_configuration, motherboard_in_configuration, psu_in_configuration, storage_in_configuration, heatsink_in_configuration) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
 		
 		try {			
 
@@ -224,7 +222,8 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 	@Override
 	public boolean deleteComponentFromConfiguration(String id_conf, String id_comp, String model_comp) throws SQLException
 	{
-		String comp = id_comp.substring(id_comp.lastIndexOf("_")+1);
+		String comp = id_comp.substring(0, id_comp.lastIndexOf("_"));
+		comp=comp.toLowerCase();
 		String query_price_prod = null;
 		String query_price_conf = null;
 		int esito = 0;
@@ -240,7 +239,7 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 		
 		//ottenimento del prezzo della componente da aggiungere
 		//TODO
-			query_price_prod = "SELECT price_prod FROM prodotto WHERE model_prod IN (SELECT model_"+comp+" FROM "+comp+"_component WHERE id_"+comp+" = '"+id_comp+"' AND model_"+comp+" = '"+model_comp+"')";
+			query_price_prod = "SELECT Prezzo FROM prodotto WHERE Modello = '"+model_comp+"' ";
 			query_price_conf = "SELECT configuration_price FROM users_configurations WHERE  id_configuration = '"+id_conf+"' ";
 	
 			try {
@@ -264,11 +263,12 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 								statement.close();
 					}
 		
-		query = "UPDATE users_configurations SET "+comp+"_in_configuration = NULL, configuration_price = '"+price_conf+"' WHERE (` id_configuration` = '"+id_conf+"')";		
+		query = "UPDATE users_configurations SET "+comp+"_in_configuration = NULL, configuration_price = '"+price_conf+"' WHERE (`id_configuration` = '"+id_conf+"')";		
 		
 		try {			
 			statement=con.createStatement();
-			esito = statement.executeUpdate(query);		
+			esito = statement.executeUpdate(query);	
+			con.commit();
 		} finally {
 				try {
 					if (statement != null)
@@ -283,8 +283,9 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 
 	public boolean checkConf(String id_comp, String id_conf) throws SQLException
 	{
-		System.out.println("la comp è "+id_comp);
-		String comp = id_comp.substring(id_comp.lastIndexOf("_")+1);
+		
+		String comp = id_comp.substring(0, id_comp.lastIndexOf("_"));
+		comp=comp.toLowerCase();
 		boolean esito = false;
 		
 		try {
@@ -320,9 +321,10 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 		return esito;
 	}
 
-	public boolean addComponentToConf(String id_comp, String id_conf, String model_comp) throws SQLException {
+	public boolean addComponentToConf(String id_comp, String id_prod, String id_conf, String model_comp) throws SQLException {
 		
-		String comp = id_comp.substring(id_comp.lastIndexOf("_")+1);
+		String comp = id_comp.substring(0, id_comp.lastIndexOf("_"));
+		comp=comp.toLowerCase();
 		String query_price_prod = null;
 		String query_price_conf = null;
 		int esito = 0;
@@ -335,10 +337,9 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		//ottenimento del prezzo della componente da aggiungere
 		//TODO
-		query_price_prod = "SELECT price_prod FROM prodotto WHERE model_prod IN (SELECT model_"+comp+" FROM "+comp+"_component WHERE id_"+comp+" = '"+id_comp+"' AND model_"+comp+" = '"+model_comp+"')";
+		query_price_prod = "SELECT Prezzo FROM prodotto WHERE IdProdotto = '"+id_prod+"' ";
 		query_price_conf = "SELECT configuration_price FROM users_configurations WHERE  id_configuration = '"+id_conf+"' ";
 		try {
 			
@@ -353,19 +354,19 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 			
 			if(results.first())			
 				price_conf = results.getFloat(1) + price_prod;
-																	
 		} finally {
 					if (statement != null)
 						statement.close();
 				}
 		
 		
-		query = "UPDATE users_configurations SET "+comp+"_in_configuration = '"+id_comp+"', configuration_price = '"+price_conf+"'  WHERE  id_configuration = '"+id_conf+"' ";
+		query = "UPDATE users_configurations SET "+comp+"_in_configuration = '"+id_prod+"', configuration_price = '"+price_conf+"'  WHERE  id_configuration = '"+id_conf+"' ";
 				
 		try {
 			
 			statement=con.createStatement();
 			esito = statement.executeUpdate(query);
+			con.commit();
 								
 		} finally {
 				try {
@@ -393,7 +394,7 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 			e.printStackTrace();
 		}
 		
-		query = "SELECT cpu_in_configuration,gpu_in_configuration,ram_in_configuration,case_in_configuration,motherboard_in_configuration,powersupply_in_configuration,storage_in_configuration,heatsink_in_configuration FROM users_configurations WHERE  id_configuration = "+id_conf+" ";
+		query = "SELECT cpu_in_configuration,gpu_in_configuration,ram_in_configuration,case_in_configuration,motherboard_in_configuration,psu_in_configuration,storage_in_configuration,heatsink_in_configuration FROM users_configurations WHERE  id_configuration = "+id_conf+" ";
 		
 		try 
 		{
@@ -429,5 +430,6 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 		}
 		return false;
 	}
+
+	}
 	
-}

@@ -75,7 +75,7 @@
 					<div class="col-xl-2 spacer-ordine border-ordprod">
 						<div class="row justify-content-center">
 							<% float price = arraycart.get(I).getPrezzo(); %>
-							<p id="ordProd" style="color: red"><input type="hidden" name="priceProd" value=<%=price%>> <%=price%> &euro;</p>
+							<p id="ordProd" style="color: red"><input type="hidden" name="priceProd" value=<%=price%>> <%=String.format("%.2f", price)%> &euro;</p>
 						</div>
 					</div>
 					<div class="col-xl-1 spacer-ordine border-ordprod">

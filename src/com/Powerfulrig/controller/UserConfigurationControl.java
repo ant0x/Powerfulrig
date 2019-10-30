@@ -70,10 +70,9 @@ public class UserConfigurationControl extends HttpServlet
 				}
 				else if(action.equals("deleteComponent"))
 				{
-					String id_conf = request.getParameter("id_conf");
 					String id_comp = request.getParameter("id_comp");
+					String id_conf = request.getParameter("id_conf");
 					String model_comp = request.getParameter("model_comp");
-
 					if(!model_user_conf.deleteComponentFromConfiguration(id_conf, id_comp,model_comp))
 					{
 						response.setStatus(500);
@@ -82,11 +81,11 @@ public class UserConfigurationControl extends HttpServlet
 				else if (action.equals("addComponentToConf"))
 				{
 					String id_comp = request.getParameter("id_comp");
+					String id_prod = request.getParameter("idprod");
 					String id_conf = request.getParameter("id_conf");
-					String model_comp = request.getParameter("model_comp");
-					
+					String model_comp = request.getParameter("model_comp");					
 					if(model_user_conf.checkConf(id_comp, id_conf)) { //SE LA COMPONENTE NON E' PRESENTE
-						model_user_conf.addComponentToConf(id_comp, id_conf, model_comp); //LA INSERISCE DIRETTAMENTE
+						model_user_conf.addComponentToConf(id_comp, id_prod, id_conf, model_comp); //LA INSERISCE DIRETTAMENTE
 					}
 					else {
 						response.setStatus(500);  //ALTRIMENTI RITORNA UNO STATUS CODE DI ERRORE (QUESTO FA IN MODO DI FAR SCEGLIERE SE SOSTITUIRE O MENO CON IL PROSEGUIO DELLA CHIAMATA AJAX IN prodotto.jsp)
@@ -95,10 +94,11 @@ public class UserConfigurationControl extends HttpServlet
 				else if (action.equals("modifyComponentInConf"))
 				{
 					String id_comp = request.getParameter("id_comp");
+					String id_prod = request.getParameter("idprod");
 					String id_conf = request.getParameter("id_conf");
 					String model_comp = request.getParameter("model_comp");
 					
-					model_user_conf.addComponentToConf(id_comp, id_conf,model_comp);
+					model_user_conf.addComponentToConf(id_comp,id_prod, id_conf,model_comp);
 				}
 				else if (action.equals("buyConfiguration"))
 				{
