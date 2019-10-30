@@ -184,7 +184,7 @@ public class DAOUser
 			statement.setString(1,Email);
 			set=statement.executeQuery();
 			while(set.next())
-			{	//potrei utilizzare un costruttore riducendo le righe di codice ,complessita invariata
+			{
 				user=new Utente();
 				user.setEmail(set.getString(1));
 				user.setPassword(set.getString(3));
@@ -210,6 +210,44 @@ public class DAOUser
 		}
 		return user;	
 	}
+	public static ArrayList<Utente> showAccountall() throws SQLException
+	{
+		ArrayList<Utente> utenti= new ArrayList<Utente>();
+		Utente user= new Utente();
+
+		try 
+		{
+			con=ConnectionPool.getConnection();
+			statement=con.prepareStatement(showAccountall);
+			set=statement.executeQuery();
+			while(set.next())
+			{
+				user=new Utente();
+				user.setEmail(set.getString(1));
+				user.setPassword(set.getString(3));
+				user.setNome(set.getString(4));
+				user.setCognome(set.getString(5));
+				user.setVia(set.getString(6));
+				user.setCap(set.getString(7));
+				user.setNumeroCivico(set.getInt(8));
+				user.setNumeroTelefono(set.getString(9));
+				utenti.add(user);
+			}
+		} 		
+		finally
+		{
+			try
+			{
+				if(statement!=null)
+					statement.close();
+			}
+			finally
+			{
+				ConnectionPool.rilasciaConnessione(con);
+			}
+		}
+		return utenti;	
+	}
 	
 	public synchronized void logout(HttpSession session) throws SQLException
 	{
@@ -228,6 +266,7 @@ public class DAOUser
 	private static String modifyAccount;
 	private static String checkEmail;
 	private static String showAccount;
+	private static String showAccountall;
 	private static String checkLogin;
 
 	static
@@ -237,6 +276,7 @@ public class DAOUser
 		modifyAccount="UPDATE PowerfulRig.utente SET";
 		checkEmail="SELECT nome FROM utente where Email=?";
 		showAccount="SELECT * FROM utente where Email=?\"";
+		showAccountall="SELECT * FROM utente";
 		checkLogin="SELECT Email,Tipo,Nome,Cognome FROM utente where Email=? AND Password=?";
 	}
 }

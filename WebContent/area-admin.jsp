@@ -1,7 +1,9 @@
 <%@page	language="java" 
 		contentType="text/html; charset=ISO-8859-1"
     	pageEncoding="ISO-8859-1"
-    	import="com.Powerfulrig.Bean.*"     import="com.Powerfulrig.controller.*"
+    	import="com.Powerfulrig.Bean.*"     
+    	import="com.Powerfulrig.Bean.Ordine"
+    	import="com.Powerfulrig.controller.*"
     	import="com.Powerfulrig.Model.*" 
     	import="java.util.*"
 %>
@@ -94,7 +96,7 @@
 						</div>
 						<%
 							DAOUser model_utente = new DAOUser();
-							ArrayList<Utente> utenti = model_utente.showAccount();
+							ArrayList<Utente> utenti = model_utente.showAccountall();
 							Iterator<?> it = utenti.iterator();
 							while (it.hasNext()) 
 							{
@@ -108,9 +110,6 @@
 									</div>
 									<div class="col-xl-4">
 										<p id="utP">Cognome:</p><p id="utP2"><%=utente.getCognome()%></p>
-									</div>
-									<div class="col-xl-4">
-										<p id="utP">Username:</p><p id="utP2"><%=utente.getUsername()%></p>
 									</div>
 								</div>
 								<div class="row">
@@ -162,7 +161,7 @@
 						</div>
 						<%
 							DAOProdotto model_product = new DAOProdotto();
-							ArrayList<Prodotto> prodotti = model_product.doRetrieveAll();
+							ArrayList<Prodotto> prodotti = model_product.viewProduct();
 							Iterator<?> it2 = prodotti.iterator();
 							while (it2.hasNext()) 
 							{
@@ -307,7 +306,7 @@
 										request.removeAttribute("ordiniPerData");
 										request.removeAttribute("ordiniPerUsername");
 										DAOOrdine model_ordine = new DAOOrdine();
-										ArrayList<Ordine> ordini = model_ordine.doRetrieveAll();
+										ArrayList<Ordine> ordini = model_ordine.viewOrdine();
 										it3 = ordini.iterator();
 									}
 							
@@ -461,7 +460,7 @@
 			  cancelButtonColor: '#d33',
 			  confirmButtonText: 'Conferma',
 			  cancelButtonText: 'Annulla'
-			}).then((result) ={
+			}).then((result) =>{
 			  if (result.value) {
 				  $.ajax({ //INVOCAZIONE AJAX
 					  	type: "GET",
