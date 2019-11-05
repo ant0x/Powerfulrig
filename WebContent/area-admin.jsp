@@ -311,7 +311,7 @@
 									}
 							
 							while (it3.hasNext()) 
-								Ordine bean = (Ordine) it3.next();	
+							 Ordine bean =(Ordine) it3.next();
 						%> 
 						<div class="row spacerUt">
 							<div class="col-xl-11">
