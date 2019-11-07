@@ -263,7 +263,7 @@
 						<input type="text" class="form-input" value="<%=bean.getImmagine()%>" name="img_folder_path" >
 					</div>
 				</div>			
-					<!-- <a href="Product?action=modify_product&type_prod=<%=bean.getTipo()%>&model_prod=<%=bean.getModello()%>&Brand_prod=<%=bean.getMarca()%>&name_prod=<%=bean.getNome()%>&year_prod=<%=bean.getYear_prod()%>&description_prod=<%=bean.getDescrizione()%>&price_prod=<%=bean.getPrezzo()%>&discount_prod=<%=bean.getPercentualeSconto()%>&discounted_price_prod=<%=bean.getDiscounted_price_prod()%>&family_prod=<%=bean.getFamily_prod()%>&qnt_prod=<%=bean.getQuantita()%>&img_folder_path=<%=bean.getImmagine()%>"><input type="button" class="form-button" value="Modifica"></a>			
+					<!-- <a href="Product?action=modify_product&type_prod=<%=bean.getTipo()%>&model_prod=<%=bean.getModello()%>&Brand_prod=<%=bean.getMarca()%>&name_prod=<%=bean.getNome()%>&year_prod=<%=bean.getYear_prod()%>&description_prod=<%=bean.getDescrizione()%>&price_prod=<%=bean.getPrezzo()%>&discount_prod=<%=bean.getPercentualeSconto()%>&discounted_price_prod=<%=bean.getPercentualeSconto()%>&family_prod=<%=bean.getFamily_prod()%>&qnt_prod=<%=bean.getQuantita()%>&img_folder_path=<%=bean.getImmagine()%>"><input type="button" class="form-button" value="Modifica"></a>			
 					 -->
 					<div class="row justify-content-center">
 					<input type="submit" class="form-button" value="Modifica">				

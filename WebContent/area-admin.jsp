@@ -1,10 +1,8 @@
 <%@page	language="java" 
 		contentType="text/html; charset=ISO-8859-1"
     	pageEncoding="ISO-8859-1"
-    	import="com.Powerfulrig.Bean.*"     
-    	import="com.Powerfulrig.Bean.Ordine"
-    	import="com.Powerfulrig.controller.*"
     	import="com.Powerfulrig.Model.*" 
+    	import="com.Powerfulrig.Bean.*" 
     	import="java.util.*"
 %>
 
@@ -60,7 +58,7 @@
 	
 	<%
 	
-		if((utenteLoggato.getTipo().equals("admin")))
+		if(!(utenteLoggato.getTipo().equals("admin")))
 		{
 			response.sendRedirect("home.jsp");
 			return;
@@ -101,6 +99,7 @@
 							while (it.hasNext()) 
 							{
 								Utente utente = (Utente) it.next();	
+								
 						%>
 						<div class="row spacerUt">
 							<div class="col-xl-11">
@@ -125,8 +124,8 @@
 								<i  id="removeUserIcon" class="glyphicon glyphicon-remove remove"> </i>
 							</div>
 						</div>
-						<%
-						
+						<%		
+						}
 						%>
 					</div>
 					<div class="container divprod" id="prodiv">
@@ -205,11 +204,6 @@
 							</div>
 							<div class="col-xl-1">
 								<div class="row justify-content-center">
-									<p class="utProd">Anno:</p>
-								</div>
-							</div>
-							<div class="col-xl-1">
-								<div class="row justify-content-center">
 									<p class="utProd">Prezzo:</p>
 								</div>
 								<div class="row justify-content-center">
@@ -220,10 +214,8 @@
 								<div class="row justify-content-center">
 									<p class="utProd">P. Scont:</p>
 								</div>
-							</div>
-							<div class="col-xl-1">
 								<div class="row justify-content-center">
-									<p class="utProd">Famiglia:</p>
+									<p class="utProd2"><%=bean.getPercentualeSconto()%> &euro;</p>
 								</div>
 							</div>
 							<div class="col-xl-1">
@@ -306,12 +298,13 @@
 										request.removeAttribute("ordiniPerData");
 										request.removeAttribute("ordiniPerUsername");
 										DAOOrdine model_ordine = new DAOOrdine();
-										ArrayList<Ordine> ordini = model_ordine.viewOrdine();
+										ArrayList<Ordine> ordini = model_ordine.viewOrdiniAll();
 										it3 = ordini.iterator();
 									}
 							
 							while (it3.hasNext()) 
-							 Ordine bean =(Ordine) it3.next();
+							{
+								Ordine bean = (Ordine) it3.next();	
 						%> 
 						<div class="row spacerUt">
 							<div class="col-xl-11">
@@ -320,7 +313,7 @@
 										<p id="utP">ID Ordine:</p><p id="utP2"><%=bean.getNumeroOrdine()%></p>
 									</div>
 									<div class="col-xl-4">
-										<p id="utP">Utente Ordine:</p><p id="utP2"><%=bean.getUser()%></p>
+										<p id="utP">Utente Ordine:</p><p id="utP2"><%=bean.getUser().getEmail()%></p>
 									</div>
 									<div class="col-xl-5">
 										<p id="utP">Codice Carta:</p><p id="utP2"><%=bean.getMetodoPagamento()%></p>
@@ -329,14 +322,14 @@
 								<div class="row">
 									<div class="col-xl-5">
 										<div class="row">
-											<p id="utP" class="spacerIndirizzoOrd">Indirizzo:</p><p id="utP2"><%=bean.getOrder_address()%></p>
+											<p id="utP" class="spacerIndirizzoOrd">Indirizzo:</p><p id="utP2"><%=bean.getUser().getVia()+" "+bean.getUser().getCap()%></p>
 										</div>
 									</div>
 									<div class="col-xl-4">
 										<p id="utP">Data Ordine:</p><p id="utP2"><%=bean.getData()%></p>
 									</div>
 									<div class="col-xl-3">
-										<p id="utP">Prezzo:</p><p id="utP2"><%=bean.getTotale()%> &euro;</p>
+										<p id="utP">Prezzo:</p><p id="utP2"><%=bean.getPrezzo()%> &euro;</p>
 									</div>
 								</div>
 							</div>
@@ -345,7 +338,7 @@
 							</div>
 						</div>
 						<%
-						}		
+							}	
 						%>					
 					</div>
 				</div>
@@ -460,7 +453,7 @@
 			  cancelButtonColor: '#d33',
 			  confirmButtonText: 'Conferma',
 			  cancelButtonText: 'Annulla'
-			}).then((result) =>{
+			}).then((result) => {
 			  if (result.value) {
 				  $.ajax({ //INVOCAZIONE AJAX
 					  	type: "GET",
