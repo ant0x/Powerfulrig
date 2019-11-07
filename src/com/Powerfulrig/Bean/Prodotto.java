@@ -155,6 +155,7 @@ public class Prodotto implements Cloneable
 		this.immagine = immagine;
 	}
 	
+	
 	public Prodotto clone()
 	{
 		try 

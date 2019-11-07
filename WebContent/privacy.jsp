@@ -58,8 +58,8 @@
 		</div>
 		<div class="container border-grcndPage">
 			<div class="row" id="spacergrcnd">
-				<p id="grcndP">Gentile utente, PowerfulRig Corporation di Alessandro Bergamo, David Capuano & Rocco Coda La informa, nel rispetto della vigente normativa in materia di protezione dei dati personali e, in particolare, ai sensi del Regolamento UE 2016/679 (GDPR) e del d.lgs. 196/2003 (Codice in materia di protezione dei dati personali, c.d. &quot;Codice della privacy&quot;), che i dati personali da Lei forniti ovvero altrimenti acquisiti nell&#180; ambito dell&#180; attività effettuata in relazione al Sito PowerfulRig.it potranno formare oggetto di trattamento, nel rispetto degli obblighi di liceità, trasparenza, proporzionalità, sicurezza e riservatezza previsti dalla normativa vigente. <br>
-							Il Sito è di proprietà e gestito da PowerfulRig Corporation di Alessandro Bergamo, David Capuano & Rocco Coda (per i dati societari v. Art. 1). Questa privacy policy è resa solo per questo Sito e non anche per siti web di terze parti eventualmente consultati dall&#180; Utente tramite link.</p>
+				<p id="grcndP">Gentile utente, PowerfulRig Corporation di  Antonio Baldi e Francesco Galasso La informa, nel rispetto della vigente normativa in materia di protezione dei dati personali e, in particolare, ai sensi del Regolamento UE 2016/679 (GDPR) e del d.lgs. 196/2003 (Codice in materia di protezione dei dati personali, c.d. &quot;Codice della privacy&quot;), che i dati personali da Lei forniti ovvero altrimenti acquisiti nell&#180; ambito dell&#180; attività effettuata in relazione al Sito PowerfulRig.it potranno formare oggetto di trattamento, nel rispetto degli obblighi di liceità, trasparenza, proporzionalità, sicurezza e riservatezza previsti dalla normativa vigente. <br>
+							Il Sito è di proprietà e gestito da PowerfulRig Corporation di  Antonio Baldi e Francesco Galasso (per i dati societari v. Art. 1). Questa privacy policy è resa solo per questo Sito e non anche per siti web di terze parti eventualmente consultati dall&#180; Utente tramite link.</p>
 			</div>
 			<div class="row" id="spacergrcnd">
 				<h7>Indice</h7>
@@ -77,7 +77,7 @@
 			</div>
 			<div class="row" id="spacergrcnd">
 				<h7>Art. 1. Titolare del trattamento dei dati:</h7>
-				<p id="grcndP">1. Titolare del trattamento è PowerfulRig Corporation di Alessandro Bergamo, David Capuano & Rocco Coda (C.F./P.IVA: 03381712623), Via Cretaio n. 28, 80074, Ischia (NA), tel.: 089825355, E-mail: privacy@PowerfulRig.it; P.E.C.: PowerfulRig@pec.it.</p>
+				<p id="grcndP">1. Titolare del trattamento è PowerfulRig Corporation di  Antonio Baldi e Francesco Galasso (C.F./P.IVA: 03381712623), Via della Rimembranza, n° 28, Fisciano(SA), tel.: 089825355, E-mail: privacy@PowerfulRig.it; P.E.C.: PowerfulRig@pec.it.</p>
 			</div>
 			<div class="row" id="spacergrcnd">
 				<h7>Art. 2. Finalità e modalità del trattamento</h7>

@@ -440,7 +440,8 @@
 							</div>
 						<%
 							}
-								ArrayList<Prodotto> prod_ordini = ordini.get(I).getLista();	
+								ArrayList<Prodotto> prod_ordini = ordini.get(I).getLista();
+								System.out.println(prod_ordini);
 								for(int J=0; J<prod_ordini.size(); J++)
 								{
 						%>

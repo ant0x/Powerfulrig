@@ -170,7 +170,7 @@ public class DAOOrdine
 		return flag;
 	}
 
-	public static ArrayList<Ordine> viewOrdine() throws SQLException
+	public static ArrayList<Ordine> viewOrdiniAll() throws SQLException
 	{
 		ArrayList<Ordine> ordini=new ArrayList<Ordine>();
 		Utente user=null;
