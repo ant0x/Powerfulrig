@@ -55,6 +55,8 @@ public class CreateOrder extends HttpServlet {
 		String order_date = formatter.format(date);
 		
 		Boolean isConsegnato = false;
+		System.out.println("il metodo di pagamento è "+order_payment_method);
+		log("il metodo di pagamento è "+order_payment_method);
 		app.setMetodoPagamento(order_payment_method);
 		app.setLista(productsToBuy);
 		app.setData(order_date);

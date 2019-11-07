@@ -234,7 +234,7 @@
 							%>
 							<div class="row cntr justify-content-start spacerCards"> 
 								<label class="radio">
-									<input type="radio" name="payment_method_opt" id="opt3" value="<%=paymentBean.getCard_number()%>" class="hidden">
+									<input type="radio" name="payment_method_opt" id="opt3" value="<%=paymentBean.getCard_bank()%>" class="hidden">
 									<span class="label"></span>
 									<p class="ordinePar2"><%=paymentBean.getCard_bank()%> - &#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; <%=paymentBean.getCard_number().substring(15,19)%></p>
 								</label>											
