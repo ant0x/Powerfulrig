@@ -177,6 +177,7 @@ public class PaymentMethodDAO implements PaymentMethodModel{
 			preparedStatement.setDate(6, java.sql.Date.valueOf(date_registration_card));
 				
 			esito = preparedStatement.executeUpdate();
+			con.commit();
 			
 		} finally {
 				try {

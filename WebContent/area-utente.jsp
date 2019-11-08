@@ -60,7 +60,10 @@
      	  <!-- ottenimento dei metodi di pagamanto dell'utenteLoggato(questo è incluso nel fragment/header) -->>
      	  <% ArrayList<PaymentMethodBean> payment_methods = model_payment.doRetrieveByEmail(utenteLoggato.getEmail());
      	  
-     	  	ArrayList<String> addresses = model_utente.showAddres(utenteLoggato.getEmail());%>
+     	    ArrayList<String> addresses = model_utente.showAddres(utenteLoggato.getEmail());
+     	    String address="";
+     	    address=addresses.get(0)+" "+addresses.get(2)+" "+addresses.get(1);
+     	    %>
 	<!-- Header section end -->
 	
 	<section class="utente-section">
@@ -171,9 +174,8 @@
 							<% 
 							boolean isStampato = false;
 							
-							for(int i = 0;i <addresses.size(); i++)
-							{								
-								if(addresses.get(i) == null || addresses.get(i).equals(null))
+															
+								if(address == "" || addresses.get(0).equals(""))
 								{
 									if(!isStampato)
 									{
@@ -218,18 +220,12 @@
 								{
 								%>	
 									<div class="row justify-content-start">
-										<input type="hidden" id="addressNumber" value="<%=i%>">
+										<input type="hidden" id="addressNumber" value="<%=1%>">
 										<input type="hidden" id="username" value="<%=utenteLoggato.getEmail()%>">
 											<div class="col-xl-6">
 												<div class="row">
 													<h4 class="upH4">Indirizzo: </h4>
-													<p class="upPCircle"><%=addresses.get(i).substring(0,addresses.get(i).indexOf(""))%></p>
-												</div>
-											</div>
-											<div class="col-xl-5">
-												<div class="row">
-													<h4 class="upH4">Città: </h4>
-													<p class="upPCircle"><%=addresses.get(i).substring(addresses.get(i).indexOf("")+1)%></p>
+													<p class="upPCircle"><%=address%></p>
 												</div>
 											</div>
 											<div class="col-xl-1">
@@ -239,7 +235,7 @@
 											</div>
 										</div>
 							<%}
-							}							
+														
 						%>				
 						<!-- div nascosto per l'inserimento di un nuovo indirizzo -->							
 						
