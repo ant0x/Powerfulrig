@@ -165,7 +165,7 @@
 			<div class="container spacerUP3">
 				<div class="row justify-content-start">
 					<div class="col-xl-5">
-						<h4 style="color:navy">Indirizzi di Spedizione</h4>
+						<h4 style="color:navy">Indirizzo di Spedizione</h4>
 					</div>
 				</div>
 				
@@ -381,7 +381,7 @@
 		%>
 			<div class="container spacerUP2 borderutdiv">
 		<%				
-			for(int I=0; I<ordini.size(); I++)
+			for(int I=1; I<ordini.size(); I++)
 			{
 				DateTimeFormatter pattern = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 				String data = ordini.get(I).getData();
@@ -407,9 +407,10 @@
 						<div class="col-xl-6">
 							<div class="row">
 								<h4 class="upH43">SPEDITO A: </h4>
-								<p class="ordP"><%=" "+ordini.get(I).getUser().getVia()+
-								ordini.get(I).getUser().getCap()+
-								ordini.get(I).getUser().getNumeroCivico()
+								<p class="ordP"><%=" "+ordini.get(I).getUser().getVia()+"n° "+
+								ordini.get(I).getUser().getNumeroCivico()+", "+
+								ordini.get(I).getUser().getCap()
+								
 								%></p>
 							</div>
 						</div>

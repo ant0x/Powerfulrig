@@ -42,7 +42,8 @@
 <body>
 
 	<% PaymentMethodDAO model_payment = new PaymentMethodDAO();
-		PaymentMethodBean paymentBean = new PaymentMethodBean();%>
+		PaymentMethodBean paymentBean = new PaymentMethodBean();
+		%>
 	
 	<!-- Page Preloder -->
 	<div id="preloder">
@@ -111,18 +112,17 @@
 								<h4 class="ordH42">Seleziona l'indirizzo di spedizione</h4>
 							</div>
 						</div>
-						<!-- generazione indirizzi -->
-						<% ArrayList<String> addresses = new ArrayList<>();
-							addresses.add(utenteLoggato.getVia()+""+utenteLoggato.getCap()+""+utenteLoggato.getNumeroCivico());
+						<!-- generazione indirizzi-->
+						<%  String addresses;
+							addresses=utenteLoggato.getVia()+" "+utenteLoggato.getCap()+" "+utenteLoggato.getNumeroCivico();
 							boolean isStampato = false;
 							
-							for(int i = 0;i < addresses.size(); i++)
-							{
+							
 							%>
 							<div class="row cntr justify-content-jusitfy"> 
 								<label id="address_selector" class="radio">
 							<%	
-								if(addresses.get(i) == null || addresses.get(i).equals(null))
+								if(addresses == null || addresses.equals(null))
 								{
 									if(!isStampato)
 									{
@@ -160,17 +160,14 @@
 								else
 								{
 							%>
-									<input type="radio" name="addressopt" value="<%=addresses.get(i)%>" id="opt1" class="hidden">
+									<input type="radio" name="addressopt" value="<%=addresses%>" id="opt1" class="hidden">
 									<span class="label"></span>
-									<p class="ordinePar"><%=addresses.get(i)%></p>
+									<p class="ordinePar"><%=addresses%></p>
 							<%
 								}							
 							%>
 							</label>											
 						</div>
-							<%
-							}
-							%>
 					</div>
 						<!-- codice generato -->												
 					<div class="col-xl-6 spacerMethod_payment">
@@ -236,7 +233,7 @@
 								<label class="radio">
 									<input type="radio" name="payment_method_opt" id="opt3" value="<%=paymentBean.getCard_bank()%>" class="hidden">
 									<span class="label"></span>
-									<p class="ordinePar2"><%=paymentBean.getCard_bank()%> - &#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; <%=paymentBean.getCard_number().substring(15,19)%></p>
+									<p class="ordinePar2"><%=paymentBean.getCard_bank()%> - &#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; <%=paymentBean.getCard_number().substring(14)%></p>
 								</label>											
 							</div>
 							<%	

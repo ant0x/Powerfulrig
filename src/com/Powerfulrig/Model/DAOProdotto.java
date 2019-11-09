@@ -152,9 +152,11 @@ public class DAOProdotto
 		boolean flag=false;
 		try
 		{
+			int id= Integer.parseInt(idProdotto);
+			System.out.println("id è "+id);
 			con=ConnectionPool.getConnection();
 			statement=con.prepareStatement(deleteProduct);
-			statement.setInt(1,Integer.parseInt(idProdotto));
+			statement.setInt(1,id);
 			flag=statement.executeUpdate()>0;
 			con.commit();
 		}

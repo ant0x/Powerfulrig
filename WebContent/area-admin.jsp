@@ -215,7 +215,7 @@
 									<p class="utProd">P. Scont:</p>
 								</div>
 								<div class="row justify-content-center">
-									<p class="utProd2"><%=bean.getPercentualeSconto()%> &euro;</p>
+									<p class="utProd2"><%=bean.getPercentualeSconto()%> %</p>
 								</div>
 							</div>
 							<div class="col-xl-1">
@@ -443,7 +443,7 @@
 	// funziona AJAX che elimina l'utente selezionato dal db
 	$("[id ='removeUserIcon']").on('click', function removeUser(){
 		var value1 = ("banUser");
-		var value2 = $(this).parent().prev().children("div:nth-child(1)").children("div:nth-child(3)").find("p#utP2").html(); //ottenimeto username	
+		var value2 = $(this).parent().prev().children("div:nth-child(1)").children("div:nth-child(3)").find("p#utP2").html(); //ottenimeto email	
 			Swal.fire({ //PRIMO POPUP
 			  title: 'Sei sicuro di voler bannare l\' utente?',
 			  text: "L'utente sarà bannato permanentemente.",
