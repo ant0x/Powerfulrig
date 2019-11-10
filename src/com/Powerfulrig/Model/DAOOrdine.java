@@ -144,16 +144,40 @@ public class DAOOrdine
 	public static boolean addOrder(Ordine order) throws SQLException
 	{
 		boolean flag=false;
+		int nFattura=-1;
 		try
 		{
+			System.out.println("err qui add");
 			con=ConnectionPool.getConnection();
 			statement=con.prepareStatement(addOrdine);
 			statement.setDouble(1,order.getTotale());
 			statement.setString(2,order.getMetodoPagamento());
 			statement.setString(3,order.getData());
 			statement.setString(4,order.getUser().getEmail());
+			System.out.println("err qui fin");
 			flag=statement.executeUpdate()>0;
 			con.commit();
+			statement=con.prepareStatement(selectNfattura);
+			set=statement.executeQuery();
+			if(set.next())
+			{
+			nFattura=set.getInt(1);
+			System.out.println("n fattura è "+nFattura);
+			}
+			for(Prodotto a : order.getLista())
+			{
+			System.out.println("ci entro in sta query?");
+			con=ConnectionPool.getConnection();
+			statement=con.prepareStatement(addComposizione);
+			statement.setInt(1,a.getQuantita());
+			statement.setDouble(2, a.getPrezzo());
+			statement.setInt(3,nFattura);
+			statement.setInt(4, a.getIdProdotto());
+			flag=statement.executeUpdate()>0;
+			con.commit();
+			
+			}
+			
 		}
 		finally
 		{
@@ -308,9 +332,12 @@ public class DAOOrdine
 	private static String viewAll;
 	private static String viewOrdineByNFattura;
 	private static String deleteOrder;
+	private static String addComposizione;
+	private static String selectNfattura;
 
 	static 
 	{
+		selectNfattura="select numero_fattura from fattura order by numero_fattura desc limit 1";
 		viewOrdine="select table2.Email,table2.Nome,table2.Cognome,table2.Via,table2.cap,table2.NumeroCivico,path,table1.Nome,numero_fattura,totale,data_fattura,quantita,table1.prezzo,table1.IdProdotto\r\n" + 
 				"from (select path,Nome,composizione.quantita,composizione.prezzo,fattura,prodotto.IdProdotto\r\n" + 
 				"    from prodotto inner join composizione on prodotto.IdProdotto=composizione.IdProdotto) as table1\r\n" + 
@@ -329,6 +356,7 @@ public class DAOOrdine
 				"       where Email like ? ) as table2\r\n" + 
 				"       on table1.fattura=table2.numero_fattura;";
 		addOrdine="INSERT INTO fattura(totale,metodo_pagamento,data_fattura,Email_Utente) VALUES (?,?,?,?)";
+		addComposizione="INSERT INTO composizione (quantita, prezzo, fattura, IdProdotto) VALUES (?, ?, ?, ?)";
 		viewAll="select table2.Email,table2.Nome,table2.Cognome,table2.Via,table2.cap,table2.NumeroCivico,path,table1.Nome,numero_fattura,totale,data_fattura,quantita,table1.prezzo,table1.IdProdotto\r\n" + 
 				"from (select path,Nome,composizione.quantita,composizione.prezzo,fattura,prodotto.IdProdotto\r\n" + 
 				"    from prodotto inner join composizione on prodotto.IdProdotto=composizione.IdProdotto) as table1\r\n" + 

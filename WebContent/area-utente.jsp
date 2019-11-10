@@ -381,7 +381,7 @@
 		%>
 			<div class="container spacerUP2 borderutdiv">
 		<%				
-			for(int I=1; I<ordini.size(); I++)
+			for(int I=0; I<ordini.size(); I++)
 			{
 				DateTimeFormatter pattern = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 				String data = ordini.get(I).getData();
