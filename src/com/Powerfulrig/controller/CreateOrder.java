@@ -47,10 +47,13 @@ public class CreateOrder extends HttpServlet {
 				
 		//parametri della requests
 		Float totalOrderPrice = Float.parseFloat(request.getParameter("totalOrderPrice"));
-		String via = request.getParameter("opt1");
-		String nCivico = request.getParameter("opt2");
+		String via = request.getParameter("addressopt1");
+		String nCivico = request.getParameter("addressopt2");
+		System.out.println("il civico è "+nCivico);
+		log("il civico è "+nCivico);
+
 		int nCivico1 = Integer.parseInt(nCivico);
-		String Cap = request.getParameter("opt3");
+		String Cap = request.getParameter("addressopt3");
 	
 		String order_payment_method = request.getParameter("payment_method_opt");
 		

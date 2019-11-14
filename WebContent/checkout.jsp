@@ -119,9 +119,9 @@
 			     	    String address="";
 			     	    address=addresses.get(0)+" "+addresses.get(2)+" "+addresses.get(1);
 			     	    %>
-			     	   <input type="radio" name="addressopt1" value="<%=addresses.get(0)%>" id="opt1" class="hidden">
-						<input type="radio" name="addressopt2" value="<%=addresses.get(2)%>" id="opt2" class="hidden">
-						<input type="radio" name="addressopt3" value="<%=addresses.get(1)%>" id="opt3" class="hidden">
+			     	    <input type="text" name="addressopt1" value="<%=addresses.get(0)%>" id="opt1" class="hidden">
+						<input type="text" name="addressopt2" value="<%=addresses.get(2)%>" id="opt2" class="hidden">
+						<input type="text" name="addressopt3" value="<%=addresses.get(1)%>" id="opt3" class="hidden">
 						<%
 							boolean isStampato = false;
 							
