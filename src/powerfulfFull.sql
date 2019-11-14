@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 8.0.16, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.18, for Win64 (x86_64)
 --
 -- Host: localhost    Database: powerfulrig
 -- ------------------------------------------------------
--- Server version	8.0.16
+-- Server version	8.0.18
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
- SET NAMES utf8 ;
+/*!50503 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,7 +21,7 @@
 
 DROP TABLE IF EXISTS `composizione`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `composizione` (
   `quantita` int(11) NOT NULL,
   `prezzo` float NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE `composizione` (
 
 LOCK TABLES `composizione` WRITE;
 /*!40000 ALTER TABLE `composizione` DISABLE KEYS */;
-INSERT INTO `composizione` VALUES (1,250.99,1,1),(1,249.99,2,15),(1,4999.99,2,17);
+INSERT INTO `composizione` VALUES (1,250.99,1,1),(1,249.99,2,15),(1,4999.99,2,17),(1,162.24,3,22);
 /*!40000 ALTER TABLE `composizione` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -50,7 +50,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `fattura`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `fattura` (
   `numero_fattura` int(11) NOT NULL AUTO_INCREMENT,
   `totale` float NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE `fattura` (
   PRIMARY KEY (`numero_fattura`),
   KEY `Email_utente` (`Email_utente`),
   CONSTRAINT `fattura_ibfk_1` FOREIGN KEY (`Email_utente`) REFERENCES `utente` (`Email`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +69,7 @@ CREATE TABLE `fattura` (
 
 LOCK TABLES `fattura` WRITE;
 /*!40000 ALTER TABLE `fattura` DISABLE KEYS */;
-INSERT INTO `fattura` VALUES (1,256,'paypal','2019-07-31','antonio.baldi98@gmail.com'),(2,4999.99,'postepay','2019-07-31','francesco.lauro@gmail.com');
+INSERT INTO `fattura` VALUES (1,256,'paypal','2019-07-31','antonio.baldi98@gmail.com'),(2,4999.99,'postepay','2019-07-31','francesco.lauro@gmail.com'),(3,162.24,'PostePay','2019-11-14','antonio.baldi98@gmail.com');
 /*!40000 ALTER TABLE `fattura` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -79,7 +79,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `prodotto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `prodotto` (
   `Watt` int(11) NOT NULL,
   `IdProdotto` int(11) NOT NULL AUTO_INCREMENT,
@@ -114,7 +114,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `spedizione`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `spedizione` (
   `ID_spedizione` int(11) NOT NULL AUTO_INCREMENT,
   `stato` varchar(20) NOT NULL,
@@ -125,7 +125,7 @@ CREATE TABLE `spedizione` (
   PRIMARY KEY (`ID_spedizione`),
   KEY `fattura` (`fattura`),
   CONSTRAINT `spedizione_ibfk_1` FOREIGN KEY (`fattura`) REFERENCES `fattura` (`numero_fattura`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -134,7 +134,7 @@ CREATE TABLE `spedizione` (
 
 LOCK TABLES `spedizione` WRITE;
 /*!40000 ALTER TABLE `spedizione` DISABLE KEYS */;
-INSERT INTO `spedizione` VALUES (1,'Processing','2019-08-01','2019-08-12','Pagani',2),(2,'Processing','2019-08-01','2019-08-12','San marzano',1);
+INSERT INTO `spedizione` VALUES (1,'Processing','2019-08-01','2019-08-12','Pagani',2),(2,'Processing','2019-08-01','2019-08-12','San marzano',1),(3,'Processing','2019-11-14','2019-11-14','84010',3);
 /*!40000 ALTER TABLE `spedizione` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -144,7 +144,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `users_configurations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users_configurations` (
   `id_configuration` int(11) NOT NULL AUTO_INCREMENT,
   `name_configuration` varchar(100) DEFAULT NULL,
@@ -197,13 +197,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `users_payement_method`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users_payement_method` (
   `card_number` varchar(40) NOT NULL,
   `card_bank` varchar(30) NOT NULL,
   `card_cvc` int(3) NOT NULL,
   `card_expiry` date NOT NULL,
-  `card_owner` varchar(16) NOT NULL,
+  `card_owner` varchar(50) NOT NULL,
   `date_registration_card` date NOT NULL,
   PRIMARY KEY (`card_number`),
   KEY `card_owner` (`card_owner`),
@@ -217,6 +217,7 @@ CREATE TABLE `users_payement_method` (
 
 LOCK TABLES `users_payement_method` WRITE;
 /*!40000 ALTER TABLE `users_payement_method` DISABLE KEYS */;
+INSERT INTO `users_payement_method` VALUES ('2132 1321 1232 3121','PostePay',154,'2019-11-29','antonio.baldi98@gmail.com','2019-11-13');
 /*!40000 ALTER TABLE `users_payement_method` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -226,7 +227,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `utente`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `utente` (
   `Email` varchar(50) NOT NULL,
   `Tipo` varchar(15) NOT NULL DEFAULT 'user',
@@ -260,4 +261,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-30 22:28:20
+-- Dump completed on 2019-11-14 17:17:41

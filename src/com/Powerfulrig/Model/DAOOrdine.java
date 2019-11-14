@@ -1,6 +1,7 @@
 package com.Powerfulrig.Model;
 
 import java.sql.Connection;
+
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +15,6 @@ import com.Powerfulrig.Bean.Prodotto;
 import com.Powerfulrig.Bean.Utente;
 import com.Powerfulrig.util.ConnectionPool;
 
-import javafx.scene.chart.PieChart.Data;
 
 public class DAOOrdine 
 {
