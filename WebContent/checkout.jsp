@@ -353,15 +353,10 @@
 					tot += qntXprice;
 					i++;
 				}
-				var price = numberWithCommas(tot);
+				var price = tot;
 				document.getElementById("totalOrderPrice").innerHTML = "<input type=\"hidden\" name=\"totalOrderPrice\" value="+tot+"><p id=\"ordProd\" class=\"totordspacer\">Totale ordine: "+price+"&#128;</p>";
 			}
 			
-			// funziona per formattare correttamente il prezzo
-			function numberWithCommas(tot) {
-				var x = parseFloat(tot).toPrecision(4);
-			    return x.toString().replace(".", ",");
-			}
 			
 			//funzione JQuery per selezionare la quantità relativa al menù select cliccato
 			//N.B si usano più IDs con lo stesso valore

@@ -37,7 +37,7 @@ public class InsertPaymentMethod extends HttpServlet {
 		//ottenimento dell'utenteLoggato
 		Utente utenteLoggato = (Utente) request.getSession().getAttribute("utenteLoggato");
 		
-		String card_owner = utenteLoggato.getEmail();		//card_owner = username
+		String card_owner = utenteLoggato.getEmail();		//card_owner = mail
 		String card_bank = " ";
 		String card_number = null;
 		int card_cvc = 0;
