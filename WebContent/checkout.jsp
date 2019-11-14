@@ -13,7 +13,7 @@
 
 <head>
 
-	<title>TL - Checkout</title>
+	<title>PR - Checkout</title>
 	<meta name="description" content="EndGam Gaming Magazine Template">
 	<meta name="keywords" content="endGam,gGaming, magazine, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,6 +43,7 @@
 
 	<% PaymentMethodDAO model_payment = new PaymentMethodDAO();
 		PaymentMethodBean paymentBean = new PaymentMethodBean();
+		DAOUser model_utente = new DAOUser();
 		%>
 	
 	<!-- Page Preloder -->
@@ -113,8 +114,15 @@
 							</div>
 						</div>
 						<!-- generazione indirizzi-->
-						<%  String addresses;
-							addresses=utenteLoggato.getVia()+" "+utenteLoggato.getCap()+" "+utenteLoggato.getNumeroCivico();
+						<%  
+						ArrayList<String> addresses = model_utente.showAddres(utenteLoggato.getEmail());
+			     	    String address="";
+			     	    address=addresses.get(0)+" "+addresses.get(2)+" "+addresses.get(1);
+			     	    %>
+			     	   <input type="radio" name="addressopt1" value="<%=addresses.get(0)%>" id="opt1" class="hidden">
+						<input type="radio" name="addressopt2" value="<%=addresses.get(2)%>" id="opt2" class="hidden">
+						<input type="radio" name="addressopt3" value="<%=addresses.get(1)%>" id="opt3" class="hidden">
+						<%
 							boolean isStampato = false;
 							
 							
@@ -122,7 +130,7 @@
 							<div class="row cntr justify-content-jusitfy"> 
 								<label id="address_selector" class="radio">
 							<%	
-								if(addresses == null || addresses.equals(null))
+								if(address == null || address.equals(null))
 								{
 									if(!isStampato)
 									{
@@ -137,14 +145,11 @@
 												<input type="text" class="form-input indSpacer1" name="indirizzo"  id="address" placeholder="Inserisci Indirizzo">
 											</div>
 											<div class="col-xl-4">
-												<input type="text" class="form-input indSpacer1" name="città" id="city" placeholder="Inserisci città">
-											</div>
-											<div class="col-xl-1">
-												<input type="text" class="form-input3 indSpacer2" id="province" maxlength="2" name="provincia" placeholder="Provincia">
+												<input type="text" class="form-input indSpacer1" name="città" id="city" placeholder="Inserisci cap">
 											</div>
 											<div class="col-xl-3">
 												<div class="row justify-content-center">
-													<input type="text" class="form-input3 indSpacer3" id="cap" maxlength="5" name="cap" placeholder="CAP">
+													<input type="text" class="form-input3 indSpacer3" id="cap" maxlength="5" name="cv" placeholder="numero civico">
 												</div>
 											</div>
 										</div>
@@ -160,9 +165,11 @@
 								else
 								{
 							%>
-									<input type="radio" name="addressopt" value="<%=addresses%>" id="opt1" class="hidden">
+									<input type="radio" name="addressopt" value="<%=address%>" id="opt1" class="hidden">
+									
+									
 									<span class="label"></span>
-									<p class="ordinePar"><%=addresses%></p>
+									<p class="ordinePar"><%=address%></p>
 							<%
 								}							
 							%>

@@ -175,7 +175,7 @@
 							boolean isStampato = false;
 							
 															
-								if(address == "" || addresses.get(0).equals(""))
+								if(address == "" || address.equals(""))
 								{
 									if(!isStampato)
 									{

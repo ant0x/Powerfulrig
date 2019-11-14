@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -46,7 +47,11 @@ public class CreateOrder extends HttpServlet {
 				
 		//parametri della requests
 		Float totalOrderPrice = Float.parseFloat(request.getParameter("totalOrderPrice"));
-		String order_address = request.getParameter("addressopt");
+		String via = request.getParameter("opt1");
+		String nCivico = request.getParameter("opt2");
+		int nCivico1 = Integer.parseInt(nCivico);
+		String Cap = request.getParameter("opt3");
+	
 		String order_payment_method = request.getParameter("payment_method_opt");
 		
 		//catching date of registration		
@@ -62,6 +67,10 @@ public class CreateOrder extends HttpServlet {
 		app.setData(order_date);
 		app.setTotale(totalOrderPrice);
 		user.setEmail(email);
+		user.setVia(via);
+		user.setNumeroCivico(nCivico1);
+		user.setCap(Cap);
+		
 		app.setUser(user);
 
 		try {
@@ -76,7 +85,10 @@ public class CreateOrder extends HttpServlet {
 		} catch (SQLException e) {
 			
 			e.printStackTrace();
-		}
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
 	
 	}
 	
