@@ -137,7 +137,7 @@ ul {
 	color: #fefefe;
 	margin-right: 10px;
 	background-color: transparent;
-	width:167px;
+	width:157px;
 }
 
 
@@ -1468,7 +1468,7 @@ ul.dropdown-cart li .item-right button{
 
 .catalogo-section {
 	text-align: center;
-	background-image: linear-gradient(#00e6e6, #001a1a);
+	background-image: linear-gradient(#00807b, #001a1a);
 }
 
 .headerCatalogo {
@@ -1604,7 +1604,7 @@ select.arrows {
 .prodsing-section {
 	padding: 200px 0px 30px;
 	margin: 0px 0px;
-	background-image: linear-gradient(#00e6e6, #001a1a);
+	background-image: linear-gradient(#18c7c0, #001a1a);
 }
 
 .border-prodsing {
@@ -1784,7 +1784,7 @@ select.arrows {
 .cateProd-section {
 	padding: 200px 0px 30px;
 	margin: 0px 0px;
-	background-image: linear-gradient(#00e6e6, #001a1a);
+	background-image: linear-gradient(#60abab, #001a1a);
 }
 
 .border-cateProd {
@@ -1827,7 +1827,7 @@ box-shadow: 0px 0px 63px 5px rgba(204,255,255,1);
 .grcnd-section {
 	padding: 200px 0px 30px;
 	margin: 0px 0px;
-	background-image: linear-gradient(#00e6e6, #001a1a);
+	background-image: linear-gradient(#60abab, #001a1a);
 }
 
 .border-grcndPage {
@@ -1860,7 +1860,7 @@ box-shadow: 0px 0px 63px 5px rgba(204,255,255,1);
 .conf-section {
 	padding: 200px 0px 40px;
 	margin: 0px 0px;
-	background-image: linear-gradient(#00e6e6, #001a1a);
+	background-image: linear-gradient(#60abab, #001a1a);
 }
 
 
@@ -2546,7 +2546,7 @@ p#login-form-remember {
 
 .contact-page {
 	padding: 200px 0px 30px;
-	background-image: linear-gradient(#00e6e6, #001a1a);
+	background-image: linear-gradient(#60abab, #001a1a);
 }
 
 .map iframe {
@@ -2673,21 +2673,21 @@ p#login-form-remember {
 	width: 156px;
 	padding: 8px 30px;
 	border-radius: 0;
-	color: blue;
+	color: #a4eded;
 	text-align: center;
 	background: #fff;
 	position: relative;
 }
 
 .form-button:hover {
-	background:blue;
+	background:#a4eded;
 	color:white;
 }
 
 .form-input {
 	padding: 5px 20px;
 	border: 2px solid black;
-	background-color: blue;
+	background-color: #113d4a;
 	width: 250px;
 	color: white;
 }
@@ -2702,7 +2702,7 @@ p#login-form-remember {
 .admin-section {
 	padding: 200px 0px 30px;
 	margin: 0px 0px;
-	background-image: linear-gradient(#00e6e6, #001a1a);
+	background-image: linear-gradient(#60abab, #001a1a);
 	min-height: 1000px;
 }
 
@@ -2844,7 +2844,7 @@ p#login-form-remember {
 .utente-section {
 	padding: 200px 0px 30px;
 	margin: 0px 0px;
-	background-image: linear-gradient(#00e6e6, #001a1a);
+	background-image: linear-gradient(#60abab, #001a1a);
 }
 
 .utenteh4 {
@@ -2908,13 +2908,13 @@ p#login-form-remember {
 }
 
 .upH4 {
-	color: grey;
+	color: #87ffff;
 	font-size: 20px;
 	margin-left: 10px;
 }
 
 .upH43 {
-	color: navy;
+	color: #2c4d4d;
 	font-size: 20px;
 	margin-left: 10px;
 }
@@ -2981,7 +2981,7 @@ p#login-form-remember {
 }
 
 .uph44 {
-	color: navy;
+	color: #2c4d4d;
 	font-weight: 800;
 	margin-bottom: 20px;
 	font-size: 13px;
@@ -3023,7 +3023,7 @@ p#login-form-remember {
 	border-radius: 4px;
 	color: white;
 	text-align: center;
-	background: navy;
+	background: #184242;
 	position: relative;
 }
 
@@ -3079,7 +3079,7 @@ p#login-form-remember {
 .form-input2 {
 	padding: 5px 20px;
 	border: 2px solid black;
-	background-color: blue;
+	background-color: #113d4a;
 	width: 300px;
 	color: white;
 }
@@ -3087,7 +3087,7 @@ p#login-form-remember {
 .form-input3 {
 	padding: 5px 20px;
 	border: 2px solid black;
-	background-color: blue;
+	background-color: #113d4a;
 	margin-left: -40px;
 	width: 125px;
 	color: white;
@@ -3097,7 +3097,7 @@ p#login-form-remember {
 .form-input4 {
 	padding: 5px 20px;
 	border: 2px solid black;
-	background-color: blue;
+	background-color: #113d4a;
 	width: 170px;
 	color: white;
 }
@@ -3113,7 +3113,7 @@ p#login-form-remember {
 .form-input5 {
 	padding: 5px 20px;
 	border: 2px solid black;
-	background-color: blue;
+	background-color: #113d4a;
 	width: 210px;
 	color: white;
 }
@@ -3128,7 +3128,7 @@ p#login-form-remember {
 	border-radius: 4px;
 	color: white;
 	text-align: center;
-	background: navy;
+	background: #184242;
 	position: relative;
 }
 
@@ -3145,7 +3145,7 @@ p#login-form-remember {
 .ordine-section {
 	padding: 240px 0px 30px;
 	margin: 0px 0px;
-	background-image: linear-gradient(#00e6e6, #001a1a);
+	background-image: linear-gradient(#60abab, #001a1a);
 }
 
 .spacer-ordine {
@@ -3721,6 +3721,21 @@ input[type="radio"]:checked + .label:after {
 
 }
 
+@media only screen and (max-width:1337px) and (min-width:1200px){
+	
+	.input-large2{
+	height: 38px;
+	padding: 5px;
+	display: inline-block;
+	border: none;
+    box-shadow: none;
+    border-bottom: 1px solid grey;
+	color: #fefefe;
+	margin-right: 10px;
+	background-color: transparent;
+	width:100px;
+	}
+}
 /* Large Mobile :480px. */
 
 @media only screen and (max-width: 767px) {

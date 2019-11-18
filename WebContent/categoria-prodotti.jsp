@@ -80,7 +80,7 @@
 		</div>
 		<div class="container border-cateProd">
 			<div class="row">
-				<div class="col-xl-10">
+				<div class="col-md-10">
 					<div class="row justify-content-start">
 					
 					<%
@@ -105,17 +105,17 @@
 		
 					%>
 					
-						<div class="col-xl-4 spacerProdotti">
+						<div class="col-sm-4 spacerProdotti">
 							<a href="Product?action=prodotto&type_prod=<%=bean.getTipo()%>&model_prod=<%=bean.getModello()%>"><img src=<%=bean.getImmagine()+"/img1.jpg"%> width="200" height="200" class="imgItem5"></a>
 							<a href="Product?action=prodotto&type_prod=<%=bean.getTipo()%>&model_prod=<%=bean.getModello()%>"><h5><%=bean.getNome()+" "+bean.getModello()%></h5></a>
 						</div>
 					<% 	}
 						} else { %>
-							<div class="row justify-content-center" style="margin-left: 20px"><h4>Nessun prodotto disponibile</h4></div>
+							<div class="row justify-content-center" style="margin-left: 20px"><h4>Nessun prodotto disponibile.</h4></div>
 					<% } %>
 					</div>
 				</div>
-				<div class="col-xl-2 list-group">
+				<div class="col-lg-2 list-group">
 				<a href="Product?action=Cpu_comp&comp_name=Processori" class="list-group-item list-group-item-action">Processori</a>
 					<a href="Product?action=Gpu_comp&comp_name=Schede Grafiche" class="list-group-item list-group-item-action">Schede Grafiche</a>		
 					<a href="Product?action=ram_comp&comp_name=RAM" class="list-group-item list-group-item-action">RAM</a>

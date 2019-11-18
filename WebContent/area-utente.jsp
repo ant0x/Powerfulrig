@@ -165,7 +165,7 @@
 			<div class="container spacerUP3">
 				<div class="row justify-content-start">
 					<div class="col-xl-5">
-						<h4 style="color:navy">Indirizzo di Spedizione</h4>
+						<h4 style="color:#419191">Indirizzo di Spedizione</h4>
 					</div>
 				</div>
 				
@@ -246,7 +246,7 @@
 			<div class="container spacerUP3">
 				<div class="row justify-content-start">
 					<div class="col-xl-5">
-						<h4 style="color:navy">Metodi di Pagamento</h4>
+						<h4 style="color:#419191">Metodi di Pagamento</h4>
 					</div>
 				</div>
 				<div class="row borderutdiv">
@@ -331,7 +331,7 @@
 						%>
 							<div class="row justify-content-start">
 								<div class="col-xl-12">
-									<h4 style="color:navy; margin-left: 5px; margin-bottom: 15px; cursor: pointer;" id="newCard">+ Inserisci nuovo Metodo di Pagamento</h4>
+									<h4 style="color:#419191; margin-left: 5px; margin-bottom: 15px; cursor: pointer;" id="newCard">+ Inserisci nuovo Metodo di Pagamento</h4>
 								</div>
 							</div>
 						<%	
