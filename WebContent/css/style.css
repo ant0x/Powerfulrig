@@ -137,6 +137,7 @@ ul {
 	color: #fefefe;
 	margin-right: 10px;
 	background-color: transparent;
+	width:167px;
 }
 
 
@@ -3753,5 +3754,3 @@ input[type="radio"]:checked + .label:after {
 .singleOption {
 	color: black;
 }
-
-

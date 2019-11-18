@@ -28,7 +28,7 @@
 
 <body>
 	<header class="sezioneHeader">
-	<nav class="navbar navbar-expand-lg navbar-dark">
+	<nav class="navbar navbar-expand-xl navbar-dark">
 	  <a href="home.jsp" class="navbar-brand site-logo">
 			<img src="./img/logotech.png" alt="">
 			</a>
@@ -44,6 +44,7 @@
 	        </a>
 	        <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdownMenuLink">
 		        <a class="dropdown-item" href="catalogo.jsp">Categorie</a>
+		        <a class="dropdown-item" href="Product?action=lastarrived"">Ultime novità</a>
 		        <div class="dropdown-divider"></div>
 	            <a class="dropdown-item" href="Product?action=Cpu_comp&comp_name=Processori">Processori</a>
 				<a class="dropdown-item" href="Product?action=Gpu_comp&comp_name=Schede Grafiche">Schede Grafiche</a>
@@ -87,9 +88,6 @@
 				<a class="dropdown-item" href="Product?action=brands&brand=CoolerMaster">CoolerMaster</a>
 				<a class="dropdown-item" href="Product?action=brands&brand=Razer">Razer</a>
 	        </div>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="Product?action=lastarrived"><b>Ultime novità</b></a>
 	      </li>
 	      <li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -164,7 +162,7 @@
                         </span>
                     </span>
                     <span class="item-right">
-                        <button class="btn btn-danger  fa fa-close"></button>
+                        <button class="btn btn-danger  fa fa-close" onclick="deletefromcart()"></button>
                     </span>
                 </span>
               </li>
@@ -198,6 +196,7 @@
 									<a class="nav-link" href="log-area.jsp"><span class="glyphicon glyphicon-cog cog"> </span> Configurazioni</a>
 								<%}%>	
 			</ul>
+			</div>
 		</nav>
 	</header>
 
