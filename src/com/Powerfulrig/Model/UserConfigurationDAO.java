@@ -228,6 +228,7 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 		String query_price_prod = null;
 		String query_price_conf = null;
 		int esito = 0;
+		int sconto=0;
 		float price_prod = 0;
 		float price_conf = 0;
 		
@@ -241,6 +242,7 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 		//ottenimento del prezzo della componente da aggiungere
 		//TODO
 			query_price_prod = "SELECT Prezzo FROM prodotto WHERE Modello = '"+model_comp+"' ";
+			String sconto_price = "Select PercentualeSconto FROM prodotto WHERE Modello = '"+model_comp+"' ";
 			query_price_conf = "SELECT configuration_price FROM users_configurations WHERE  id_configuration = '"+id_conf+"' ";
 	
 			try {
@@ -248,6 +250,10 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 				statement=con.createStatement();
 				results = statement.executeQuery(query_price_prod);
 				
+				statement=con.createStatement();
+				ResultSet result1 = statement.executeQuery(sconto_price);
+				if(result1.first())
+					  sconto = result1.getInt(1);
 			
 				
 				if(results.first())			
@@ -256,8 +262,17 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 				statement=con.createStatement();
 				results = statement.executeQuery(query_price_conf);
 					
-				if(results.first())			
-					price_conf = results.getFloat(1) - price_prod;
+				if(results.first())		
+				{
+					if(sconto>0)
+						
+					sconto=100-sconto;
+					price_conf = results.getFloat(1) - (sconto*price_prod)/100;
+				}
+					else
+					{
+						price_conf = results.getFloat(1) - price_prod;
+					}
 																	
 				} finally {
 						if (statement != null)

@@ -157,7 +157,7 @@
 		else if(password_userRES == false)
 		{
 			Swal.fire({ //Password non conforme
-				title: 'Passowrd non conforme',
+				title: 'Password non conforme',
 				text: "La password dev'essere almeno di 8 caratteri ed almeno 1 maiuscolo.",
 				type: 'warning',
 				  confirmButtonColor: '#3085d6',

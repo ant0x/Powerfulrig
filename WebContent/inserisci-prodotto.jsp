@@ -20,6 +20,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	
+	
+	<!-- Header section start -->
+	 <%@ include file="fragment/header3.jsp" %>
+	
+	<!-- Header section end -->
+	
 	<!-- Icona -->
 	<link href="img/icona.ico" rel="shortcut icon"/>
 
@@ -69,22 +75,7 @@
 		<div class="loader"></div>
 	</div>
 
-	<!-- Header section start -->
-	<header class="sezioneHeader2 bg-visible">
-		<div class="container-fluid au-reg-background">
-			<div class="row">
-				<div class="header-left col-xl-3">
-					<div class="row">
-						<a href="home.html" class="site-logo">
-							<img src="./img/logotech.png" alt="">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
 	
-	<!-- Header section end -->
 	
 	<section class="insform-pages">
 		<div class="container">

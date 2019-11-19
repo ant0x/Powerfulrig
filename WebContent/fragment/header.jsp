@@ -123,7 +123,7 @@
 														<a class="nav-link" href="area-utente.jsp"><span class="glyphicon glyphicon-user men"></span><%=utenteLoggato.getNome()%> </a>
 														<li class="nav-item"><a class="nav-link" href="#"><span class="d-inline-block glyphicon glyphicon-log-out log-out" onclick="logout()"> </span></a></li>
 											<%} else{ %>
-														<a class="nav-link" href="area-admin.jsp" style = "font-size:10px"><span class="glyphicon glyphicon-user men"></span>Admin:<%=utenteLoggato.getEmail()%></a>											
+														<a class="nav-link" href="area-admin.jsp" style = "font-size:15px"><span class="glyphicon glyphicon-user men"></span>Admin:<%=" "+utenteLoggato.getNome()%></a>											
 														<li class="nav-item"><a class="nav-link" href="#"><span class="d-inline-block glyphicon glyphicon-log-out log-out" onclick="logout()"> </span></a></li>
 													
 												<%} %>

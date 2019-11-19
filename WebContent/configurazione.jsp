@@ -149,7 +149,7 @@
 							<p id="titleConf">Marca: </p>
 							<p id="pConf"><%=prod_bean.getMarca()%></p>
 							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">
-							<input type="hidden" id="id_comp" value="<%=bean.getGpu_in_configuration()%>">
+							<input type="hidden" id="id_comp" value="<%=prod_bean.getTipo()%>">
 							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
 					</div>
@@ -199,8 +199,8 @@
 						<div>
 							<p id="titleConf">Marca: </p>
 							<p id="pConf"><%=prod_bean.getMarca()%></p>.
-							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">							
-							<input type="hidden" id="id_comp" value="<%=bean.getMotherboard_in_configuration()%>">
+							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">
+							<input type="hidden" id="id_comp" value="<%=prod_bean.getTipo()%>">
 							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
 					</div>
@@ -253,8 +253,8 @@
 						<div>
 							<p id="titleConf">Marca: </p>
 							<p id="pConf"><%=prod_bean.getMarca()%></p>
-							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">							
-							<input type="hidden" id="id_comp" value="<%=bean.getRam_in_configuration()%>">
+							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">
+							<input type="hidden" id="id_comp" value="<%=prod_bean.getTipo()%>">
 							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
 					</div>
@@ -304,7 +304,7 @@
 						<div>
 							<p id="titleConf">Marca: </p>
 							<p id="pConf"><%=prod_bean.getMarca()%></p>
-							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">							
+							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">
 							<input type="hidden" id="id_comp" value="<%=prod_bean.getTipo()%>">
 							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
@@ -355,8 +355,8 @@
 						<div>
 							<p id="titleConf">Marca: </p>
 							<p id="pConf"><%=prod_bean.getMarca()%></p>	
-							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">						
-							<input type="hidden" id="id_comp" value="<%=bean.getStorage_in_configuration()%>">
+							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">
+							<input type="hidden" id="id_comp" value="<%=prod_bean.getTipo()%>">
 							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
 					</div>
@@ -409,8 +409,8 @@
 						<div>
 							<p id="titleConf">Marca: </p>
 							<p id="pConf"><%=prod_bean.getMarca()%></p>
-							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">							
-							<input type="hidden" id="id_comp" value="<%=bean.getCase_in_configuration()%>">
+							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">
+							<input type="hidden" id="id_comp" value="<%=prod_bean.getTipo()%>">
 							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
 					</div>
@@ -460,8 +460,8 @@
 						<div>
 							<p id="titleConf">Marca: </p>
 							<p id="pConf"><%=prod_bean.getMarca()%></p>
-							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">							
-							<input type="hidden" id="id_comp" value="<%=bean.getHeatsink_in_configuration()%>">
+							<input type="hidden" id="model_prod" value="<%=prod_bean.getModello()%>">
+							<input type="hidden" id="id_comp" value="<%=prod_bean.getTipo()%>">
 							<input type="hidden" id="id_conf" value="<%=bean.get_id_configuration()%>">
 						</div>
 					</div>
