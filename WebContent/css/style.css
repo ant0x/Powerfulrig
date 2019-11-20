@@ -192,12 +192,10 @@ ul {
 -----------------------*/
 
 .carousel-caption {
-	padding: auto;
+	top:30%;
+	bottom:auto;
 }
 
-.carousel-item {
-	height: 936px;
-}
 
 .carousel-caption h2 {
 	font-size: 100px;
@@ -205,8 +203,6 @@ ul {
 	color: #ccffff;
 	font-weight: 500;
 	line-height: 1;
-	margin-top: 120px;
-	margin-bottom: 50px;
 	margin-right: 56%;
 	position: relative;
 	-webkit-text-stroke: 2px #003333;
@@ -223,9 +219,8 @@ ul {
 }
 
 .carousel-caption a {
-	margin-left: 30%;
-	width: 200px;
 	margin-bottom: 80px;
+	left:45%;
 }
 
 
@@ -3575,7 +3570,6 @@ input[type="radio"]:checked + .label:after {
 
 	.men {
 		margin-left: 16px;
-		margin-top: 3.5px;
 	}
 	
 	.cart {
@@ -3583,7 +3577,6 @@ input[type="radio"]:checked + .label:after {
 	}
 	
 	.cog {
-		margin-top: 7px;
 		margin-right: 10px;
 	}
 
@@ -3684,40 +3677,6 @@ input[type="radio"]:checked + .label:after {
 	.site-btn3 {
 		font-size: 11px;
 		width: 190px;
-	}
-	.site-btn{
-			display: inline-block;
-			border: none;
-			font-size: 18px;
-			font-weight: 700;
-			min-width: 50px;
-			padding: 24px 30px;
-			border-radius: 30px;
-			color: #003366;
-			line-height: normal;
-			cursor: pointer;
-			text-align: center;
-			background: #e6ffff;
-			position: relative;
-			z-index: 1;
-	}
-	.carousel-caption h2 {
-		font-size: 50px;
-		margin-top: 50px;
-		margin-bottom: 20px;
-	}
-	
-	.carousel-caption p {
-		height: 150px;
-		font-size: 22px;
-	}
-
-	.carousel-caption a {
-		margin-bottom: 50px;
-	}
-
-	.carousel-item {
-		height: 656px;
 	}
 
 	.prodsing-section {

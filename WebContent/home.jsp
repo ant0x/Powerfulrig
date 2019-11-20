@@ -41,15 +41,16 @@
 
 <body>
 
+<!-- Header section start -->
+     	  <%@ include file="fragment/header.jsp" %>
+	<!-- Header section end -->
+
 	<!-- Page Preloder-->
 	<div id="preloder">
 		<div class="loader"></div>
 	</div>
 
-<!-- Header section start -->
 
-     	  <%@ include file="fragment/header.jsp" %>
-	<!-- Header section end -->
 
 
 	<!-- Main section -->
@@ -61,18 +62,21 @@
 			<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
 			<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
 		</ol>
+		
 		<div class="carousel-inner">
+			
+			
 			<div class="carousel-item active">
 				<img src="img/gamingwp.jpg" alt="Second slide">
 				<div class="carousel-caption">
 					<h2>Benvenuto in PowerfulRig</h2>
-					<p>Tanti prodotti per<br>configurare PC di ogni tipo<br><br><br><br></p>
+					<p>Tanti prodotti per<br>configurare PC di ogni tipo</p>
 					<a href="catalogo.jsp" class="site-btn">Scopri...</a>
 				</div>
 			</div>
 			<div class="carousel-item">
 				<img src="img/gamingrig.jpg" alt="Second slide">
-				<div class="carousel-caption d-none d-md-block">
+				<div class="carousel-caption">
 					<h2>Configurazioni Personalizzate</h2>
 					<p><br>Configura il tuo PC<br>come meglio preferisci! <br><br><br></p>
 					<% if(utenteLoggato != null)
@@ -87,26 +91,20 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="img/intelxd.jpg" alt="First slide">
+				<a href="Product?action=prodotto&type_prod=Cpu_comp&model_prod=i9-9980XE"><img src="img/intelxd.jpg" alt="First slide"></a>
 				<div class="carousel-caption d-none d-md-block">
-					<h2></h2>
-					<p><br><br> <br><br><br></p>
-					<a href="Product?action=prodotto&type_prod=Cpu_comp&model_prod=i9-9980XE" class="site-btn">Vai al Prodotto</a>
 				</div>
 			</div>
 			<div class="carousel-item">
-				<video poster="http://cwsmgmt.corsair.com/responsive/videos/vengeance-rgb-pro-header.mp4" autoplay muted loop preload style="width: 100%;">
+				<a href="Product?action=prodotto&type_prod=Case_comp&model_prod=Corsair 780T"><video poster="http://cwsmgmt.corsair.com/responsive/videos/vengeance-rgb-pro-header.mp4" autoplay muted loop preload style="width: 100%;">
 					<source src="//cwsmgmt.corsair.com/responsive/videos/vengeance-rgb-pro-header.mp4"></source>
-				</video>
+				</video></a>
 				<div class="carousel-caption d-none d-md-block">
-					<a href="Product?action=prodotto&type_prod=ram_comp&model_prod=LPX" class="site-btn">Vai al Prodotto</a>
 				</div>
 			</div>
 			<div class="carousel-item">
 				<img src="img/2080ti2.jpg" alt="Second slide">
-				<div class="carousel-caption d-none d-md-block">
-					<h2></h2>
-					<p><br><br><br><br><br></p>
+				<div class="carousel-caption d-md-block">
 					<a href="Product?action=prodotto&type_prod=Gpu_comp&model_prod=RTX%202080Ti" class="site-btn">Vai al Prodotto</a>
 				</div>
 			</div>
