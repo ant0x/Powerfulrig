@@ -124,19 +124,15 @@
 	
 	<section class="catalogo-section">
 		<div class="container">
-		
-				</div>
-			
-		
-		<div class="row">
-				<div class="headerCatalogo col-xl-5">
+			 <div class="row">
+				<div class="headerCatalogo col-md-12">
 					<p>Prodotti in vetrina</p>
 				</div>
-				<div class="headerCatalogo col-xl-7">
-					<hr>
+				<!-- TODO SEZIONE PRODOTTI -->
 				</div>
 			</div>
 	</section>
+	
 
 		
 		

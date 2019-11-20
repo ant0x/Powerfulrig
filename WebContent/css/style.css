@@ -1471,22 +1471,21 @@ ul.dropdown-cart li .item-right button{
 	background-image: linear-gradient(#00807b, #001a1a);
 }
 
+.catalogo-section .container{
+	border-bottom: 2px solid white;
+}
 .headerCatalogo {
 	display: inline-block;
-	padding-bottom: 30px;
+	padding-bottom: 1px;
+	padding-top:10px;
+	border-bottom:2px solid white;
 }
 
-.headerCatalogo hr {
-	border: 1px solid black;
-	width: 720px;
-	margin-left: -50px;
-	margin-top: 32px;
-	display: inline-block;
-}
 
 .headerCatalogo p {
 	color: #FFFFFF;
-	font-size: 40px;
+	font-size: 27px;
+	font-weight:bold;
 	float: left;
 }
 
