@@ -95,18 +95,19 @@
 					}
 					System.out.println("l'action è "+action_name);
 					log("l'action è "+action_name);
-					if(action_name.equalsIgnoreCase("Prodotti in sconto"))
-					{
-						ArrayList<Prodotto> array2 = new ArrayList<Prodotto>();
-						ArrayList<Prodotto>	array1 = model_product.viewProduct();
-						for(Prodotto b : array1)
+					if(action_name!=null)
+						if(action_name.equalsIgnoreCase("Prodotti in sconto"))
 						{
-							if(b.getPercentualeSconto()>0)
-							array2.add(b);
-						}
-						array=array2;
+							ArrayList<Prodotto> array2 = new ArrayList<Prodotto>();
+							ArrayList<Prodotto>	array1 = model_product.viewProduct();
+							for(Prodotto b : array1)
+							{
+								if(b.getPercentualeSconto()>0)
+								array2.add(b);
+							}
+							array=array2;
 								
-					}
+						}
 						
 					
 					

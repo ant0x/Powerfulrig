@@ -58,11 +58,14 @@ public class ProductControl extends HttpServlet
 					request.removeAttribute("component");
 					request.removeAttribute("action_name");
 					//action="'"+action+"'";
+					System.out.println("l'action in comp è "+action);
+					log("l'action in comp è "+action);
+
 					/*SET ATTRIBUTE*/
 					request.setAttribute("component", action);
 					request.setAttribute("comp_name", comp_name);
 				}
-				else if(action.equals("prodottiscontati"))
+				else if(action.equals("Prodotti in sconto"))
 				{		
 					request.removeAttribute("action_name");
 					request.removeAttribute("comp_name");
@@ -184,7 +187,7 @@ public class ProductControl extends HttpServlet
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
 		else if(action.equals("Case_comp"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
-		else if(action.equals("prodottiscontati"))
+		else if(action.equals("Prodotti in sconto"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
 		else if(action.equals("Monitor_comp"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
