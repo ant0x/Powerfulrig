@@ -59,7 +59,7 @@
 									<li><a href="Product?action=Pc_comp&comp_name=Configurazioni">Configurazioni</a></li>
 								</ul>
 							</li>
-							<li><a href="Product?action=lastarrived"><b>Ultime novità</b></a></li>
+							<li><a href="Product?action=prodottiscontati"><b>Ultime novità</b></a></li>
 							<li><a href="chisiamo.jsp"><b>Info</b></a></li>
 							<li><a href="contatti.jsp"><b>Contattaci</b></a></li>
 						</ul>

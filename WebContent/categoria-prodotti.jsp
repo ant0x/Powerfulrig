@@ -93,6 +93,20 @@
 					{
 							array = model_product.viewProduct("Marca",brand);
 					}
+					System.out.println("l'action è "+action_name);
+					log("l'action è "+action_name);
+					if(action_name.equalsIgnoreCase("Prodotti in sconto"))
+					{
+						ArrayList<Prodotto> array2 = new ArrayList<Prodotto>();
+						ArrayList<Prodotto>	array1 = model_product.viewProduct();
+						for(Prodotto b : array1)
+						{
+							if(b.getPercentualeSconto()>0)
+							array2.add(b);
+						}
+						array=array2;
+								
+					}
 						
 					
 					
@@ -130,7 +144,7 @@
 					<a href="Product?action=headphones_comp&comp_name=Cuffie" class="list-group-item list-group-item-action">Cuffie</a>
 					<a href="Product?action=Sedia_comp&comp_name=Sedie Gaming" class="list-group-item list-group-item-action">Sedie Gaming</a>
 					<a href="Product?action=Pc_comp&comp_name=Configurazioni" class="list-group-item list-group-item-action">Configurazioni</a>
-					<a href="Product?action=lastarrived" class="list-group-item list-group-item-action">Ultime novità</a>
+					<a href="Product?action=prodottiscontati" class="list-group-item list-group-item-action">Ultime novità</a>
 				</div>
 			</div>
 		</div>

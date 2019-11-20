@@ -46,7 +46,7 @@ public class ProductControl extends HttpServlet
 				
 		String action = request.getParameter("action");
 		String comp_name = request.getParameter("comp_name");
-		String action_name = "Ultimi Arrivi";
+		String action_name = "Prodotti in sconto";
 		
 		try {
 			if(action != null) 
@@ -62,7 +62,7 @@ public class ProductControl extends HttpServlet
 					request.setAttribute("component", action);
 					request.setAttribute("comp_name", comp_name);
 				}
-				else if(action.equals("lastarrived"))
+				else if(action.equals("prodottiscontati"))
 				{		
 					request.removeAttribute("action_name");
 					request.removeAttribute("comp_name");
@@ -184,7 +184,7 @@ public class ProductControl extends HttpServlet
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
 		else if(action.equals("Case_comp"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
-		else if(action.equals("lastarrived"))
+		else if(action.equals("prodottiscontati"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");
 		else if(action.equals("Monitor_comp"))
 			dispatcher = getServletContext().getRequestDispatcher("/categoria-prodotti.jsp");

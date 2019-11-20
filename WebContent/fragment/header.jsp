@@ -44,7 +44,7 @@
 	        </a>
 	        <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdownMenuLink">
 		        <a class="dropdown-item" href="catalogo.jsp">Categorie</a>
-		        <a class="dropdown-item" href="Product?action=lastarrived"">Ultime novità</a>
+		        <a class="dropdown-item" href="Product?action=prodottiscontati"">Prodotti in sconto</a>
 		        <div class="dropdown-divider"></div>
 	            <a class="dropdown-item" href="Product?action=Cpu_comp&comp_name=Processori">Processori</a>
 				<a class="dropdown-item" href="Product?action=Gpu_comp&comp_name=Schede Grafiche">Schede Grafiche</a>
