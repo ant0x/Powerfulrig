@@ -75,7 +75,9 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="img/gamingrig.jpg" alt="Second slide">
+				<video poster="https://cwsmgmt.corsair.com/pdp/ll-rgb-fans-white/LL_Fans_White_v01.mp4" autoplay muted loop preload style="width: 100%;">
+					<source src="https://cwsmgmt.corsair.com/pdp/ll-rgb-fans-white/LL_Fans_White_v01.mp4"></source>
+				</video>
 				<div class="carousel-caption">
 					<h2>Configurazioni Personalizzate</h2>
 					<p><br>Configura il tuo PC<br>come meglio preferisci! <br><br><br></p>
@@ -91,21 +93,22 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<a href="Product?action=prodotto&type_prod=Cpu_comp&model_prod=i9-9980XE"><img src="img/intelxd.jpg" alt="First slide"></a>
+				<a href="Product?action=prodotto&type_prod=Cpu_comp&model_prod=i9-9980XE"><img src="img/intelxd.jpg" alt="First slide" class="imgsrc"></a>
 				<div class="carousel-caption d-none d-md-block">
 				</div>
 			</div>
 			<div class="carousel-item">
-				<a href="Product?action=prodotto&type_prod=Case_comp&model_prod=Corsair 780T"><video poster="http://cwsmgmt.corsair.com/responsive/videos/vengeance-rgb-pro-header.mp4" autoplay muted loop preload style="width: 100%;">
+				<a href="Product?action=prodotto&type_prod=Case_comp&model_prod=Corsair 780T"><video poster="http://cwsmgmt.corsair.com/responsive/videos/vengeance-rgb-pro-header.mp4" class="imgsrc" autoplay muted loop preload style="width: 100%;">
 					<source src="//cwsmgmt.corsair.com/responsive/videos/vengeance-rgb-pro-header.mp4"></source>
 				</video></a>
 				<div class="carousel-caption d-none d-md-block">
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="img/2080ti2.jpg" alt="Second slide">
-				<div class="carousel-caption d-md-block">
-					<a href="Product?action=prodotto&type_prod=Gpu_comp&model_prod=RTX%202080Ti" class="site-btn">Vai al Prodotto</a>
+				<a href="Product?action=prodotto&type_prod=Pc_comp&model_prod=ONE i140"><video poster="http://cwsmgmt.corsair.com/responsive/videos/Corsair_One_i60_Loop_v01.mp4" class="imgsrc" autoplay muted loop preload style="width: 100%;">
+					<source src="http://cwsmgmt.corsair.com/responsive/videos/Corsair_One_i60_Loop_v01.mp4"></source>
+				</video></a>
+				<div class="carousel-caption d-none d-md-block">
 				</div>
 			</div>
 		</div>
