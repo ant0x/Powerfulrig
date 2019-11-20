@@ -251,7 +251,7 @@
 		}
 	
 		jQuery(document).ready(function($){
-			$('.imgItem3').on('click',  function() {
+			$('.imgItem3').on('mouseover',  function() {
 	    		$('#imgXD').prop('src', this.src);
 			});
 		});

@@ -145,12 +145,12 @@
 								cart = (Cart) request.getSession().getAttribute("Carrello");
 							} %>
 						<%	if(cart==null || cart.getProducts().isEmpty()) { %>
-          <ul class="dropdown-menu dropdown-cart" role="menu">
-              <li><a class="dropdown-item disabled" href="#">Nessun prodotto aggiunto!</a></ul>
+          <ul class="dropdown-menu bg-danger dropdown-cart" role="menu">
+              <li><a class="dropdown-item disabled" style="color:white" href="#">Nessun prodotto aggiunto!</a></ul>
              <% 	} else { 
 							ArrayList<Prodotto> arraycart = cart.getProducts();
 						%> 
-             <ul class="dropdown-menu dropdown-cart" role="menu">  
+             <ul class="dropdown-menu bg-info dropdown-cart" role="menu">  
              <% for(int I=0;I<arraycart.size();I++) {%>
               <li>   
                   <span class="item">
@@ -162,7 +162,7 @@
                         </span>
                     </span>
                     <span class="item-right">
-                        <button class="btn btn-danger  fa fa-close" onclick="deletefromcart()"></button>
+                        <button class="btn btn-danger  fa fa-close" onClick="deletefromcart()"></button>
                     </span>
                 </span>
               </li>

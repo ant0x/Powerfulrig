@@ -2317,8 +2317,20 @@ p#login-form-remember {
 }
 
 .setButton {
-	margin-top: 25px;
+	margin-top: 0px;
 	float: center;
+	border-radius:15px;
+	font-weight:italic;
+	color:white;
+	background-color:#006666;
+	border: 1px solid #001a1a;
+	cursor:pointer;
+	
+}
+
+.setButton:hover{
+	color:#3c6e6b;
+	background-color:#001a1a
 }
 
 .register-bottom-grid input[type="password"] {
