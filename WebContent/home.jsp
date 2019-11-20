@@ -129,8 +129,47 @@
 				<div class="headerCatalogo col-md-12">
 					<p>Prodotti in vetrina</p>
 				</div>
-				<!-- TODO SEZIONE PRODOTTI -->
 				</div>
+		<div>
+		<div>
+				<%
+			DAOProdotto model_product=new DAOProdotto();
+			ArrayList<Prodotto> array = model_product.viewProduct();
+           	ArrayList<Prodotto> arrayVetrina = new ArrayList<Prodotto>();						
+			int I=0;
+			
+			if((array!=null || array.size()!=0) && (arrayVetrina!=null || arrayVetrina.size()!=0))
+			{
+				while(I<array.size())
+				{
+					Prodotto b = array.get(I);
+					if(arrayVetrina.size() < 12)
+						arrayVetrina.add(b);
+					I++;
+				}
+			
+								
+				Iterator<?> it2 = arrayVetrina.iterator();
+				while (it2.hasNext()) 
+				{
+					Prodotto bean = (Prodotto) it2.next();	
+			%>
+			
+			
+				<div class="objectItem col-md-3">
+					<a href="Product?action=prodotto&type_prod=<%=bean.getTipo()%>&model_prod=<%=bean.getModello()%>"><img src=<%=bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem"></a>
+					<div class="row justify-content-center">
+						<a href="Product?action=prodotto&type_prod=<%=bean.getTipo()%>&model_prod=<%=bean.getModello()%>"><p><b><%=bean.getNome()%></b></p></a>
+					</div>
+				</div>
+			
+			
+			<% 	}
+				} else { %>
+					<div class="col-md-12"><h4>Nessun prodotto disponibile</h4></div>
+			<% } %>
+			</div>
+		</div>
 			</div>
 	</section>
 	
@@ -154,14 +193,6 @@
 			$('.input-large2').css("border-bottom", "1px solid blue");
 		}
 		
-		$('.objectItem img').on({
-		    mouseenter: function(){
-		        $(this).animate({width: '200px', height: '200px', top: '-=15px', left: '-=15px'}, 500);
-		    },
-		    mouseleave: function(){
-		        $(this).animate({width: '150px', height: '150px', top: '+=15px', left: '+=15px'}, 500);
-		    }
-		});
 		
 		$(document).mouseup(function(e) {
 		var container = $(".inputSearch");
