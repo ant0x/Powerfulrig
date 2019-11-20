@@ -1711,6 +1711,12 @@ select.arrows {
 	border: 1px solid #001a1a;
 	margin-left: 0;
 	margin-bottom: 3px;
+	cursor:pointer;
+	border-radius: 5px;
+}
+
+.imgItem3:hover{
+	border: 1px solid #93f5f2;
 }
 
 .table {
