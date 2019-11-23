@@ -146,10 +146,11 @@ public class ProductControl extends HttpServlet
 				}
 				else if (action.equals("removeProd")) 
 				{
-					String id = request.getParameter("id");
-					System.out.println("l'id è "+id);
-					log("l'id è "+id);
-					model_product.cancelProduct(id);
+					String type_prod = request.getParameter("type_prod");
+					String model_prod = request.getParameter("model_prod");
+					ArrayList<Prodotto> app=model_product.viewProduct("Tipo",type_prod,"Modello",model_prod);
+					System.out.println("prodotto è "+app);
+					model_product.cancelProduct(app.get(0).getIdProdotto());
 				}
 				else if (action.equals("addQuantity"))
 				{

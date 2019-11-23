@@ -113,6 +113,7 @@ public class DAOProdotto
 			statement=con.prepareStatement(viewProduct);
 			for(int i=1;i<strings.length;i+=2,j++) 
 				statement.setString(j,strings[i]);
+			System.out.println("la queryrebdffjd "+statement);
 			set=statement.executeQuery();
 			while(set.next())
 			{
@@ -147,16 +148,16 @@ public class DAOProdotto
 		return prodotti;
 	}
 
-	public static boolean cancelProduct(String idProdotto) throws SQLException
+	public static boolean cancelProduct(int idProdotto) throws SQLException
 	{
 		boolean flag=false;
 		try
 		{
-			int id= Integer.parseInt(idProdotto);
-			System.out.println("id è "+id);
+			
+			System.out.println("id è "+idProdotto);
 			con=ConnectionPool.getConnection();
 			statement=con.prepareStatement(deleteProduct);
-			statement.setInt(1,id);
+			statement.setInt(1,idProdotto);
 			flag=statement.executeUpdate()>0;
 			con.commit();
 		}
@@ -187,6 +188,6 @@ public class DAOProdotto
 	{
 		addProduct="INSERT INTO prodotto(Watt,PercentualeSconto,Prezzo,Specifica,Marca,Quantita,Nome,Modello,Tipo,Descrizione,path) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
 		modifyProduct="UPDATE PowerfulRig.prodotto SET";
-		deleteProduct="UPDATE PowerfulRig.prodotto SET Visualizzabile=false WHERE Visualizzabile=true AND IdProdotto=?";
+		deleteProduct="DELETE FROM PowerfulRig.prodotto WHERE IdProdotto=?";
 	}
 }

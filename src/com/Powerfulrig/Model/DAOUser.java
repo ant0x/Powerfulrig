@@ -285,6 +285,41 @@ public class DAOUser
 		return compIndirizzo;	
 	}
 	
+	
+	public boolean deletePaymentMethod(String card_number) throws SQLException {
+		int esito = 0;
+		
+		try {
+			con = ConnectionPool.getConnection();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+						
+		
+		String query = "DELETE FROM users_payement_method WHERE card_number = '"+card_number+"'";
+		System.out.println("la query di david il torrisandkcijsadihdsa "+query);
+		try
+		{
+		statement = con.prepareStatement(query);
+		esito = statement.executeUpdate();
+		con.commit();
+		}
+		finally {
+			try {
+				if (statement != null)
+					statement.close();
+			} finally {
+				if (con != null)
+					con.close();
+			}
+		}
+
+		return (esito != 0);
+	}
+	
+	
+	
 	public synchronized void logout(HttpSession session) throws SQLException
 	{
 		synchronized(session) 
@@ -308,7 +343,7 @@ public class DAOUser
 	static
 	{
 		addUtente="INSERT INTO utente(Email,Password,Nome,Cognome) values(?,?,?,?)";
-		DeleteAccount="DELETE  FROM utene WHERE Email=?";
+		DeleteAccount="DELETE FROM utente WHERE Email=?";
 		modifyAccount="UPDATE PowerfulRig.utente SET";
 		checkEmail="SELECT nome FROM utente where Email=?";
 		showAccount="SELECT * FROM utente where Email=?";

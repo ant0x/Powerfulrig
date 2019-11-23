@@ -217,7 +217,7 @@
  			  if (result.value) {
 				  $.ajax({
 					  	type: "POST",
-					    url: "Utente1",
+					    url: "Utente",
 					    data: {"action" : value},
 					    success: function(results){
 					    	Swal.fire({

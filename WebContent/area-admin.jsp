@@ -112,8 +112,8 @@
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-xl-6">
-										<p id="utP">E-mail:</p><p id="utP2"><%=utente.getEmail()%></p>
+									<div class="col-xl-4">
+										<p id="utP">Email:</p><p id="utP2"><%=utente.getEmail()%></p>
 									</div>
 									<div class="col-xl-4">
 										<p id="utP">Password:</p><p id="utP2">********</p>
@@ -443,9 +443,10 @@
 	// funziona AJAX che elimina l'utente selezionato dal db
 	$("[id ='removeUserIcon']").on('click', function removeUser(){
 		var value1 = ("banUser");
-		var value2 = $(this).parent().prev().children("div:nth-child(1)").children("div:nth-child(3)").find("p#utP2").html(); //ottenimeto email	
-			Swal.fire({ //PRIMO POPUP
-			  title: 'Sei sicuro di voler bannare l\' utente?',
+		var value2 = $(this).parent().prev().children("div:nth-child(2)").children("div:nth-child(1)").find("p#utP2").html(); //ottenimeto email	
+		alert(value2);		
+		Swal.fire({ //PRIMO POPUP
+			  title: 'Sei sicuro di voler eliminare l\' utente?',
 			  text: "L'utente sarà bannato permanentemente.",
 			  type: 'warning',
 			  showCancelButton: true,

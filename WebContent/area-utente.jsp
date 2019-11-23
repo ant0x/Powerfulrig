@@ -538,7 +538,7 @@
 		} 
 
 		$(function() {
-    		$("#dataexpcarta").datepicker({dateFormat: 'mm/yy'});
+    		$("#dataexpcarta").datepicker({dateFormat:'mm/yy'});
     	});
 
 		$("#list1").on('click', function() {
@@ -634,7 +634,7 @@
 						    data: {"action" : value1, "card_number" : value2},
 						    success: function(results){
 						    	Swal.fire({ //SECONDO POPUP
-						  			  title: 'Indirizzo Eliminato',
+						  			  title: 'Metodo Eliminato',
 						  			  timer: 1200,
 						  			  type: 'success',
 						  			  showCancelButton: false,
