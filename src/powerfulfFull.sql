@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 8.0.18, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.16, for Win64 (x86_64)
 --
 -- Host: localhost    Database: powerfulrig
 -- ------------------------------------------------------
--- Server version	8.0.18
+-- Server version	8.0.16
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
+ SET NAMES utf8 ;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,7 +21,7 @@
 
 DROP TABLE IF EXISTS `composizione`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `composizione` (
   `quantita` int(11) NOT NULL,
   `prezzo` float NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE `composizione` (
 
 LOCK TABLES `composizione` WRITE;
 /*!40000 ALTER TABLE `composizione` DISABLE KEYS */;
-INSERT INTO `composizione` VALUES (1,250.99,1,1),(1,249.99,2,15),(1,4999.99,2,17),(1,162.24,3,22);
+INSERT INTO `composizione` VALUES (1,249,42,2);
 /*!40000 ALTER TABLE `composizione` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -50,7 +50,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `fattura`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `fattura` (
   `numero_fattura` int(11) NOT NULL AUTO_INCREMENT,
   `totale` float NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE `fattura` (
   PRIMARY KEY (`numero_fattura`),
   KEY `Email_utente` (`Email_utente`),
   CONSTRAINT `fattura_ibfk_1` FOREIGN KEY (`Email_utente`) REFERENCES `utente` (`Email`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +69,7 @@ CREATE TABLE `fattura` (
 
 LOCK TABLES `fattura` WRITE;
 /*!40000 ALTER TABLE `fattura` DISABLE KEYS */;
-INSERT INTO `fattura` VALUES (1,256,'paypal','2019-07-31','antonio.baldi98@gmail.com'),(2,4999.99,'postepay','2019-07-31','francesco.lauro@gmail.com'),(3,162.24,'PostePay','2019-11-14','antonio.baldi98@gmail.com');
+INSERT INTO `fattura` VALUES (42,249,'Paypal','2019-11-25','a.baldi20@studenti.unisa.it');
 /*!40000 ALTER TABLE `fattura` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -79,7 +79,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `prodotto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `prodotto` (
   `Watt` int(11) NOT NULL,
   `IdProdotto` int(11) NOT NULL AUTO_INCREMENT,
@@ -114,7 +114,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `spedizione`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `spedizione` (
   `ID_spedizione` int(11) NOT NULL AUTO_INCREMENT,
   `stato` varchar(20) NOT NULL,
@@ -134,7 +134,7 @@ CREATE TABLE `spedizione` (
 
 LOCK TABLES `spedizione` WRITE;
 /*!40000 ALTER TABLE `spedizione` DISABLE KEYS */;
-INSERT INTO `spedizione` VALUES (1,'Processing','2019-08-01','2019-08-12','Pagani',2),(2,'Processing','2019-08-01','2019-08-12','San marzano',1),(3,'Processing','2019-11-14','2019-11-14','84010',3);
+INSERT INTO `spedizione` VALUES (3,'Processing','2019-11-25','2019-11-25','84010',42);
 /*!40000 ALTER TABLE `spedizione` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -144,7 +144,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `users_configurations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `users_configurations` (
   `id_configuration` int(11) NOT NULL AUTO_INCREMENT,
   `name_configuration` varchar(100) DEFAULT NULL,
@@ -178,7 +178,7 @@ CREATE TABLE `users_configurations` (
   CONSTRAINT `users_configurations_ibfk_7` FOREIGN KEY (`psu_in_configuration`) REFERENCES `prodotto` (`IdProdotto`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `users_configurations_ibfk_8` FOREIGN KEY (`storage_in_configuration`) REFERENCES `prodotto` (`IdProdotto`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `users_configurations_ibfk_9` FOREIGN KEY (`heatsink_in_configuration`) REFERENCES `prodotto` (`IdProdotto`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -187,7 +187,6 @@ CREATE TABLE `users_configurations` (
 
 LOCK TABLES `users_configurations` WRITE;
 /*!40000 ALTER TABLE `users_configurations` DISABLE KEYS */;
-INSERT INTO `users_configurations` VALUES (34,'popmerd','antonio.baldi988@gmail.com','2019-10-25',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(38,'hggh','antoniobaldi7575@gmail.com','2019-10-30',438.722,2,22,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `users_configurations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -197,13 +196,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `users_payement_method`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `users_payement_method` (
   `card_number` varchar(40) NOT NULL,
   `card_bank` varchar(30) NOT NULL,
   `card_cvc` int(3) NOT NULL,
   `card_expiry` date NOT NULL,
-  `card_owner` varchar(50) NOT NULL,
+  `card_owner` varchar(60) NOT NULL,
   `date_registration_card` date NOT NULL,
   PRIMARY KEY (`card_number`),
   KEY `card_owner` (`card_owner`),
@@ -217,7 +216,7 @@ CREATE TABLE `users_payement_method` (
 
 LOCK TABLES `users_payement_method` WRITE;
 /*!40000 ALTER TABLE `users_payement_method` DISABLE KEYS */;
-INSERT INTO `users_payement_method` VALUES ('2132 1321 1232 3121','PostePay',154,'2019-11-29','antonio.baldi98@gmail.com','2019-11-13');
+INSERT INTO `users_payement_method` VALUES ('4161 5155 1561 5156','Paypal',511,'2019-11-29','a.baldi20@studenti.unisa.it','2019-11-24');
 /*!40000 ALTER TABLE `users_payement_method` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -227,7 +226,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `utente`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `utente` (
   `Email` varchar(50) NOT NULL,
   `Tipo` varchar(15) NOT NULL DEFAULT 'user',
@@ -248,7 +247,7 @@ CREATE TABLE `utente` (
 
 LOCK TABLES `utente` WRITE;
 /*!40000 ALTER TABLE `utente` DISABLE KEYS */;
-INSERT INTO `utente` VALUES ('a.baldi2137127@gmail.com','user','Antonio6','sdaadsasd','dsadsadas',NULL,NULL,NULL,NULL),('amministratore@tecklord.it','user','Antonio6','sdasdaasdasd','adsdasdsa',NULL,NULL,NULL,NULL),('antasdadsoniobadsadsadasadsldi7575@gmail.com','user','Antonio6','','',NULL,NULL,NULL,NULL),('antdsaasddsanioasddsadasbaldi7575@gmail.com','user','Antonio6','','',NULL,NULL,NULL,NULL),('antonio.baldi98@gmail.com','user','password','antonio','baldi','via e. berlinguer ','84010',51,'3922412988'),('antonio.baldi988@gmail.com','user','Antonio6','antonio','baldi',NULL,NULL,NULL,NULL),('antoniobaldi7575@gmail.com','admin','admin','anton','bald','via umberto I','84010',23,'3921234121'),('antoniobaldi7dsadsa575@gmail.com','user','Antonio6','','',NULL,NULL,NULL,NULL),('antoniobaldi7saddasads575@gmail.com','user','Antonio6','','',NULL,NULL,NULL,NULL),('antoniobaldiasddsadsa7575@gmail.com','user','Antonio6','sdadsadsa','Antonio6',NULL,NULL,NULL,NULL),('antoniobaldidsadsa7575@gmail.com','user','Antonio6','','Antonio6',NULL,NULL,NULL,NULL),('antoniobasdadsadasldi7575@gmail.com','user','Antonio6','','',NULL,NULL,NULL,NULL),('antoniobasddasaldi7575@gmail.com','user','Antonio6','','',NULL,NULL,NULL,NULL),('francesco.lauro@gmail.com','user','password','Francesco','Lauro','via fontana','84016',65,'3981729210');
+INSERT INTO `utente` VALUES ('a.baldi20@studenti.unisa.it','user','password','Antonio','Baldi','via E. berlinguer','84010',51,'3922412988'),('admin@powerfulrig.com','admin','password','Francesco','Galasso','via umberto I ','84000',32,NULL);
 /*!40000 ALTER TABLE `utente` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -261,4 +260,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-14 17:17:41
+-- Dump completed on 2019-11-25 22:11:32
