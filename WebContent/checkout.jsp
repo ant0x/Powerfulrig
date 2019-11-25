@@ -201,7 +201,8 @@
 							%>
 							<div class="row cntr justify-content-start"> 
 								<label class="radio newPaymentMethod">
-									<span class="glyphicon glyphicon-plus plus2"></span><p id="newCard" class="ordinePar"><a herf="#">Inserisci un nuovo metodo di pagamento</p></a>
+									<span class="glyphicon glyphicon-plus plus2"></span>
+									<p id="j" class="ordinePar"><a href="area-utente.jsp">Inserisci un nuovo metodo di pagamento</a></p>
 								</label>
 							</div>
 							<div class="row" id="inputNewCard2">
