@@ -437,7 +437,10 @@
 							</div>
 						<%
 							}
-								ArrayList<Prodotto> prod_ordini = ordini.get(I).getLista();
+								ArrayList<Prodotto> prod_ordini = new ArrayList<Prodotto>();
+										prod_ordini.add(ordini.get(I).getProdotti()); 
+								//System.out.println("i prodotti sono "+prod_ordini);
+								System.out.println("i prodotti del primo ordine sono "+ordini.get(1).getLista());
 								System.out.println(prod_ordini);
 								for(int J=0; J<prod_ordini.size(); J++)
 								{

@@ -2704,10 +2704,10 @@ p#login-form-remember {
 	font-weight: 700;
 	width: 156px;
 	padding: 8px 30px;
-	border-radius: 0;
+	border-radius: 15px;
 	color: #a4eded;
 	text-align: center;
-	background: #fff;
+	background: #001a1a;
 	position: relative;
 }
 

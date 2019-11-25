@@ -37,12 +37,11 @@ public class InsertProduct extends HttpServlet
 		String model_prod=null;
 		String brand_prod=null;
 		String name_prod=null;
-		int year_prod=0;
 		String description_prod=null;
 		float price_prod=0;
 		int discount_prod=0;
-		float discounted_price_prod=0;
-		int family_prod=0;
+		String specifiche_prod = null;
+		int watt = 0;
 		int qnt_prod=0;
 		String img_folder_path=null;
 		
@@ -65,15 +64,7 @@ public class InsertProduct extends HttpServlet
 			
 			name_prod=request.getParameter(scroller.nextElement());		//name_prod
 			
-			String year=request.getParameter(scroller.nextElement());	//year_prod
-			year_prod=Integer.parseInt(year);
-			
 			description_prod=request.getParameter(scroller.nextElement());		//description_prod
-			
-			String specifiche=request.getParameter(scroller.nextElement());			//qnt_prod
-			
-			String watt_prod=request.getParameter(scroller.nextElement());			//qnt_prod
-			int watt = Integer.parseInt(watt_prod);
 			
 			String price=request.getParameter(scroller.nextElement());			//price_prod
 			price_prod=Float.parseFloat(price);
@@ -81,16 +72,13 @@ public class InsertProduct extends HttpServlet
 			String discount=request.getParameter(scroller.nextElement());		//discount_prod
 			discount_prod=Integer.parseInt(discount);
 			
-			String discounted_price=request.getParameter(scroller.nextElement());	//discounted_price_prod
-			discounted_price_prod=Float.parseFloat(discounted_price);
+			String specifiche=request.getParameter(scroller.nextElement());			//qnt_prod
 			
-			String family=request.getParameter(scroller.nextElement());				//family_prod
-			family_prod=Integer.parseInt(family);
+			String watt_prod=request.getParameter(scroller.nextElement());			
+			watt = Integer.parseInt(watt_prod);
 			
 			String qnt=request.getParameter(scroller.nextElement());			//qnt_prod
 			qnt_prod=Integer.parseInt(qnt);
-			
-			
 			
 			img_folder_path=request.getParameter(scroller.nextElement());		//img_folder_path
 			
@@ -128,6 +116,7 @@ public class InsertProduct extends HttpServlet
 					dispatcher.forward(request, response);
 					
 				}
+				
 			} catch(Exception e){
 				
 				e.printStackTrace();

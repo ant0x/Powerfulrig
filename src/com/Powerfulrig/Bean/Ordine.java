@@ -115,8 +115,8 @@ public class Ordine
 		return lista;
 	}
 
-	public void setLista(ArrayList<Prodotto> productsToBuy) {
-		this.lista = productsToBuy;
+	public void setLista(ArrayList<Prodotto> prodotti) {
+		this.lista = prodotti;
 	}
 	private ArrayList<Prodotto> lista = new ArrayList<Prodotto>();
 	private int quantita;

@@ -44,7 +44,7 @@
 	        </a>
 	        <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdownMenuLink">
 		        <a class="dropdown-item" href="catalogo.jsp">Categorie</a>
-		        <a class="dropdown-item" href="Product?action=Prodotti in sconto2"">Prodotti in sconto</a>
+		        <a class="dropdown-item" href="Product?action=Prodotti in sconto">Prodotti in sconto</a>
 		        <div class="dropdown-divider"></div>
 	            <a class="dropdown-item" href="Product?action=Cpu_comp&comp_name=Processori">Processori</a>
 				<a class="dropdown-item" href="Product?action=Gpu_comp&comp_name=Schede Grafiche">Schede Grafiche</a>
@@ -155,8 +155,9 @@
               <li>   
                   <span class="item">
                     <span class="item-left">
-                        <img src=<%=arraycart.get(I).getImmagine()+"/img1.jpg"%> width="50" height="50" class="imgItem8" alt="" />
-                        <span class="item-info">
+                     <a id="productInCart" href="Product?action=prodotto&type_prod=<%=arraycart.get(I).getTipo()%>&model_prod=<%=arraycart.get(I).getModello()%>">
+                        <img src=<%=arraycart.get(I).getImmagine()+"/img1.jpg"%> width="50" height="50" class="imgItem8" alt="" /></a>
+                        <span class="item-info">                        
                             <span><%=arraycart.get(I).getNome()%></span>
                             <span><%=String.format("%.2f", arraycart.get(I).getPrezzo())%> &euro;</span>
                         </span>
@@ -239,6 +240,7 @@
 		    var url = $(this).parent().prev().children().attr("href");		//attraversamento del DOM a ritroso
 		    var type_prod = getURLParameter(url, 'type_prod');
 		    var model_prod = getURLParameter(url, 'model_prod');
+		    alert("tipo e modello "+type_prod+"  "+model_prod);
 		    //calling the ajax function
 		    delfromCart(type_prod, model_prod);
 		});

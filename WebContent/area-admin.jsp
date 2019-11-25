@@ -131,7 +131,13 @@
 					<div class="container divprod" id="prodiv">
 						<div class="row">
 							<div class="col-xl-5 justify-content-start">
-									<% Boolean inserimento = (Boolean) request.getAttribute("inserimento"); 
+							
+									<% 
+									Boolean inserimento = (Boolean) request.getAttribute("inserimento"); 
+									%>
+									<input type="text" name="inserimento" value="<%=inserimento%>" id="inserimento" class="hidden">
+									
+									<% 
 										if(inserimento!=null) 
 										{
 											if(inserimento){ %>
@@ -495,7 +501,10 @@
    		$("#ordiv").show();
 	});
 
+	
+	
 	</script>	
+	
 	
 	<script src="js/jquery.slicknav.min.js"></script>
 	<script src="js/main.js"></script>

@@ -87,19 +87,19 @@
 			<form name="insertForm" id="insertproduct" method = "get" action = "InsertProduct">
 				<div class="row form-group">
 					<label for="type_prod" class="4 form-label">Tipo</label>
-					<div class="col-xl-8">
-						<select name = "type_prod" class="arrows" onchange = "sendInfo()">
+					<div class="col-md-8">
+						<select name = "type_prod" class="arrows" onchange = "sendInfo()" style="background-color:#001a1a">
 						<!--  Gli attribbuti "value" sono i  prefissi delle tabelle nel DB -->
 							<option class="singleOption" value="searchCategory" disabled selected hidden>Seleziona Categoria</option>
-							<option class="singleOption" value="cpu">CPU</option>
+							<option class="singleOption" value="Cpu">CPU</option>
 							<option class="singleOption" value="heatsink">Dissipatori</option>
-							<option class="singleOption" value="gpu">Schede Video</option>
+							<option class="singleOption" value="Gpu">Schede Video</option>
 							<option class="singleOption" value="motherboard">Schede Madre</option>
 							<option class="singleOption" value="ram">RAM</option>
 							<option class="singleOption" value="storage">Archiviazione</option>
-							<option class="singleOption" value="psu">Alimentatore</option>
-							<option class="singleOption" value="case">Case</option>
-							<option class="singleOption" value="monitor">Monitor</option>
+							<option class="singleOption" value="Psu">Alimentatore</option>
+							<option class="singleOption" value="Case">Case</option>
+							<option class="singleOption" value="Monitor">Monitor</option>
 							<option class="singleOption" value="keyboard">Tastiere</option>
 							<option class="singleOption" value="mouse">Mouse</option>
 							<option class="singleOption" value="headphones">Cuffie</option>
@@ -109,67 +109,61 @@
 				</div>
 				<div class="row form-group">
 					<label for="model_prod" class="4 form-label">Modello</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<input type="text" class="form-input" name="model_prod" placeholder="Modello Prodotto">
 					</div>
 				</div>
 				<div class="row form-group">
 					<label for="brand_prod" class="4 form-label">Brand</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<input type="text" class="form-input" name="brand_prod" placeholder="Brand Prodotto">
 					</div>
 				</div>
 				<div class="row form-group">
 					<label for="name_prod" class="4 form-label">Nome</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<input type="text" class="form-input" name="name_prod" placeholder="Nome Prodotto">
 					</div>
 				</div>
 				<div class="row form-group">
-					<label for="year_prod" class="4 form-label">Anno</label>
-					<div class="col-xl-8">
-						<input type="text" class="form-input" name="year_prod" placeholder="Anno Prodotto">
-					</div>
-				</div>
-				<div class="row form-group">
 					<label for="description_prod" class="4 form-label">Descrizione</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<textarea rows="5" class="form-input" name="description_prod" placeholder="Descrizione Prodotto"></textarea>
 					</div>
 				</div>
 				<div class="row form-group">
 					<label for="price_prod" class="4 form-label">Prezzo</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<input type="text" class="form-input" name="price_prod" placeholder="Prezzo Prodotto">
 					</div>
 				</div>
 				<div class="row form-group">
 					<label for="discount_prod" class="4 form-label">% Prodotto in Sconto</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<input type="text" class="form-input" name="discount_prod" placeholder="% Prodotto in Sconto">
 					</div>
 				</div>
 				<div class="row form-group">
-					<label for="discounted_price_prod" class="4 form-label">Prezzo Prodotto in Sconto</label>
-					<div class="col-xl-8">
-						<input type="text" class="form-input" name="discounted_price_prod" placeholder="Prezzo Prodotto in Sconto">
+					<label for="specifiche_prod" class="4 form-label">Specifiche Prodotto</label>
+					<div class="col-md-8">
+						<input type="text" class="form-input" name="specifiche_prod" placeholder="Specifiche Prodotto">
 					</div>
 				</div>
 				<div class="row form-group">
-					<label for="family_prod" class="4 form-label">Informazioni Prodotto</label>
-					<div class="col-xl-8">
-						<input type="text" class="form-input" name="family_prod" placeholder="Informazioni Prodotto">
+					<label for="watt_prod" class="4 form-label">WattHr</label>
+					<div class="col-md-8">
+						<input type="text" class="form-input" name="watt_prod" placeholder="500W">
 					</div>
 				</div>
 				<div class="row form-group">
 					<label for="qnt_prod" class="4 form-label">Quantità Prodotto</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<input type="text" class="form-input" name="qnt_prod" placeholder="Quantità  Prodotto">
 					</div>
 				</div>
 				<div class="row form-group">
 					<label for="img_folder_path" class="4 form-label">Path Folder Immagini</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<input type="text" class="form-input" name="img_folder_path" placeholder="Path Folder Prodotto">
 					</div>
 				</div>
@@ -177,7 +171,7 @@
 					<div id = "generated-inputs">
 					</div>
 				<div class="row justify-content-center">
-					<input type="submit" class="form-button" value="Invia">
+					<input type="submit" class="form-button" value="Invia" id="subm1t">
 					<input type="reset" class="form-button" value="Reset">
 				</div>
 				
@@ -188,50 +182,9 @@
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery.slicknav.min.js"></script>
 	<script src="js/main.js"></script>
-	
-	<!-- Javascripts for InsertProduct -->
-	
-	<script><!-- Questa funzione serve per prendere i valori del menu "select" -->
-		function catchingType_prod(){
-			var type_prod = document.getElementsByName('type_prod')[0].value;
-			return type_prod;
-		}
-	</script>
-	
-	<script>  
-		var request;  
-		function sendInfo()  //Questa funzione serve per inoltrare i valori alla jsp per la comunicazione AJAX con il DB 
-		{	  
-			var v = catchingType_prod(); 
-			
-			var url = "retrieve-products-columns.jsp?type_prod="+v;  
-  
-			if(window.XMLHttpRequest)	// se il browser supporta l'oggetto XMLHttpRequest
-			{  
-				request=new XMLHttpRequest(); 
-			}  
-			try
-			{  
-				request.onreadystatechange = getInfo;  
-				request.open("GET",url,true);  
-				request.send(); 
-				
-			}catch(e){alert("Unable to connect to server");}  
-		}  
-  
-		function getInfo()
-		{  
-			if(request.readyState == 4)
-			{  
-				var val = request.responseText;
-				
-				
-				document.getElementById('generated-inputs').innerHTML=val;  
-			}  
-		}  
-		
-</script>  
-	
+
+
+
 </body>
 
 </html>

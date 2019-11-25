@@ -87,6 +87,7 @@ public class DAOOrdine
 		ArrayList<Ordine> ordini=new ArrayList<Ordine>();
 		Utente user=null;
 		Prodotto prod=null;
+		ArrayList<Prodotto> prodotti = new ArrayList<Prodotto>();
 		Ordine order=null;
 		String precedente="";
 		try
@@ -104,6 +105,8 @@ public class DAOOrdine
 				prod.setIdProdotto(set.getInt(14));
 				if(set.getString(9).equalsIgnoreCase(precedente))
 				{
+					//prodotti.add(prod);
+					//order.setLista(prodotti);
 					order.setProdotto(prod);
 					order.setQuantita(set.getInt(12));
 					order.setPrezzo(set.getFloat(13));
@@ -125,11 +128,14 @@ public class DAOOrdine
 					order.setQuantita(set.getInt(12));
 					order.setPrezzo(set.getFloat(13));
 					order.setStato(set.getString(14));
+					//prodotti.add(prod);
+					//order.setLista(prodotti);
 					order.setProdotto(prod);
 					order.setUser(user);
 					ordini.add(order);
 				}
 				precedente=order.getNumeroOrdine();
+				
 			}
 		}
 		finally
