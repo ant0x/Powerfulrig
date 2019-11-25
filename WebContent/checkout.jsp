@@ -152,7 +152,7 @@
 												<input type="text" class="form-input indSpacer1" name="indirizzo"  id="address" placeholder="Inserisci Indirizzo">
 											</div>
 											<div class="col-md-4">
-												<input type="text" class="form-input indSpacer1" name="città" id="city" placeholder="Inserisci cap">
+												<input type="text" class="form-input indSpacer1" name="cittï¿½" id="city" placeholder="Inserisci cap">
 											</div>
 											<div class="col-md-3">
 												<div class="row justify-content-center">
@@ -201,8 +201,7 @@
 							%>
 							<div class="row cntr justify-content-start"> 
 								<label class="radio newPaymentMethod">
-									<span class="glyphicon glyphicon-plus plus2"></span>
-									<p id="j" class="ordinePar"><a href="area-utente.jsp">Inserisci un nuovo metodo di pagamento</a></p>
+									<span class="glyphicon glyphicon-plus plus2"></span><p id="newCard" class="ordinePar"><a herf="#">Inserisci un nuovo metodo di pagamento</p></a>
 								</label>
 							</div>
 							<div class="row" id="inputNewCard2">
@@ -337,14 +336,14 @@
 		});
 		
 		$("#newCard").on('click', function() {
-			location.href="area-utente.jsp");
+			location.href="area-utente.jsp"});
 	
-		// questo è l'equivalente di $(document).ready
+		// questo ï¿½ l'equivalente di $(document).ready
 		document.addEventListener("DOMContentLoaded", function(event) { 
 			calcolaTot();
 		});
 	
-			function calcolaTot()		//si controlla prima la qnt se è disponibile per l'acquisto. Se questo è verofocato si procede con il calcolo del prezzo tot
+			function calcolaTot()		//si controlla prima la qnt se ï¿½ disponibile per l'acquisto. Se questo ï¿½ verofocato si procede con il calcolo del prezzo tot
 			{			
 				// questa funzione considera i prodotti uno ad uno (va dall'alto verso il basso)
 				var quantities = document.getElementsByName("qnt_selector");
@@ -353,7 +352,7 @@
 				var qntXprice;
 				var tot = 0.00;
 				
-				i=0; 	// quantities[i] è relativa a prices[i]
+				i=0; 	// quantities[i] ï¿½ relativa a prices[i]
 				while(i<quantities.length && i<prices.length)
 				{
 					qntXprice = quantities[i].value * prices[i].value; 
@@ -365,8 +364,8 @@
 			}
 			
 			
-			//funzione JQuery per selezionare la quantità relativa al menù select cliccato
-			//N.B si usano più IDs con lo stesso valore
+			//funzione JQuery per selezionare la quantitï¿½ relativa al menï¿½ select cliccato
+			//N.B si usano piï¿½ IDs con lo stesso valore
 			$("[id ='qnt_selector']").on('change', function catchQnt(){
 			    var url = $(this).prev().val();			    
 			    var type_prod = getURLParameter(url, 'type_prod');			  
@@ -391,7 +390,7 @@
 			        },
 			       	error: function(results){
 			       		Swal.fire({
-				  			  title: 'Quantità non disponibile!',
+				  			  title: 'Quantitï¿½ non disponibile!',
 				  			  timer: 1100,
 				  			  type: 'warning',
 				  			  showCancelButton: false,
@@ -412,7 +411,7 @@
 			var value5 = $("#username").val();			
 				Swal.fire({ //PRIMO POPUP
 				  title: "Sei sicuro di voler eliminare il metodo di pagamento?",
-				  text: "Il metodo sarà eliminato permanentemente.",
+				  text: "Il metodo sarï¿½ eliminato permanentemente.",
 				  type: 'warning',
 				  showCancelButton: true,
 				  confirmButtonColor: '#3085d6',
