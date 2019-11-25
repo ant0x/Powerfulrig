@@ -30,14 +30,14 @@
 	<header class="sezioneHeader1">
 		<div class="container-fluid header-background">
 			<div class="row">
-				<div class="header-left col-xl-3">
+				<div class="header-left col-md-3">
 					<div class="row">
 						<a href="home.jsp" class="site-logo">
 							<img src="./img/logotech.png" alt="">
 						</a>
 					</div>
 				</div>
-				<div class="header-center col-xl-7">
+				<div class="header-center col-md-7">
 					<nav class="top-nav-area">
 						<div class="bg"></div>
 						<ul class="row main-menu">
@@ -65,9 +65,9 @@
 						</ul>
 					</nav>
 				</div>
-				<div class="header-right col-xl-2">
+				<div class="header-right col-md-2">
 					<div class="row user-option" id="uo1">
-						<div class="col-xl-3">
+						<div class="col-md-3">
 							<i class="glyphicon glyphicon-user men"> </i>
 						</div>
 									
@@ -81,17 +81,17 @@
 											if(utenteLoggato!=null) 
 											{
 												if((utenteLoggato.getTipo()).equals("user")){ %>
-													<div class="col-xl-6">
+													<div class="col-md-6">
 														<a href="area-utente.jsp"><%=utenteLoggato.getNome()%>  </a>
 													</div>
-													<div class="col-xl-2">
+													<div class="col-md-2">
 														<a href="#"><i class="glyphicon glyphicon-log-out log-out" onclick="logout()"> </i></a>
 													</div>
 											<%} else{ %>
-													<div class="col-xl-6">
+													<div class="col-md-6">
 														<a href="area-admin.jsp" style = "font-size:10px">Admin:<%=utenteLoggato.getEmail()%></a>													
 													</div>
-													<div class="col-xl-2">
+													<div class="col-md-2">
 														<a href="#"><i class="glyphicon glyphicon-log-out log-out" onclick="logout()"> </i></a>
 													</div>
 												<%} %>
@@ -130,7 +130,7 @@
 						<div class="apri">
 							<div class="carrello">
 								<div class="row setupRow">
-									<div class="col-xl-12">
+									<div class="col-md-12">
 										<h4 class="cartH4noElem">Nessun prodotto presente nel carrello!</h4>
 									</div>
 								</div>
@@ -145,13 +145,13 @@
 							<div class="carrello">
 							<% for(int I=0;I<arraycart.size();I++) {%>
 								<div class="row setupRow">
-									<div class="col-xl-3">
+									<div class="col-md-3">
 										<img src=<%=arraycart.get(I).getImmagine()+"/img1.jpg"%> width="50" height="50" class="imgItem8">
 									</div>
-									<div class="col-xl-6">
+									<div class="col-md-6">
 										<a id="productInCart" href="Product?action=prodotto&type_prod=<%=arraycart.get(I).getTipo()%>&model_prod=<%=arraycart.get(I).getModello()%>"><h4 class="cartH4"><%=arraycart.get(I).getNome()%></h4></a>
 									</div>
-									<div class="col-xl-3">
+									<div class="col-md-3">
 										<h3 class="cartH3"><%=arraycart.get(I).getPrezzo()%> &euro;</h3>
 										<i id="trashDel" class="glyphicon glyphicon-trash trash2" style="cursor: pointer;"> </i>
 									</div>
@@ -159,7 +159,7 @@
 							<% } %>
 							</div>
 							<div class="row setupRow2 justify-content-center">
-								<div class="col-xl-12">
+								<div class="col-md-12">
 								<% 	if(utenteLoggato!=null) 
 									{ %>
 									<a href="checkout.jsp"><input type="button" class="site-btn6 setupbtncart2" value="ACQUISTA ORA"></a>

@@ -74,10 +74,10 @@
 		</div>
 		<div class="container border-utentepage">
 			<div class="row justify-content-start">
-				<div class="col-xl-6">
+				<div class="col-md-6">
 					<h4 id="list1" class="utenteh4">Informazioni Utente</h4>
 				</div>
-				<div class="col-xl-6">
+				<div class="col-md-6">
 					<h4 id="list2" class="utenteh42">Lista Ordini</h4>
 				</div>
 			</div>
@@ -86,19 +86,19 @@
 		<div class="container" id="utdiv">
 			<div class="container spacerUP borderutdiv" id="infPut">
 				<div class="row justify-content-start">
-					<div class="col-xl-3">
+					<div class="col-md-3">
 						<div class="row">
 							<h4 class="upH4">Nome: </h4>
 							<p class="upPCircle"><%=utenteLoggato.getNome()%></p>
 						</div>
 					</div>
-					<div class="col-xl-3">
+					<div class="col-md-3">
 						<div class="row">
 							<h4 class="upH4">Cognome: </h4>
 							<p class="upPCircle"><%=utenteLoggato.getCognome()%></p>
 						</div>
 					</div>
-					<div class="col-xl-5">
+					<div class="col-md-5">
 						<div class="row">
 							<h4 class="upH4">E-mail: </h4>
 							<p class="upPCircle"><%=utenteLoggato.getEmail()%></p>
@@ -106,13 +106,13 @@
 					</div>
 				</div>
 				<div class="row spacerUP2 justify-content-start">
-					<div class="col-xl-3">
+					<div class="col-md-3">
 						<div class="row">
 							<h4 class="upH4">Password: </h4>
 							<p class="upPCircle">&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;</p>
 						</div>
 					</div>
-					<div class="col-xl-3">
+					<div class="col-md-3">
 						<div class="row justify-content-end">
 							<input type="button" class="site-btn6" id="btninfo" value="Modifica Informazioni">
 						</div>
@@ -123,19 +123,19 @@
 			<div class="container spacerUP borderutdiv" id="infPut2">
 				<form method="GET" action="ModifyUser">
 					<div class="row justify-content-start">
-						<div class="col-xl-3">
+						<div class="col-md-3">
 							<div class="row">
 								<h4 class="upH4">Nome: </h4>
 								<input type="text" name="firstname" class="form-input" value="<%=utenteLoggato.getNome()%>">
 							</div>
 						</div>
-						<div class="col-xl-3">
+						<div class="col-md-3">
 							<div class="row">
 								<h4 class="upH4">Cognome: </h4>
 								<input type="text" name="lastname" class="form-input" value="<%=utenteLoggato.getCognome()%>">
 							</div>
 						</div>
-						<div class="col-xl-5">
+						<div class="col-md-5">
 							<div class="row">
 								<h4 class="upH4">E-mail: </h4>
 							</div>
@@ -145,14 +145,14 @@
 						</div>
 					</div>
 					<div class="row spacerUP2 justify-content-start">
-						<div class="col-xl-3">
+						<div class="col-md-3">
 						</div>
-						<div class="col-xl-3">
+						<div class="col-md-3">
 							<div class="row">
 								<a href="modify-password.jsp"><h4 class="passwordh4">Modifica Password</h4></a>
 							</div>
 						</div>
-						<div class="col-xl-6">
+						<div class="col-md-6">
 							<div class="row justify-content-center">
 								<input type="Submit" class="site-btn6" style="width: 130px; margin-top: 37px; margin-right: 40px;" value="Applica">
 								<input type="reset" class="site-btn6" style="width: 130px; margin-top: 37px; margin-left: 30px;" id="btninfo2" value="Annulla">
@@ -164,13 +164,13 @@
 			
 			<div class="container spacerUP3">
 				<div class="row justify-content-start">
-					<div class="col-xl-5">
+					<div class="col-md-5">
 						<h4 style="color:#419191">Indirizzo di Spedizione</h4>
 					</div>
 				</div>
 				
 				<div class="row borderutdiv">
-					<div class="col-xl-12">
+					<div class="col-md-12">
 							<% 
 							boolean isStampato = false;
 							
@@ -181,7 +181,7 @@
 									{
 									%>							
 										<div class="row justify-content-start">
-											<div class="col-xl-12">
+											<div class="col-md-12">
 												<div class="row">
 													<h4 style="color:navy; margin-left: 5px; cursor: pointer;" id="newInd">+ Inserisci nuovo indirizzo</h4>
 												</div>
@@ -189,18 +189,18 @@
 										</div>
 										<div class="row justify-content-start" id="inputNewInd">
 											<form action="InsertAddress" method="get">
-												<div class="col-xl-12">
+												<div class="col-md-12">
 													<div class="row">
-														<div class="col-xl-4">
+														<div class="col-md-4">
 															<input type="text" class="form-input" name="indirizzo" placeholder="Inserisci Indirizzo">
 														</div>
-														<div class="col-xl-4">
+														<div class="col-md-4">
 															<input type="text" class="form-input" name="citta" placeholder="Inserisci città">
 														</div>
-														<div class="col-xl-1">
+														<div class="col-md-1">
 															<input type="text" class="form-input3" id="provincia" maxlength="2" name="provincia" placeholder="Provincia">
 														</div>
-														<div class="col-xl-3">
+														<div class="col-md-3">
 															<div class="row justify-content-center">
 																<input type="text" class="form-input3" id="cap" maxlength="5" name="cap" placeholder="CAP">
 															</div>
@@ -222,13 +222,13 @@
 									<div class="row justify-content-start">
 										<input type="hidden" id="addressNumber" value="<%=1%>">
 										<input type="hidden" id="username" value="<%=utenteLoggato.getEmail()%>">
-											<div class="col-xl-6">
+											<div class="col-md-6">
 												<div class="row">
 													<h4 class="upH4">Indirizzo: </h4>
 													<p class="upPCircle"><%=address%></p>
 												</div>
 											</div>
-											<div class="col-xl-1">
+											<div class="col-md-1">
 												<div class="row justify-content-center">
 													<i id="removeAddressIcon" class="glyphicon glyphicon-remove remove3"> </i>
 												</div>
@@ -245,7 +245,7 @@
 			</div>
 			<div class="container spacerUP3">
 				<div class="row justify-content-start">
-					<div class="col-xl-5">
+					<div class="col-md-5">
 						<h4 style="color:#419191">Metodi di Pagamento</h4>
 					</div>
 				</div>
@@ -274,22 +274,22 @@
 						if(i == payment_methods.size()-1) // se è l'ultimo metodo di pagamento esistente
 						{
 						%>
-							<div class="col-xl-12">
+							<div class="col-md-12">
 						<%
 						}
 						else
 						{	
 							%>
-							<div class="col-xl-12" style="margin-bottom: 2px;border-bottom: 1px solid white;">
+							<div class="col-md-12" style="margin-bottom: 2px;border-bottom: 1px solid white;">
 						<% } %>
 							<div class="row spacerUP4 justify-content-start">
-								<div class="col-xl-5">
+								<div class="col-md-5">
 									<div class="row">
 										<h4 class="upH4">Tipo Carta: </h4>
 										<p class="upPCircle"><%=payment_methods.get(i).getCard_bank() %></p>
 									</div>
 								</div>
-								<div class="col-xl-7">
+								<div class="col-md-7">
 									<div class="row">
 										<h4 class="upH4">Scadenza Carta: </h4>
 										<%	
@@ -302,19 +302,19 @@
 								</div>
 							</div>
 							<div class="row justify-content-start">
-								<div class="col-xl-5">
+								<div class="col-md-5">
 									<div class="row">
 										<h4 class="upH4">Codice Carta: </h4>
 										<p id="card_number" class="upPCircle"><%=payment_methods.get(i).getCard_number()%></p>
 									</div>
 								</div>
-								<div class="col-xl-4">
+								<div class="col-md-4">
 									<div class="row">
 										<h4 class="upH4">Codice CVC: </h4>
 										<p class="upPCircle">&#8226;&#8226;&#8226;</p>
 									</div>
 								</div>
-								<div class="col-xl-3">
+								<div class="col-md-3">
 									<div class="row justify-content-end">
 										<i id="removePaymentMethodIcon" class="glyphicon glyphicon-remove remove3"> </i>
 									</div>
@@ -330,7 +330,7 @@
 						{
 						%>
 							<div class="row justify-content-start">
-								<div class="col-xl-12">
+								<div class="col-md-12">
 									<h4 style="color:#419191; margin-left: 5px; margin-bottom: 15px; cursor: pointer;" id="newCard">+ Inserisci nuovo Metodo di Pagamento</h4>
 								</div>
 							</div>
@@ -345,7 +345,7 @@
 					<div class="row" id="inputNewCard">
 						<form action="InsertPaymentMethod" method="get">
 							<div class="row justify-content-start">
-								<div class="col-xl-4">
+								<div class="col-md-4">
 									<select class="custom-select" name="card_type_selector" id="card_selector">
 										<option disabled hidden selected>TIPO CARTA</option>
 										<option value="Carta di Credito">Carta di Credito</option>
@@ -354,13 +354,13 @@
 										<option value="PostePay">PostePay</option>
 									</select>
 								</div>
-								<div class="col-xl-4">
+								<div class="col-md-4">
 									<input type="text" class="form-input2" id="codcarta" name="codcarta" maxlength="19" placeholder="Codice Carta">
 								</div>
-								<div class="col-xl-2">
+								<div class="col-md-2">
 									<input type="password" class="form-input4" name="codcvc" maxlength="3" placeholder="Codice CVC">
 								</div>
-								<div class="col-xl-2">
+								<div class="col-md-2">
 									<input type="date" class="prova312" name="dataexpcarta" id="dataexpcarta" style="margin-left: 40px;">
 								</div>
 							</div>
@@ -388,23 +388,23 @@
 			%>
 				<div class="container" style="margin-bottom: 15px">
 					<div class="row justify-content-start test">
-						<div class="col-xl-3">
+						<div class="col-md-3">
 							<div class="row">
 								<h4 class="upH43">ORDINE EFFETTUATO IL: </h4>
 								<p class="ordP"><%=data%></p>
 							</div>
 						</div>
-						<div class="col-xl-3">
+						<div class="col-md-3">
 							<div class="row">
 								<h4 class="upH43">IMPORTO TOTALE: </h4>
-								<div class="col-xl-12">
+								<div class="col-md-12">
 									<div class="row">
 										<p class="ordP"><%=ordini.get(I).getTotale() %> &euro;</p>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-6">
+						<div class="col-md-6">
 							<div class="row">
 								<h4 class="upH43">SPEDITO A: </h4>
 								<p class="ordP"><%=" "+ordini.get(I).getUser().getVia()+"n° "+
@@ -416,7 +416,7 @@
 						</div>
 					</div>
 					<div class="row justify-content-start test3">
-						<div class="col-xl-12">
+						<div class="col-md-12">
 						<%
 							if(ordini.get(I).getStato().equalsIgnoreCase("consegnato")) {
 						%>
@@ -438,7 +438,9 @@
 						<%
 							}
 								ArrayList<Prodotto> prod_ordini = new ArrayList<Prodotto>();
-										prod_ordini.add(ordini.get(I).getProdotti()); 
+								for(Prodotto a : ordini.get(I).getLista())
+									prod_ordini.add(a);
+
 								//System.out.println("i prodotti sono "+prod_ordini);
 								System.out.println("i prodotti del primo ordine sono "+ordini.get(1).getLista());
 								System.out.println(prod_ordini);
@@ -448,11 +450,11 @@
 								
 								<div class="row" style="margin-bottom: 15px;">
 								<!-- codice generato -->
-									<div class="col-xl-2">
+									<div class="col-md-2">
 										<a href="Product?action=prodotto&type_prod=<%=prod_ordini.get(J).getTipo()%>&model_prod=<%=prod_ordini.get(J).getModello()%>"><img src=<%=prod_ordini.get(J).getImmagine()+"/img1.jpg"%> class="imgItem7" width="auto" height="auto"></a>
 									</div>
 									<!--  prodotto acquistato simulato -->
-									<div class="col-xl-3 spacerInfo">
+									<div class="col-md-3 spacerInfo">
 										<h4 class="upH45"><a style="color: black;" class="prod_ordini_href" href="Product?action=prodotto&type_prod=<%=prod_ordini.get(J).getTipo()%>&model_prod=<%=prod_ordini.get(J).getModello()%>"><%=prod_ordini.get(J).getNome()%></a></h4>
 										<h4 class="upH45">Spedizione Gratuita</h4>
 										<h4 class="upH45"><%=prod_ordini.get(J).getPrezzo() %> &euro; x<%=prod_ordini.get(J).getQuantita()%></h4>
@@ -460,9 +462,8 @@
 										<input type="hidden" id="model_prod" value="<%=prod_ordini.get(J).getModello()%>">
 										<input type="button" class="site-btn5" id="buyAgainButton" value="COMPRA DI NUOVO">
 									</div>
-									<div class="col-xl-4" id="details">
-										<h4 class="uph44" style="margin-bottom: 0px;">Metodo di pagamento:</h4>
-										<h4 class="upH45"><%=ordini.get(I).getMetodoPagamento()%></h4>
+									<div class="col-md-4" id="details">
+										
 										<h4 class="uph44" style="margin-bottom: 0px;">Spedito a:</h4>
 										<h4 class="upH45"><%=utenteLoggato.getNome()%> <%=utenteLoggato.getCognome() %>, <br> <%=ordini.get(I).getUser().getVia()%> <br> <%=ordini.get(I).getUser().getCap()%> <br> <%=ordini.get(I).getUser().getNumeroCivico()%></h4>
 									</div>
@@ -470,7 +471,7 @@
 										if(J==0) //se è il primo prodotto stampato dell'ordine, alalora stampa il div di informazioni laterale
 										{
 									%>
-									<div class="col-xl-3 spacerBtnUP">
+									<div class="col-md-3 spacerBtnUP">
 										<div class="row justify-content-center">
 											<a href="https://www.ups.com/track?loc=it_IT&requester=ST/" target="_blank"><input type="button" class="site-btn6 setupbtnUP" value="Traccia il mio pacco"></a>
 										</div>
@@ -490,14 +491,14 @@
 									else 
 									{%>		
 									</div>						
-										<div class="col-xl-3 spacerBtnUP"></div>
+										<div class="col-md-3 spacerBtnUP"></div>
 									<%} 
 								}
 							%>
 						</div>
 					</div>
 					<div class="row justify-content-start test2">
-							<div class="col-xl-12">
+							<div class="col-md-12">
 								<div class="row justify-content-end">
 									<h4 class="upH43">Ordine</h4>
 									<p class="ordP"># 239-103-<%=ordini.get(I).getNumeroOrdine()%></p>

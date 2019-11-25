@@ -76,18 +76,18 @@
 		</div>
 		<div class="container border-adminpage">
 			<div class="row justify-content-center">
-				<div class="col-xl-4">
+				<div class="col-md-4">
 					<h4 id="list1" class="adminh4">Lista Utenti</h4>
 				</div>
-				<div class="col-xl-4">
+				<div class="col-md-4">
 					<h4 id="list2" class="adminh4">Lista Prodotti</h4>
 				</div>
-				<div class="col-xl-4">
+				<div class="col-md-4">
 					<h4 id="list3" class="adminh4">Lista Ordini</h4>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xl-12">
+				<div class="col-md-12">
 					<div class="container divutenti" id="utdiv">
 						<div class="row justify-content-end">
 							<h4 class="uth4">Utenti registrati: </h4>
@@ -102,25 +102,25 @@
 								
 						%>
 						<div class="row spacerUt">
-							<div class="col-xl-11">
+							<div class="col-md-11">
 								<div class="row">
-									<div class="col-xl-4">
+									<div class="col-md-4">
 										<p id="utP">Nome:</p><p id="utP2"><%=utente.getNome()%></p>
 									</div>
-									<div class="col-xl-4">
+									<div class="col-md-4">
 										<p id="utP">Cognome:</p><p id="utP2"><%=utente.getCognome()%></p>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-xl-4">
+									<div class="col-md-4">
 										<p id="utP">Email:</p><p id="utP2"><%=utente.getEmail()%></p>
 									</div>
-									<div class="col-xl-4">
+									<div class="col-md-4">
 										<p id="utP">Password:</p><p id="utP2">********</p>
 									</div>
 								</div>
 							</div>
-							<div class="col-xl-1">
+							<div class="col-md-1">
 								<i  id="removeUserIcon" class="glyphicon glyphicon-remove remove"> </i>
 							</div>
 						</div>
@@ -130,7 +130,7 @@
 					</div>
 					<div class="container divprod" id="prodiv">
 						<div class="row">
-							<div class="col-xl-5 justify-content-start">
+							<div class="col-md-5 justify-content-start">
 							
 									<% 
 									Boolean inserimento = (Boolean) request.getAttribute("inserimento"); 
@@ -157,7 +157,7 @@
 											}%>
 								</div>
 						
-								<div class="col-xl-7">
+								<div class="col-md-7">
 									<div class=" row justify-content-start">
 										<a href="inserisci-prodotto.jsp"><h4 class="prodh4">Inserisci Prodotto</h4></a>
 									</div>
@@ -173,10 +173,10 @@
 								Prodotto bean = (Prodotto) it2.next();	
 						%>
 						<div class="row spacerProd">
-							<div class="col-xl-1">
+							<div class="col-md-1">
 								<a href="Product?action=prodotto&type_prod=<%=bean.getTipo()%>&model_prod=<%=bean.getModello()%>"><img src="<%=bean.getImmagine()%>/img1.jpg" width="70px" height="70px"></a>
 							</div>
-							<div class="col-xl-1" id="type_prod_div">
+							<div class="col-md-1" id="type_prod_div">
 								<div class="row justify-content-center">
 									<p class="utProd">Tipo:</p>
 								</div>
@@ -184,7 +184,7 @@
 									<p  class="utProd2" id="type_prod_value"><%=bean.getTipo()%></p>
 								</div>
 							</div>
-							<div class="col-xl-1">
+							<div class="col-md-1">
 								<div class="row justify-content-center">
 									<p class="utProd">Marca:</p>
 								</div>
@@ -192,7 +192,7 @@
 									<p class="utProd2"><%=bean.getMarca()%></p>
 								</div>
 							</div>
-							<div class="col-xl-2">
+							<div class="col-md-2">
 								<div class="row justify-content-center">
 									<p class="utProd">Nome:</p>
 								</div>
@@ -200,7 +200,7 @@
 									<p class="utProd2"><%=bean.getNome()%></p>
 								</div>
 							</div>
-							<div class="col-xl-1" id="model_prod_div">
+							<div class="col-md-1" id="model_prod_div">
 								<div class="row justify-content-center">
 									<p class="utProd">Modello:</p>
 								</div>
@@ -208,7 +208,7 @@
 									<p class="utProd2" id="model_prod_value"><%=bean.getModello()%></p>
 								</div>
 							</div>
-							<div class="col-xl-1">
+							<div class="col-md-1">
 								<div class="row justify-content-center">
 									<p class="utProd">Prezzo:</p>
 								</div>
@@ -216,7 +216,7 @@
 									<p class="utProd2"><%=bean.getPrezzo()%> &euro;</p>
 								</div>
 							</div>
-							<div class="col-xl-1">
+							<div class="col-md-1">
 								<div class="row justify-content-center">
 									<p class="utProd">P. Scont:</p>
 								</div>
@@ -224,7 +224,7 @@
 									<p class="utProd2"><%=bean.getPercentualeSconto()%> %</p>
 								</div>
 							</div>
-							<div class="col-xl-1">
+							<div class="col-md-1">
 								<div class="row justify-content-center">
 									<p class="utProd">Quantità:</p>
 								</div>
@@ -232,7 +232,7 @@
 									<p class="utProd2"><%=bean.getQuantita()%></p>
 								</div>
 							</div>	
-							<div class="col-xl-1">
+							<div class="col-md-1">
 								<div class="row justify-content-center">
 									<a href="Product?action=modify_product&type_prod=<%=bean.getTipo()%>&model_prod=<%=bean.getModello()%>"><i class="glyphicon glyphicon glyphicon-wrench wrench"> </i></a>
 								</div>
@@ -249,17 +249,17 @@
 						<div class="container spacerUP5">
 							<form action="SelectOrdersByDate" method="GET">
 								<div class="row">
-									<div class="col-xl-4">
+									<div class="col-md-4">
 										<div class="row justify-content-center">											
 											<input id="dataStart" class="prova312" type="date" name="start">
 										</div>
 									</div>
-									<div class="col-xl-4">
+									<div class="col-md-4">
 										<div class="row justify-content-center">
 											<input id="dataEnd" class="prova312" type="date" name="end">
 										</div>
 									</div>
-									<div class="col-xl-4">
+									<div class="col-md-4">
 										<div class="row justify-content-center">
 											<input type="Submit" class="site-btn6" id="setupbtnUP2" value="Cerca per Data">
 										</div>
@@ -270,16 +270,16 @@
 						<div class="container spacerUP5">
 							<form action="SelectOrdersByUsername" method="GET">
 								<div class="row">
-									<div class="col-xl-4">
+									<div class="col-md-4">
 									</div>
-									<div class="col-xl-4">
+									<div class="col-md-4">
 										<div class="row justify-content-center">											
 											<input id="username" type="text" name="username">
 										</div>
 									</div>
-									<div class="col-xl-4">
+									<div class="col-md-4">
 										<div class="row justify-content-center">
-											<input type="Submit" class="site-btn6" id="setupbtnUP2" value="Cerca per Username" style="margin-top: 3px">
+											<input type="Submit" class="site-btn6" id="setupbtnUP2" value="Cerca per Email" style="margin-top: 3px">
 										</div>
 									</div>
 								</div>
@@ -313,33 +313,33 @@
 								Ordine bean = (Ordine) it3.next();	
 						%> 
 						<div class="row spacerUt">
-							<div class="col-xl-11">
+							<div class="col-md-11">
 								<div class="row">
-									<div class="col-xl-3">
+									<div class="col-md-3">
 										<p id="utP">ID Ordine:</p><p id="utP2"><%=bean.getNumeroOrdine()%></p>
 									</div>
-									<div class="col-xl-4">
+									<div class="col-md-4">
 										<p id="utP">Utente Ordine:</p><p id="utP2"><%=bean.getUser().getEmail()%></p>
 									</div>
-									<div class="col-xl-5">
+									<div class="col-md-5">
 										<p id="utP">Codice Carta:</p><p id="utP2"><%=bean.getMetodoPagamento()%></p>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-xl-5">
+									<div class="col-md-5">
 										<div class="row">
 											<p id="utP" class="spacerIndirizzoOrd">Indirizzo:</p><p id="utP2"><%=bean.getUser().getVia()+" "+bean.getUser().getCap()%></p>
 										</div>
 									</div>
-									<div class="col-xl-4">
+									<div class="col-md-4">
 										<p id="utP">Data Ordine:</p><p id="utP2"><%=bean.getData()%></p>
 									</div>
-									<div class="col-xl-3">
+									<div class="col-md-3">
 										<p id="utP">Prezzo:</p><p id="utP2"><%=bean.getPrezzo()%> &euro;</p>
 									</div>
 								</div>
 							</div>
-							<div class="col-xl-1">
+							<div class="col-md-1">
 								<i id="removeOrderIcon" class="glyphicon glyphicon-remove remove"></i>
 							</div>
 						</div>
@@ -402,8 +402,7 @@
 					  			  showConfirmButton: false,
 					  			  width: '400px',
 					  			})
-					  		setTimeout(function(){	window.location.hash = "#prodiv";
-  													location.reload();} , 1350);  
+					  		setTimeout(function(){location.href="area-admin.jsp"} , 200);
 						  }
 					})
 			  	}

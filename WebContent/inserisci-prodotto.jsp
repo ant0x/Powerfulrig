@@ -84,7 +84,7 @@
 			</div>
 		</div>
 		<div class="container border-insformpage">
-			<form name="insertForm" id="insertproduct" method = "get" action = "InsertProduct">
+			<form name="insertForm" id="insertproduct" method = "post" action = "InsertProduct">
 				<div class="row form-group">
 					<label for="type_prod" class="4 form-label">Tipo</label>
 					<div class="col-md-8">

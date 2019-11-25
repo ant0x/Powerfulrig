@@ -2,7 +2,7 @@
 	<footer class="footer-section">
 		<div class="container-fluid">
 			<div class="row" id="fspace2">
-				<div class="col-xl-3">
+				<div class="col-md-3">
 					<p id="fp">Metodi di pagamento: </p>
 					<img class="i" src="./img/loghipay/paypal.svg">
 					<img class="i" src="./img/loghipay/visa.svg">
@@ -11,7 +11,7 @@
 					<img class="i" src="./img/loghipay/americanexpress.svg">
 					<img class="i2" src="./img/loghipay/cartadocente.jpg">
 				</div>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<ul class="nav flex-column">
 						<li class="nav-item">
 							<a class="nav-link" id="pstyles" href="privacy.jsp">Privacy Policy</a>
@@ -24,7 +24,7 @@
 						</li>
 					 </ul>
 				</div>
-				<div class="col-xl-1">
+				<div class="col-md-1">
 					<ul class="nav flex-column">
 						<li class="nav-item">
 							<a class="nav-link" id="pstyles" href="contatti.jsp">Supporto</a>
@@ -34,7 +34,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-xl-5">
+				<div class="col-md-5">
 					<div class="row justify-content-start">
 						<div class="footer-social">
 							<p><b>Seguici su:</b></p>
@@ -50,7 +50,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-1">
+				<div class="col-md-1">
 					<div class="row" id="setupiconID">
 						<a href="#" class="setupicon"><i class="glyphicon glyphicon-arrow-up"> </i></a>
 					</div>

@@ -32,7 +32,7 @@
 				
 				String format2 = "<div class=\"row form-group\"> \r\n" + 
 						"<label for=\""+rs.getString(1)+"\" class=\"4 form-label\">"+rs.getString(1)+"</label> \r\n" +
-						"<div class=\"col-xl-8\"> \r\n" +
+						"<div class=\"col-md-8\"> \r\n" +
 							"<input type=\"text\" class=\"form-input\" name=\""+rs.getString(1)+"\"> \r\n" +
 						"</div> \r\n" +
 					"</div>";

@@ -112,6 +112,7 @@ public class InsertProduct extends HttpServlet
 					
 					request.setAttribute("inserimento", true);
 					
+					
 					RequestDispatcher dispatcher = request.getRequestDispatcher("area-admin.jsp");
 					dispatcher.forward(request, response);
 					

@@ -87,7 +87,8 @@ public class DAOOrdine
 		ArrayList<Ordine> ordini=new ArrayList<Ordine>();
 		Utente user=null;
 		Prodotto prod=null;
-		ArrayList<Prodotto> prodotti = new ArrayList<Prodotto>();
+		ArrayList<Prodotto> prodotti;
+		prodotti = new ArrayList<Prodotto>();
 		Ordine order=null;
 		String precedente="";
 		try
@@ -99,17 +100,22 @@ public class DAOOrdine
 			set=statement.executeQuery();
 			while(set.next())
 			{
+				
 				prod=new Prodotto();
 				prod.setImmagine(set.getString(7));
 				prod.setNome(set.getString(8));
 				prod.setIdProdotto(set.getInt(14));
+				prod.setPrezzo(set.getFloat(13));
+				prod.setQuantita(set.getInt(12));
+				prod.setModello(set.getString(16));
+				prod.setTipo(set.getString(17));
 				if(set.getString(9).equalsIgnoreCase(precedente))
 				{
-					//prodotti.add(prod);
-					//order.setLista(prodotti);
-					order.setProdotto(prod);
+					
+					prodotti.add(prod);
 					order.setQuantita(set.getInt(12));
 					order.setPrezzo(set.getFloat(13));
+					
 				}
 				else
 				{
@@ -128,11 +134,12 @@ public class DAOOrdine
 					order.setQuantita(set.getInt(12));
 					order.setPrezzo(set.getFloat(13));
 					order.setStato(set.getString(14));
-					//prodotti.add(prod);
-					//order.setLista(prodotti);
-					order.setProdotto(prod);
+					prodotti.add(prod);
+					order.setLista(prodotti.clone());
+					//order.setProdotto(prod);
 					order.setUser(user);
 					ordini.add(order);
+					prodotti.clear();
 				}
 				precedente=order.getNumeroOrdine();
 				
@@ -375,16 +382,16 @@ public class DAOOrdine
 				"       where data_fattura between ? AND ? ) as table2\r\n" + 
 				"       on table1.fattura=table2.numero_fattura"
 				+ "ORDER BY data_fattura DESC";
-		viewOrdineById="select table2.Email,table2.Nome,table2.Cognome,table2.Via,table2.cap,table2.NumeroCivico,path,table1.Nome,numero_fattura,totale,data_fattura,quantita,table1.prezzo,table1.IdProdotto,stato\r\n" + 
-				"from (select path,Nome,composizione.quantita,composizione.prezzo,fattura,prodotto.IdProdotto\r\n" + 
+		viewOrdineById="select table2.Email,table2.Nome,table2.Cognome,table2.Via,table2.cap,table2.NumeroCivico,path,table1.Nome,numero_fattura,totale,data_fattura,quantita,table1.prezzo,table1.IdProdotto,stato, table1.Modello, table1.Tipo\r\n" + 
+				"from (select path,Nome,composizione.quantita,composizione.prezzo,fattura,prodotto.IdProdotto, prodotto.Tipo, prodotto.Modello\r\n" + 
 				"    from prodotto inner join composizione on prodotto.IdProdotto=composizione.IdProdotto) as table1\r\n" + 
 				"      inner join \r\n" + 
 				"      (select numero_fattura,totale,data_fattura,Cognome,Nome,Email,Via,cap,NumeroCivico,stato\r\n" + 
-				"     from fattura inner join utente on fattura.Email_utente=utente.Email \r\n" +
-				"	  inner join spedizione on fattura.numero_fattura = spedizione.fattura \r\n"+
+				"     from fattura inner join utente on fattura.Email_utente=utente.Email \r\n" + 
+				"	  inner join spedizione on fattura.numero_fattura = spedizione.fattura \r\n" + 
 				"       where Email like ? ) as table2\r\n" + 
-				"       on table1.fattura=table2.numero_fattura \r\n"
-				+ " ORDER BY data_fattura DESC";
+				"       on table1.fattura=table2.numero_fattura \r\n" + 
+				" ORDER BY data_fattura DESC ";
 		addOrdine="INSERT INTO fattura(totale,metodo_pagamento,data_fattura,Email_Utente) VALUES (?,?,?,?)";
 		addComposizione="INSERT INTO composizione (quantita, prezzo, fattura, IdProdotto) VALUES (?,?,?,?)";
 		addSpedizione="INSERT INTO spedizione (stato, data_partenza, data_arrivo, citta_destinazione, fattura) VALUES (?,?,?,?,?)";

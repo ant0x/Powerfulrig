@@ -80,7 +80,7 @@
 				</video>
 				<div class="carousel-caption">
 					<h2>Configurazioni Personalizzate</h2>
-					<p><br>Configura il tuo PC<br>come meglio preferisci! <br><br><br></p>
+					<p>Configura il tuo PC<br>come meglio preferisci!</p>
 					<% if(utenteLoggato != null)
 						{%>					
 							<a href="configurazioni.jsp" class="site-btn">Inizia ora...</a>

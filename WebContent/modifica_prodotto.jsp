@@ -186,7 +186,7 @@
 	<header class="sezioneHeader2 bg-visible">
 		<div class="container-fluid au-reg-background">
 			<div class="row">
-				<div class="header-left col-xl-3">
+				<div class="header-left col-md-3">
 					<div class="row">
 						<a href="home.html" class="site-logo">
 							<img src="./img/logotech.png" alt="">
@@ -209,43 +209,43 @@
 			<form name="modifyForm" id="modifyproduct" method = "get" action = "ModifyProduct">
 				<div class="row form-group">
 					<label for="type_prod" class="4 form-label">Tipo</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<input type="text" class="form-input" name="type_prod"  value="<%=bean.getTipo()%>"  readonly>
 					</div>
 				</div>
 				<div class="row form-group">
 					<label for="model_prod" class="4 form-label">Modello</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<input type="text" class="form-input" name="model_prod" value="<%=bean.getModello()%>">
 					</div>
 				</div>
 				<div class="row form-group">
 					<label for="brand_prod" class="4 form-label">Brand</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<input type="text" class="form-input" value="<%=bean.getMarca()%>" name="brand_prod">
 					</div>
 				</div>
 				<div class="row form-group">
 					<label for="name_prod" class="4 form-label">Nome</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<input type="text" class="form-input" value="<%=bean.getNome()%>" name="name_prod">
 					</div>
 				</div>
 				<div class="row form-group">
 					<label for="description_prod" class="4 form-label">Descrizione</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<textarea rows="5" class="form-input" name="description_prod"><%=bean.getDescrizione()%></textarea>
 					</div>
 				</div>
 				<div class="row form-group">
 					<label for="price_prod" class="4 form-label">Prezzo</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<input type="text" class="form-input" value="<%=bean.getPrezzo()%>" name="price_prod">
 					</div>
 				</div>
 				<div class="row form-group">
 					<label for="discount_prod" class="4 form-label">% Prodotto in Sconto</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<input type="text" class="form-input" value="<%=bean.getPercentualeSconto()%>" name="discount_prod">
 					</div>
 				</div>
@@ -253,13 +253,13 @@
 					<label for="family_prod" class="4 form-label">Informazioni Prodotto</label>
 				<div class="row form-group">
 					<label for="qnt_prod" class="4 form-label">Quantità Prodotto</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<input type="text" class="form-input" value="<%=bean.getQuantita()%>" name="qnt_prod">
 					</div>
 				</div>
 				<div class="row form-group">
 					<label for="img_folder_path" class="4 form-label">Path Folder Immagini</label>
-					<div class="col-xl-8">
+					<div class="col-md-8">
 						<input type="text" class="form-input" value="<%=bean.getImmagine()%>" name="img_folder_path" >
 					</div>
 				</div>			

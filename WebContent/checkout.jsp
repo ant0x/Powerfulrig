@@ -69,21 +69,21 @@
 					{%>
 				<!-- Display del singolo prodotto in carello -->
 				<div class="row spacerOrdProd">
-					<div class="col-xl-2 border-ordprod">
+					<div class="col-md-2 border-ordprod">
 						<img src=<%=arraycart.get(I).getImmagine()+"/img1.jpg"%> width="100" height="100" class="imgItem5">
 					</div>
-					<div class="col-xl-5 spacer-ordine border-ordprod" style="margin-left: -30px;">
+					<div class="col-md-5 spacer-ordine border-ordprod" style="margin-left: -30px;">
 						<div class="row justify-content-start">
 							<p id="ordProd"><%=arraycart.get(I).getMarca()+" "+arraycart.get(I).getNome()+" "+arraycart.get(I).getModello()%></p>
 						</div>
 					</div>
-					<div class="col-xl-2 spacer-ordine border-ordprod">
+					<div class="col-md-2 spacer-ordine border-ordprod">
 						<div class="row justify-content-center">
 							<% float price = arraycart.get(I).getPrezzo(); %>
 							<p id="ordProd" style="color: red"><input type="hidden" name="priceProd" value=<%=price%>> <%=price%> &euro;</p>
 						</div>
 					</div>
-					<div class="col-xl-1 spacer-ordine border-ordprod">
+					<div class="col-md-1 spacer-ordine border-ordprod">
 					<input type="hidden" id="prodParameters" value="Product?action=addQuantity&type_prod=<%=arraycart.get(I).getTipo()%>&model_prod=<%=arraycart.get(I).getModello()%>">
 						<select class="custom-select" name="qnt_selector" id="qnt_selector">
 							<option disabled hidden selected><%=arraycart.get(I).getQuantita()%></option>
@@ -107,9 +107,9 @@
 			 <!-- Container per la selezione dell'indirizzo -->
 			<div class="container">
 				<div class="row spacerInfo2">
-					<div class="col-xl-6 setupAddress">
+					<div class="col-md-6 setupAddress">
 						<div class="row justify-content-start">
-							<div class="col-xl-5">
+							<div class="col-md-5">
 								<h4 class="ordH42">Seleziona l'indirizzo di spedizione</h4>
 							</div>
 						</div>
@@ -146,15 +146,15 @@
 									<span class="glyphicon glyphicon-plus plus2"></span><p id="newInd" class="ordinePar"><a herf="#">Inserisci un nuovo indirizzo</p></a>
 								</div>
 								<div class="row justify-content-start" id="inputNewInd2">
-									<div class="col-xl-12">
+									<div class="col-md-12">
 										<div class="row">
-											<div class="col-xl-4">
+											<div class="col-md-4">
 												<input type="text" class="form-input indSpacer1" name="indirizzo"  id="address" placeholder="Inserisci Indirizzo">
 											</div>
-											<div class="col-xl-4">
+											<div class="col-md-4">
 												<input type="text" class="form-input indSpacer1" name="città" id="city" placeholder="Inserisci cap">
 											</div>
-											<div class="col-xl-3">
+											<div class="col-md-3">
 												<div class="row justify-content-center">
 													<input type="text" class="form-input3 indSpacer3" id="cap" maxlength="5" name="cv" placeholder="numero civico">
 												</div>
@@ -184,9 +184,9 @@
 						</div>
 					</div>
 						<!-- codice generato -->												
-					<div class="col-xl-6 spacerMethod_payment">
+					<div class="col-md-6 spacerMethod_payment">
 						<div class="row justify-content-center">
-							<div class="col-xl-5">
+							<div class="col-md-5">
 								<h4 class="ordH4">Seleziona il metodo di pagamento</h4>
 							</div>
 						</div>
@@ -207,7 +207,7 @@
 							<div class="row" id="inputNewCard2">
 								<form action="InsertPaymentMethod" method="GET">
 									<div class="row justify-content-start" >
-										<div class="col-xl-5">
+										<div class="col-md-5">
 											<select class="custom-select" name="card_selector" id="card_selector">
 												<option disabled hidden selected>TIPO CARTA</option>
 												<option value=1>PayPal</option>
@@ -216,15 +216,15 @@
 												<option value=4>PostePay</option>
 											</select>
 										</div>
-										<div class="col-xl-7">
+										<div class="col-md-7">
 											<input type="text" class="form-input2" id="codcarta" name="codcarta" maxlength="19" placeholder="Codice Carta">
 										</div>
 									</div>
 									<div class="row justify-content-start" style="margin-top: 20px;">
-										<div class="col-xl-5">
+										<div class="col-md-5">
 											<input type="password" class="form-input4" name="codcvc" maxlength="3" placeholder="Codice CVC">
 										</div>
-										<div class="col-xl-7">
+										<div class="col-md-7">
 											<input type="date" name="dataexpcarta" id="dataexpcarta">
 										</div>
 									</div>
@@ -262,7 +262,7 @@
 										<div class="row" id="inputNewCard2">
 											<form action="InsertPaymentMethod" method="get">
 												<div class="row justify-content-start">
-													<div class="col-xl-5">
+													<div class="col-md-5">
 														<select class="custom-select" name="card_selector" id="card_selector">
 															<option disabled hidden selected>TIPO CARTA</option>
 															<option value=1>PayPal</option>
@@ -271,15 +271,15 @@
 															<option value=4>PostePay</option>
 														</select>
 													</div>
-													<div class="col-xl-7">
+													<div class="col-md-7">
 														<input type="text" class="form-input2" id="codcarta" name="codcarta" maxlength="19" placeholder="Codice Carta">
 													</div>
 												</div>
 												<div class="row justify-content-start" style="margin-top: 20px;">
-													<div class="col-xl-5">
+													<div class="col-md-5">
 														<input type="password" class="form-input4" name="codcvc" maxlength="3" placeholder="Codice CVC">
 													</div>
-													<div class="col-xl-7">
+													<div class="col-md-7">
 														<input type="date" class="prova312" name="dataexpcarta" id="dataexpcarta">
 													</div>
 												</div>

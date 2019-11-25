@@ -85,11 +85,11 @@
 					<div class="row">
 						 <div class="yConf">
 						 	<div class="row">			
-								<div class="col-xl-8">
+								<div class="col-md-8">
 									<a href="UserConfiguration?action=showConf&id_conf=<%=userconfs.get(I).get_id_configuration()%>"><p class="confP4" id="confP41"><%=userconfs.get(I).getname_configuration()%></p></a>
 									<input type="hidden" id="id_conf" value="<%=userconfs.get(I).get_id_configuration()%>">
 								</div>
-								<div class="col-xl-3">
+								<div class="col-md-3">
 									<div class="row">
 										<p id="confPP2"><%=data%></p>
 									</div>
@@ -97,7 +97,7 @@
 										<p id="confPP3">Prezzo: <%=String.format(Locale.US,"%.2f",userconfs.get(I).getConfiguration_price())%> &euro;</p>
 									</div>
 								</div>
-								<div class="col-xl-1">
+								<div class="col-md-1">
 									<i id="removeConfIcon" class="glyphicon glyphicon-remove remove" style="margin-top: 28px;"> </i>
 								</div>
 							</div>
@@ -113,10 +113,10 @@
 			{
 			%>
 				<div class="row noConf" id="noVis1" onclick="createConf()">
-					<div class="col-xl-2">
+					<div class="col-md-2">
 						<i class="glyphicon glyphicon-plus plus"> </i> 
 					</div>
-					<div class="col-xl-10">
+					<div class="col-md-10">
 						<p class="confP" id="confP1">Aggiungi Configurazione</p>
 						<input type="hidden" id="mail_conf" value="<%=utenteLoggato.getEmail()%>">
 					</div>

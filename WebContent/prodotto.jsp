@@ -69,12 +69,12 @@
 	<section class="prodsing-section">
 		<div class="container border-prodsing">
 			<div class="row">
-				<div class="col-xl-12">
+				<div class="col-md-12">
 					<h6><%=bean.getNome()+" "+bean.getModello()%></h6>
 				</div>
 			</div>
 			<div class="row" id="spacerPS">
-				<div class="col-xl-1">
+				<div class="col-md-1">
 					<img src=<%=bean.getImmagine()+"/img1.jpg"%> width="65" height="65" class="imgItem3">
 					<img src=<%=bean.getImmagine()+"/img2.jpg"%> width="65" height="65" class="imgItem3">
 					<img src=<%=bean.getImmagine()+"/img3.jpg"%> width="65" height="65" class="imgItem3">
@@ -85,7 +85,7 @@
 						<span class="close">&times;</span>
 						<img class="modal-content" id="img01" style="width: 350px;">
 					</div>
-				<div class="col-xl-8" id="spacerDettagli">
+				<div class="col-md-8" id="spacerDettagli">
 					<div>
 						<p id="stiletitle">Marca: </p>
 						<p class="stilep"><%=bean.getMarca()%></p>
@@ -130,10 +130,10 @@
 					</div>
 					<p id="stilepPS">Spedizione Gratuita</p>
 					<div class="row">
-						<div class="col-xl-6">
+						<div class="col-md-6">
 							<input type="button" class="site-btn3" value="AGGIUNGI AL CARRELLO" onclick="addtocart()">
 						</div>
-						<div class="col-xl-6">
+						<div class="col-md-6">
 							<div class="row justify-content-center dropdown">
 								<button type="button" class="btn btn-secondary dropdown-toggle site-btn3 spacerBtn" id="dropdownMenuButton" data-display="static" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">AGGIUNGI A CONFIGURAZIONE</button>
 								<div class="dropdown-menu fixSpaceConf" aria-labelledby="dropdownMenuButton">
@@ -170,26 +170,26 @@
 		</div>
 		<div class="container spacerDescrizioneProd">
 			<div class="row">
-				<div class="col-xl-3">
+				<div class="col-md-3">
 					<h2 id="titlePPS">DESCRIZIONE</h2>
 				</div>
-				<div class="descstyle col-xl-9">
+				<div class="descstyle col-md-9">
 					<hr>
 				</div> 
 				<p id="descP"><%=bean.getDescrizione()%></p>
 			</div>
 			<div class="row">
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<h2 id="titlePPS">SPECIFICHE</h2>
 				</div>
-				<div class="specstyle col-xl-10">
+				<div class="specstyle col-md-10">
 					<hr>
 				</div>
 			</div>
 			
 			<div class="container">
 				<div class="row">
-					<div class="col-xl-6">
+					<div class="col-md-6">
 						<table class="table">
 							<thead>
 								<tr>

@@ -71,10 +71,10 @@
 				if(bean.getCpu_in_configuration()==null || bean.getCpu_in_configuration().isEmpty())
 				{
 				%>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<a href="Product?action=Cpu_comp&comp_name=Processori"><img src="img/plus.png" width="150" height="150" class="imgItem6"></a>
 				</div>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<div class="row" id="spacerConf">
 						<div>
 							<p id="titleConf">Inserire Processore</p>
@@ -87,12 +87,12 @@
 					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getCpu_in_configuration()).get(0);
 					
 				%>	
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
 					
 					<i class="glyphicon glyphicon-trash trash" id="removeCompIcon"></i>
 				</div>
-				<div class="col-xl-2" id="spacerConf3">
+				<div class="col-md-2" id="spacerConf3">
 					<div class="row" id="spacerConf2">
 						<div>
 							<p id="titleConf">Marca: </p>
@@ -124,10 +124,10 @@
 				if(bean.getGpu_in_configuration()==null || bean.getGpu_in_configuration().isEmpty())
 				{
 				%>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<a href="Product?action=Gpu_comp&comp_name=Schede Grafiche"><img src="img/plus.png" width="150" height="150" class="imgItem6"></a>
 				</div>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<div class="row" id="spacerConf">
 						<div>
 							<p id="titleConf">Inserire Scheda Grafica</p>
@@ -139,11 +139,11 @@
 				} else {
 					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getGpu_in_configuration()).get(0);
 				%>	
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
 					<i class="glyphicon glyphicon-trash trash" style="cursor: pointer;"  id="removeCompIcon"></i>
 				</div>
-				<div class="col-xl-2" id="spacerConf3">
+				<div class="col-md-2" id="spacerConf3">
 					<div class="row" id="spacerConf2">
 						<div>
 							<p id="titleConf">Marca: </p>
@@ -175,10 +175,10 @@
 				if(bean.getMotherboard_in_configuration()==null || bean.getMotherboard_in_configuration().isEmpty())
 				{
 				%>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<a href="Product?action=motherboard_comp&comp_name=Schede Madre"><img src="img/plus.png" width="150" height="150" class="imgItem6"></a>
 				</div>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<div class="row" id="spacerConf">
 						<div>
 							<p id="titleConf">Inserire Scheda Madre</p>
@@ -190,11 +190,11 @@
 				} else {
 					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getMotherboard_in_configuration()).get(0);
 				%>	
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
 					<i class="glyphicon glyphicon-trash trash" id="removeCompIcon"></i>
 				</div>
-				<div class="col-xl-2" id="spacerConf3">
+				<div class="col-md-2" id="spacerConf3">
 					<div class="row" id="spacerConf2">
 						<div>
 							<p id="titleConf">Marca: </p>
@@ -229,10 +229,10 @@
 				if(bean.getRam_in_configuration()==null || bean.getRam_in_configuration().isEmpty())
 				{
 				%>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<a href="Product?action=ram_comp&comp_name=RAM"><img src="img/plus.png" width="150" height="150" class="imgItem6"></a>
 				</div>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<div class="row" id="spacerConf">
 						<div>
 							<p id="titleConf">Inserire Memoria RAM</p>
@@ -244,11 +244,11 @@
 				} else {
 					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getRam_in_configuration()).get(0);
 				%>	
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
 					<i class="glyphicon glyphicon-trash trash" id="removeCompIcon"></i>
 				</div>
-				<div class="col-xl-2" id="spacerConf3">
+				<div class="col-md-2" id="spacerConf3">
 					<div class="row" id="spacerConf2">
 						<div>
 							<p id="titleConf">Marca: </p>
@@ -280,10 +280,10 @@
 				if(bean.getpsu_in_configuration()==null || bean.getpsu_in_configuration().isEmpty())
 				{
 				%>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<a href="Product?action=Psu_comp&comp_name=Alimentatori"><img src="img/plus.png" width="150" height="150" class="imgItem6"></a>
 				</div>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<div class="row" id="spacerConf">
 						<div>
 							<p id="titleConf">Inserire Alimentatore</p>
@@ -295,11 +295,11 @@
 				} else {
 					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getpsu_in_configuration()).get(0);
 				%>	
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
 					<i class="glyphicon glyphicon-trash trash" id="removeCompIcon"></i>
 				</div>
-				<div class="col-xl-2" id="spacerConf3">
+				<div class="col-md-2" id="spacerConf3">
 					<div class="row" id="spacerConf2">
 						<div>
 							<p id="titleConf">Marca: </p>
@@ -331,10 +331,10 @@
 				if(bean.getStorage_in_configuration()==null || bean.getStorage_in_configuration().isEmpty())
 				{
 				%>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<a href="Product?action=storage_comp&comp_name=Archiviazione"><img src="img/plus.png" width="150" height="150" class="imgItem6"></a>
 				</div>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<div class="row" id="spacerConf">
 						<div>
 							<p id="titleConf">Inserire HDD/SSD</p>
@@ -346,11 +346,11 @@
 				} else {
 					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getStorage_in_configuration()).get(0);
 				%>	
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
 					<i class="glyphicon glyphicon-trash trash" id="removeCompIcon"></i>
 				</div>
-				<div class="col-xl-2" id="spacerConf3">
+				<div class="col-md-2" id="spacerConf3">
 					<div class="row" id="spacerConf2">
 						<div>
 							<p id="titleConf">Marca: </p>
@@ -385,10 +385,10 @@
 				if(bean.getCase_in_configuration()==null || bean.getCase_in_configuration().isEmpty())
 				{
 				%>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<a href="Product?action=Case_comp&comp_name=Case"><img src="img/plus.png" width="150" height="150" class="imgItem6"></a>
 				</div>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<div class="row" id="spacerConf">
 						<div>
 							<p id="titleConf">Inserire Case</p>
@@ -400,11 +400,11 @@
 				} else {
 					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getCase_in_configuration()).get(0);
 				%>	
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
 					<i class="glyphicon glyphicon-trash trash" id="removeCompIcon"></i>
 				</div>
-				<div class="col-xl-2" id="spacerConf3">
+				<div class="col-md-2" id="spacerConf3">
 					<div class="row" id="spacerConf2">
 						<div>
 							<p id="titleConf">Marca: </p>
@@ -436,10 +436,10 @@
 				if(bean.getHeatsink_in_configuration()==null || bean.getHeatsink_in_configuration().isEmpty())
 				{
 				%>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<a href="Product?action=heatsink_comp&comp_name=Dissipatori"><img src="img/plus.png" width="150" height="150" class="imgItem6"></a>
 				</div>
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<div class="row" id="spacerConf">
 						<div>
 							<p id="titleConf">Inserire Dissipatore</p>
@@ -451,11 +451,11 @@
 				} else {
 					Prodotto prod_bean = model_prod.viewProduct("IdProdotto",bean.getHeatsink_in_configuration()).get(0);
 				%>	
-				<div class="col-xl-2">
+				<div class="col-md-2">
 					<a href="Product?action=prodotto&type_prod=<%=prod_bean.getTipo()%>&model_prod=<%=prod_bean.getModello()%>"><img src=<%=prod_bean.getImmagine()+"/img1.jpg"%> width="150" height="150" class="imgItem6"></a>	
 					<i class="glyphicon glyphicon-trash trash" id="removeCompIcon"></i>
 				</div>
-				<div class="col-xl-2" id="spacerConf3">
+				<div class="col-md-2" id="spacerConf3">
 					<div class="row" id="spacerConf2">
 						<div>
 							<p id="titleConf">Marca: </p>
