@@ -113,7 +113,7 @@ public class DAOProdotto
 			statement=con.prepareStatement(viewProduct);
 			for(int i=1;i<strings.length;i+=2,j++) 
 				statement.setString(j,strings[i]);
-			System.out.println("la queryrebdffjd "+statement);
+		
 			set=statement.executeQuery();
 			while(set.next())
 			{
@@ -154,7 +154,6 @@ public class DAOProdotto
 		try
 		{
 			
-			System.out.println("id è "+idProdotto);
 			con=ConnectionPool.getConnection();
 			statement=con.prepareStatement(deleteProduct);
 			statement.setInt(1,idProdotto);

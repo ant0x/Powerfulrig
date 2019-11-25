@@ -96,7 +96,6 @@ public class DAOOrdine
 			con=ConnectionPool.getConnection();
 			statement=con.prepareStatement(viewOrdineById);
 			statement.setString(1,Email);
-			System.out.println("la query è "+statement);
 			set=statement.executeQuery();
 			while(set.next())
 			{
@@ -168,14 +167,14 @@ public class DAOOrdine
 		
 		try
 		{
-			System.out.println("err qui add");
+			
 			con=ConnectionPool.getConnection();
 			statement=con.prepareStatement(addOrdine);
 			statement.setDouble(1,order.getTotale());
 			statement.setString(2,order.getMetodoPagamento());
 			statement.setString(3,order.getData());
 			statement.setString(4,order.getUser().getEmail());
-			System.out.println("err qui fin");
+			
 			flag=statement.executeUpdate()>0;
 			con.commit();
 			statement=con.prepareStatement(selectNfattura);
@@ -183,11 +182,11 @@ public class DAOOrdine
 			if(set.next())
 			{
 				nFattura=set.getInt(1);
-				System.out.println("n fattura è "+nFattura);
+				
 			}
 			for(Prodotto a : order.getLista())
 			{
-				System.out.println("ci entro in sta query?");
+				
 				statement=con.prepareStatement(addComposizione);
 				statement.setInt(1,a.getQuantita());
 				statement.setDouble(2, a.getPrezzo());
@@ -199,7 +198,6 @@ public class DAOOrdine
 			addSpedizione="INSERT INTO spedizione (stato, data_partenza, data_arrivo, citta_destinazione, fattura) VALUES (?,?,?,?,?)";
 			statement=con.prepareStatement(addSpedizione);
 			statement.setString(1, "Processing");
-			System.out.println("il cap è "+order.getUser().getCap());
 			
 			statement.setString(2, order.getData());
 			statement.setString(3, order.getData());

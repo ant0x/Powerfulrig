@@ -126,7 +126,7 @@ public class PaymentMethodDAO implements PaymentMethodModel{
 		}
 		
 		query="DELETE FROM users_payement_method WHERE card_number = '"+card_number+"'";
-		System.out.println("payemnwrgDAO---->"+query);
+		
 		try {
 			
 			statement=con.createStatement();		

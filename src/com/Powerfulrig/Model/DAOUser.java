@@ -298,7 +298,7 @@ public class DAOUser
 						
 		
 		String query = "DELETE FROM users_payement_method WHERE card_number = '"+card_number+"'";
-		System.out.println("la query di david il torrisandkcijsadihdsa "+query);
+		
 		try
 		{
 		statement = con.prepareStatement(query);

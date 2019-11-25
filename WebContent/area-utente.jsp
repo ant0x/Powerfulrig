@@ -441,9 +441,7 @@
 								for(Prodotto a : ordini.get(I).getLista())
 									prod_ordini.add(a);
 
-								//System.out.println("i prodotti sono "+prod_ordini);
-								System.out.println("i prodotti del primo ordine sono "+ordini.get(1).getLista());
-								System.out.println(prod_ordini);
+								
 								for(int J=0; J<prod_ordini.size(); J++)
 								{
 						%>

@@ -80,8 +80,7 @@ public class UtenteControl extends HttpServlet {
 				}
 				if(action.equals("deletePaymentMethod"))
 				{
-					System.out.println("daviddddddddddddddddddddddddddddddddd");
-					log("davidddddddddddddddddddddddddddddddddddddd");
+				
 					String card_number = request.getParameter("card_number");
 					
 					model_utente.deletePaymentMethod(card_number);

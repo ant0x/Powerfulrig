@@ -222,7 +222,7 @@ public class UserConfigurationDAO implements UserConfigurationModel {
 	@Override
 	public boolean deleteComponentFromConfiguration(String id_conf, String id_comp, String model_comp) throws SQLException
 	{
-		System.out.println("l'id comp "+id_comp);
+		
 		String comp = id_comp.substring(0, id_comp.lastIndexOf("_"));
 		comp=comp.toLowerCase();
 		String query_price_prod = null;

@@ -93,8 +93,7 @@
 					{
 							array = model_product.viewProduct("Marca",brand);
 					}
-					System.out.println("l'action è "+action_name);
-					log("l'action è "+action_name);
+					
 					if(action_name!=null)
 						if(action_name.equalsIgnoreCase("Prodotti in sconto"))
 						{
