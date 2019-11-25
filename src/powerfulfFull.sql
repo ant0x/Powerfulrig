@@ -19,6 +19,9 @@
 -- Table structure for table `composizione`
 --
 
+DROP DATABASE IF EXISTS powerfulrig;
+CREATE DATABASE powerfulrig;
+use powerfulrig;
 DROP TABLE IF EXISTS `composizione`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
