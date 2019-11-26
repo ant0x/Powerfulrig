@@ -529,7 +529,6 @@
 			var value1 = $(this).parent().next().find("input#id_comp").val();			
 			var value2 = $('#id_conf').val();
 			var value3 = $(this).parent().next().find("input#model_prod").val();	
-			alert("l'id è "+value1);
 		    $.ajax({
 		        type: "POST",
 		        url: "UserConfiguration",

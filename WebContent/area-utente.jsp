@@ -230,7 +230,7 @@
 											</div>
 											<div class="col-md-1">
 												<div class="row justify-content-center">
-													<i id="removeAddressIcon" class="glyphicon glyphicon-remove remove3"> </i>
+													
 												</div>
 											</div>
 										</div>

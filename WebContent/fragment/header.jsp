@@ -240,7 +240,6 @@
 		    var url = $(this).parent().prev().children().attr("href");		//attraversamento del DOM a ritroso
 		    var type_prod = getURLParameter(url, 'type_prod');
 		    var model_prod = getURLParameter(url, 'model_prod');
-		    alert("tipo e modello "+type_prod+"  "+model_prod);
 		    //calling the ajax function
 		    delfromCart(type_prod, model_prod);
 		});

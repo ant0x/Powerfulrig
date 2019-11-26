@@ -49,6 +49,7 @@ public class CreateOrder extends HttpServlet {
 		Float totalOrderPrice = Float.parseFloat(request.getParameter("totalOrderPrice"));
 		String via = request.getParameter("addressopt1");
 		String nCivico = request.getParameter("addressopt2");
+		String quantita = request.getParameter("qnt_selector");
 
 		int nCivico1 = Integer.parseInt(nCivico);
 		String Cap = request.getParameter("addressopt3");
@@ -61,7 +62,7 @@ public class CreateOrder extends HttpServlet {
 		String order_date = formatter.format(date);
 		
 		Boolean isConsegnato = false;
-		log("il metodo di pagamento è "+order_payment_method);
+		app.setQuantita(Integer.parseInt(quantita));
 		app.setMetodoPagamento(order_payment_method);
 		app.setLista(productsToBuy);
 		app.setData(order_date);

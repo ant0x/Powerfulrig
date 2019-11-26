@@ -79,8 +79,10 @@
 					</div>
 					<div class="col-md-2 spacer-ordine border-ordprod">
 						<div class="row justify-content-center">
-							<% float price = arraycart.get(I).getPrezzo(); %>
-							<p id="ordProd" style="color: red"><input type="hidden" name="priceProd" value=<%=price%>> <%=price%> &euro;</p>
+							<% float price = arraycart.get(I).getPrezzo();
+							
+							%>
+							<p id="ordProd" style="color: red"><input type="hidden" name="priceProd" value=<%=String.format(Locale.US,"%.2f", price)%>> <%=String.format(Locale.US,"%.2f", price)%> &euro;</p>
 						</div>
 					</div>
 					<div class="col-md-1 spacer-ordine border-ordprod">

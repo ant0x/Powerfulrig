@@ -4,7 +4,7 @@
 	contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"
     import="com.Powerfulrig.Bean.*"
-    
+    import="com.Powerfulrig.Model.*"
     import="java.util.*"
 %>
 

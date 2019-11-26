@@ -318,11 +318,8 @@
 									<div class="col-md-3">
 										<p id="utP">ID Ordine:</p><p id="utP2"><%=bean.getNumeroOrdine()%></p>
 									</div>
-									<div class="col-md-4">
+									<div class="col-md-8">
 										<p id="utP">Utente Ordine:</p><p id="utP2"><%=bean.getUser().getEmail()%></p>
-									</div>
-									<div class="col-md-5">
-										<p id="utP">Codice Carta:</p><p id="utP2"><%=bean.getMetodoPagamento()%></p>
 									</div>
 								</div>
 								<div class="row">
@@ -449,7 +446,6 @@
 	$("[id ='removeUserIcon']").on('click', function removeUser(){
 		var value1 = ("banUser");
 		var value2 = $(this).parent().prev().children("div:nth-child(2)").children("div:nth-child(1)").find("p#utP2").html(); //ottenimeto email	
-		alert(value2);		
 		Swal.fire({ //PRIMO POPUP
 			  title: 'Sei sicuro di voler eliminare l\' utente?',
 			  text: "L'utente sarà bannato permanentemente.",

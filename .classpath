@@ -22,7 +22,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/anton/Desktop/apache-tomcat-9.0.22/lib/mysql-connector-java-8.0.16.jar"/>
-	<classpathentry kind="lib" path="C:/Users/anton/Desktop/apache-tomcat-9.0.22/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Antonio/Desktop/apache-tomcat-9.0.27/lib/mysql-connector-java-8.0.18.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Antonio/Desktop/apache-tomcat-9.0.27/lib/servlet-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -154,7 +154,7 @@ public class ProductControl extends HttpServlet
 					String model_prod = request.getParameter("model_prod");
 					int qnt_to_add = Integer.parseInt(request.getParameter("qnt_to_add"));
 					
-					ArrayList<Prodotto> bean = model_product.viewProduct(type_prod, model_prod);
+					ArrayList<Prodotto> bean = model_product.viewProduct("Tipo",type_prod,"Modello", model_prod);
 					
 					if(!cart.addQuantity(bean.get(0), qnt_to_add))
 					{
